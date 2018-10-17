@@ -1,0 +1,31 @@
+{
+    "TileSize" : 16,
+    "Title" : "DemoDungeon_0",
+    "Sheet" : "game/texture/dungeon0.png",
+
+    "Tiles" : [
+        {"id" : "wall0", "solid" : true, "tile" : [2, 0]},
+        {"id" : "wall1", "solid" : true, "tile" : [3, 0]},
+        {"id" : "wall2", "solid" : true, "tile" : [2, 1]},
+        {"id" : "wall3", "solid" : true, "tile" : [3, 1]},
+        {"id" : "wall4", "solid" : true, "tile" : [4, 0]},
+        {"id" : "wall5", "solid" : true, "tile" : [4, 1]},
+        {"id" : "floor0", "solid" : false, "tile" : [0, 0]},
+        {"id" : "floor1", "solid" : false, "tile" : [0, 1]},
+        {"id" : "floor2", "solid" : false, "tile" : [1, 0]},
+        {"id" : "floor3", "solid" : false, "tile" : [1, 1]}
+    ],
+
+    "Layout" : [
+        ["wall0", "wall4", "wall4", "wall4", "wall4", "wall4", "wall4", "wall4", "wall4", "wall4", "wall1"],
+        ["wall5", "floor2", "floor1", "floor0", "floor0", "floor0", "floor3", "floor0", "floor1", "floor2", "wall5"],
+        ["wall5", "floor3", "floor1", "floor1", "floor1", "floor0", "floor0", "floor2", "floor3", "floor2", "wall5"],
+        ["wall5", "floor2", "floor0", "floor3", "floor2", "floor2", "floor0", "floor0", "floor1", "floor1", "wall5"],
+        ["wall5", "floor1", "floor1", "floor0", "floor1", "floor0", "floor3", "floor3", "floor0", "floor2", "wall5"],
+        ["wall5", "floor2", "floor2", "floor0", "floor3", "floor1", "floor1", "floor0", "floor2", "floor2", "wall5"],
+        ["wall5", "floor2", "floor2", "floor2", "floor1", "floor3", "floor3", "floor0", "floor1", "floor0", "wall5"],
+        ["wall5", "floor0", "floor2", "floor3", "floor1", "floor0", "floor2", "floor0", "floor1", "floor2", "wall5"],
+        ["wall5", "floor0", "floor1", "floor0", "floor2", "floor1", "floor2", "floor1", "floor0", "floor2", "wall5"],
+        ["wall2", "wall4", "wall4", "wall4", "wall4", "wall4", "wall4", "wall4", "wall4", "wall4", "wall3"]
+    ]
+}
