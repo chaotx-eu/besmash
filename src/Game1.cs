@@ -31,7 +31,7 @@ namespace RougeLikeDemo {
         }
 
         protected override void LoadContent() {
-            Content.Load<object>("gradient");
+    //        Content.Load<object>("gradient");
 
             kevin.MapX = kevin.MapY = 1;
             MapD0.addEntity(kevin);
