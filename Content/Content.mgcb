@@ -10,6 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
+/reference:..\..\libs\BesmashContent\bin\Debug\netstandard2.0\BesmashContent.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -86,4 +87,9 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:menu/texture/gradient.png
+
+#begin testmap.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:testmap.xml
 

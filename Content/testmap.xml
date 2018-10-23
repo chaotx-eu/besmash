@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+  <Asset Type="TileMap">
+    <Title>FooMap</Title>
+    <Viewport>1 1</Viewport>
+
+    <Tiles>
+      <Tile>
+        <SpriteSheet>game/texture/sheets/map/dungeon0_sheet</SpriteSheet>
+        <SpriteRectangle>0 0 16 16</SpriteRectangle>
+        <Position>0 0</Position>
+        <Solid>true</Solid>
+      </Tile>
+      <Tile>
+        <SpriteSheet>game/texture/sheets/map/dungeon0_sheet</SpriteSheet>
+        <SpriteRectangle>0 0 16 16</SpriteRectangle>
+        <Position>1 0</Position>
+        <Solid>true</Solid>
+      </Tile>
+
+      <Tile>
+        <SpriteSheet>game/texture/sheets/map/dungeon0_sheet</SpriteSheet>
+        <SpriteRectangle>0 0 16 16</SpriteRectangle>
+        <Position>0 1</Position>
+        <Solid>true</Solid>
+      </Tile>
+      <Tile>
+        <SpriteSheet>game/texture/sheets/map/dungeon0_sheet</SpriteSheet>
+        <SpriteRectangle>0 0 16 16</SpriteRectangle>
+        <Rotation>90</Rotation>
+        <Position>1 1</Position>
+        <Solid>true</Solid>
+      </Tile>
+    </Tiles>
+  </Asset>
+</XnaContent>
