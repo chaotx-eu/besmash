@@ -10,7 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:..\..\libs\BesmashContent\bin\Debug\netstandard2.0\BesmashContent.dll
+/reference:..\libs\BesmashContent.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -92,4 +92,9 @@
 /importer:XmlImporter
 /processor:PassThroughProcessor
 /build:testmap.xml
+
+#begin xmlmap.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:xmlmap.xml
 

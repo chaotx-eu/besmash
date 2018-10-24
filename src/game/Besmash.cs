@@ -14,6 +14,8 @@ namespace BesmashGame {
 
         private TileMap testmap;
         private Player testplayer;
+        private Entity testnpc_0;
+        private Entity testnpc_1;
 
         public Besmash() {
             Content.RootDirectory = "Content";
@@ -34,7 +36,17 @@ namespace BesmashGame {
             testplayer.SpriteRectangle = new Rectangle(0, 32, 16, 16);
             testplayer.load(Content);
 
-            testmap = Content.Load<TileMap>("testmap");
+            testnpc_0 = new Entity();
+            testnpc_0.SpriteSheet = "game/texture/sheets/entity/kevin_sheet";
+            testnpc_0.SpriteRectangle = new Rectangle(0, 16, 16, 16);
+            testnpc_0.load(Content);
+
+            testnpc_1 = new Entity();
+            testnpc_1.SpriteSheet = "game/texture/sheets/entity/kevin_sheet";
+            testnpc_1.SpriteRectangle = new Rectangle(0, 0, 16, 16);
+            testnpc_1.load(Content);
+
+            testmap = Content.Load<TileMap>("xmlmap");
             testmap.load(Content);
         }
 
@@ -51,8 +63,13 @@ namespace BesmashGame {
             graphics.ApplyChanges();
             batch = new SpriteBatch(graphics.GraphicsDevice);
 
+            testnpc_0.Position = new Point(2, 2);
+            testnpc_1.Position = new Point(8, 8);
+            
             testmap.init(this);
             testmap.Slave = testplayer;
+            testmap.addEntity(testnpc_0);
+            testmap.addEntity(testnpc_1);
         }
 
         // temporary (real update in ScreenManager)
