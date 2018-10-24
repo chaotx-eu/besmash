@@ -13,7 +13,10 @@ namespace BesmashGame {
         private SpriteBatch batch;
 
         private TileMap testmap;
-        private Player testplayer;
+
+        private Player testplayer_0;
+        private Player testplayer_1;
+
         private Entity testnpc_0;
         private Entity testnpc_1;
 
@@ -31,10 +34,15 @@ namespace BesmashGame {
         protected override void LoadContent() {
             Content.Load<object>("menu/texture/gradient");
 
-            testplayer = new Player();
-            testplayer.SpriteSheet = "game/texture/sheets/entity/kevin_sheet";
-            testplayer.SpriteRectangle = new Rectangle(0, 32, 16, 16);
-            testplayer.load(Content);
+            testplayer_0 = new Player();
+            testplayer_0.SpriteSheet = "game/texture/sheets/entity/kevin_sheet";
+            testplayer_0.SpriteRectangle = new Rectangle(0, 32, 16, 16);
+            testplayer_0.load(Content);
+
+            testplayer_1 = new Player();
+            testplayer_1.SpriteSheet = "game/texture/sheets/entity/kevin_sheet";
+            testplayer_1.SpriteRectangle = new Rectangle(0, 32, 16, 16);
+            testplayer_1.load(Content);
 
             testnpc_0 = new Entity();
             testnpc_0.SpriteSheet = "game/texture/sheets/entity/kevin_sheet";
@@ -67,7 +75,8 @@ namespace BesmashGame {
             testnpc_1.Position = new Point(8, 8);
             
             testmap.init(this);
-            testmap.Slave = testplayer;
+            testmap.Slave = testplayer_0;
+            testmap.addEntity(testplayer_1);
             testmap.addEntity(testnpc_0);
             testmap.addEntity(testnpc_1);
         }
@@ -76,21 +85,41 @@ namespace BesmashGame {
         long timer = 0;
         protected override void Update(GameTime gameTime) {
             if(Keyboard.GetState().IsKeyDown(Keys.Escape)) Exit();
-            timer += gameTime.ElapsedGameTime.Milliseconds;
+            if(timer < 200) timer += gameTime.ElapsedGameTime.Milliseconds;
             
             if(timer > 200) {
                 if(Keyboard.GetState().IsKeyDown(Keys.Up)
                 || Keyboard.GetState().IsKeyDown(Keys.Right)
                 || Keyboard.GetState().IsKeyDown(Keys.Down)
-                || Keyboard.GetState().IsKeyDown(Keys.Left)) {
+                || Keyboard.GetState().IsKeyDown(Keys.Left)
+                || Keyboard.GetState().IsKeyDown(Keys.Add)
+                || Keyboard.GetState().IsKeyDown(Keys.OemMinus)
+                || Keyboard.GetState().IsKeyDown(Keys.Space)) {
                     timer = 0;
+                }
+
+                if(Keyboard.GetState().IsKeyDown(Keys.Space)) {
+                    testmap.Slave = testmap.Slave == testplayer_0
+                        ? testplayer_1 : testplayer_0;
+                }
+
+                if(Keyboard.GetState().IsKeyDown(Keys.Add)) {
+                    int vw = testmap.Viewport.X+1;
+                    int vh = testmap.Viewport.Y+1;
+                    testmap.Viewport = new Point(vw, vh);
+                }
+
+                if(Keyboard.GetState().IsKeyDown(Keys.OemMinus)) {
+                    int vw = testmap.Viewport.X > 1 ? testmap.Viewport.X-1 : 1;
+                    int vh = testmap.Viewport.Y > 1 ? testmap.Viewport.Y-1 : 1;
+                    testmap.Viewport = new Point(vw, vh);
                 }
 
                 if(testmap.Slave != null) {
                     if(Keyboard.GetState().IsKeyDown(Keys.Up)) {
-                        testplayer.move(new Point(
-                            testplayer.Position.X,
-                            testplayer.Position.Y-1));
+                        testmap.Slave.move(new Point(
+                            testmap.Slave.Position.X,
+                            testmap.Slave.Position.Y-1));
                     }
 
                     if(Keyboard.GetState().IsKeyDown(Keys.Right)) {
