@@ -98,3 +98,8 @@
 /processor:PassThroughProcessor
 /build:xmlmap.xml
 
+#begin xmlmap_big.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:xmlmap_big.xml
+

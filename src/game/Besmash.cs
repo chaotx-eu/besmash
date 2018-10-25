@@ -71,8 +71,11 @@ namespace BesmashGame {
             graphics.ApplyChanges();
             batch = new SpriteBatch(graphics.GraphicsDevice);
 
-            testnpc_0.Position = new Point(2, 2);
-            testnpc_1.Position = new Point(8, 8);
+            testplayer_0.StepTime = 200;
+            testplayer_1.StepTime = 400;
+
+            testnpc_0.Position = new Vector2(2, 2);
+            testnpc_1.Position = new Vector2(8, 8);
             
             testmap.init(this);
             testmap.Slave = testplayer_0;
@@ -116,29 +119,17 @@ namespace BesmashGame {
                 }
 
                 if(testmap.Slave != null) {
-                    if(Keyboard.GetState().IsKeyDown(Keys.Up)) {
-                        testmap.Slave.move(new Point(
-                            testmap.Slave.Position.X,
-                            testmap.Slave.Position.Y-1));
-                    }
+                    if(Keyboard.GetState().IsKeyDown(Keys.Up))
+                        testmap.Slave.move(0, -1);
 
-                    if(Keyboard.GetState().IsKeyDown(Keys.Right)) {
-                        testmap.Slave.move(new Point(
-                            testmap.Slave.Position.X+1,
-                            testmap.Slave.Position.Y));
-                    }
+                    if(Keyboard.GetState().IsKeyDown(Keys.Right))
+                        testmap.Slave.move(1, 0);
 
-                    if(Keyboard.GetState().IsKeyDown(Keys.Down)) {
-                        testmap.Slave.move(new Point(
-                            testmap.Slave.Position.X,
-                            testmap.Slave.Position.Y+1));
-                    }
+                    if(Keyboard.GetState().IsKeyDown(Keys.Down))
+                        testmap.Slave.move(0, 1);
 
-                    if(Keyboard.GetState().IsKeyDown(Keys.Left)) {
-                        testmap.Slave.move(new Point(
-                            testmap.Slave.Position.X-1,
-                            testmap.Slave.Position.Y));
-                    }
+                    if(Keyboard.GetState().IsKeyDown(Keys.Left))
+                        testmap.Slave.move(-1, 0);
                 }
             }
 
