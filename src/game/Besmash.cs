@@ -50,22 +50,22 @@ namespace BesmashGame {
             Content.Load<object>("menu/texture/gradient");
 
             testplayer_0 = new Player();
-            testplayer_0.SpriteSheet = "game/texture/sheets/entity/kevin_sheet";
+            testplayer_0.SpriteSheet = "images/entities/kevin_sheet";
             testplayer_0.SpriteRectangle = new Rectangle(0, 32, 16, 16);
             testplayer_0.load(Content);
 
             testplayer_1 = new Player();
-            testplayer_1.SpriteSheet = "game/texture/sheets/entity/kevin_sheet";
+            testplayer_1.SpriteSheet = "images/entities/kevin_sheet";
             testplayer_1.SpriteRectangle = new Rectangle(0, 32, 16, 16);
             testplayer_1.load(Content);
 
             testnpc_0 = new Entity();
-            testnpc_0.SpriteSheet = "game/texture/sheets/entity/kevin_sheet";
+            testnpc_0.SpriteSheet = "images/entities/kevin_sheet";
             testnpc_0.SpriteRectangle = new Rectangle(0, 16, 16, 16);
             testnpc_0.load(Content);
 
             testnpc_1 = new Entity();
-            testnpc_1.SpriteSheet = "game/texture/sheets/entity/kevin_sheet";
+            testnpc_1.SpriteSheet = "images/entities/kevin_sheet";
             testnpc_1.SpriteRectangle = new Rectangle(0, 0, 16, 16);
             testnpc_1.load(Content);
 
