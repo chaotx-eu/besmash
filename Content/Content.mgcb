@@ -100,23 +100,8 @@
 /processorParam:TextureFormat=Color
 /build:menu/texture/gradient.png
 
-#begin testmap.xml
-/importer:XmlImporter
-/processor:PassThroughProcessor
-/build:testmap.xml
-
 #begin testmap_50x50.xml
 /importer:XmlImporter
 /processor:PassThroughProcessor
 /build:testmap_50x50.xml
-
-#begin xmlmap.xml
-/importer:XmlImporter
-/processor:PassThroughProcessor
-/build:xmlmap.xml
-
-#begin xmlmap_big.xml
-/importer:XmlImporter
-/processor:PassThroughProcessor
-/build:xmlmap_big.xml
 

@@ -4,6 +4,8 @@ using Microsoft.Xna.Framework.Input;
 
 using GameStateManagement;
 using BesmashContent;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace BesmashGame {
     // Nur eine Demo bisheriger Funktionalitaeten
@@ -16,12 +18,31 @@ namespace BesmashGame {
 
         private Player testplayer_0;
         private Player testplayer_1;
+        private Player testplayer_2;
+        private Player testplayer_3;
+        private Player testplayer_4;
+        private Team testteam;
 
         private Entity testnpc_0;
         private Entity testnpc_1;
 
         // "Bouncy"-CollisionResolver (see Movable for more info)
-        Movable.CollisionResolver bouncyCR;
+        private CollisionResolver bouncyCR;
+
+        private Point[,] formations = {
+            {new Point(0, 1), new Point(0, 2), new Point(0, 3), new Point(0, 4)},
+            {new Point(1, 1), new Point(-1, 1), new Point(2, 2), new Point(-2, 2)},
+            {new Point(1, 0), new Point(-1, 0), new Point(2, 1), new Point(-2, 1)},
+            {new Point(1, -1), new Point(-1, -1), new Point(2, -2), new Point(-2, -2)},
+        };
+
+        private void setTeamFormation(int i) {
+            if(i >= formations.GetLength(0)) return;
+            testteam.FormationStrategy.RelativePositions[testplayer_1] = formations[i, 0];
+            testteam.FormationStrategy.RelativePositions[testplayer_2] = formations[i, 1];
+            testteam.FormationStrategy.RelativePositions[testplayer_3] = formations[i, 2];
+            testteam.FormationStrategy.RelativePositions[testplayer_4] = formations[i, 3];
+        }
 
         public Besmash() {
             Content.RootDirectory = "Content";
@@ -29,7 +50,7 @@ namespace BesmashGame {
 
             bouncyCR = (x, y, mo) => {
                 if(mo != null && mo != testmap.Slave) {
-                    if(mo is Entity)
+                    if(mo is Entity && !(mo is Player))
                         return new Point(-x, -y);
 
                     if(mo is Tile && ((Tile)mo).Solid)
@@ -59,6 +80,32 @@ namespace BesmashGame {
             testplayer_1.SpriteRectangle = new Rectangle(0, 32, 16, 16);
             testplayer_1.load(Content);
 
+            testplayer_2 = new Player();
+            testplayer_2.SpriteSheet = "images/entities/kevin_sheet";
+            testplayer_2.SpriteRectangle = new Rectangle(0, 32, 16, 16);
+            testplayer_2.load(Content);
+
+            testplayer_3 = new Player();
+            testplayer_3.SpriteSheet = "images/entities/kevin_sheet";
+            testplayer_3.SpriteRectangle = new Rectangle(0, 32, 16, 16);
+            testplayer_3.load(Content);
+
+            testplayer_4 = new Player();
+            testplayer_4.SpriteSheet = "images/entities/kevin_sheet";
+            testplayer_4.SpriteRectangle = new Rectangle(0, 32, 16, 16);
+            testplayer_4.load(Content);
+
+            List<Player> memberList = new List<Player>();
+            memberList.Add(testplayer_1);
+            memberList.Add(testplayer_2);
+            memberList.Add(testplayer_3);
+            memberList.Add(testplayer_4);
+            testteam = new Team(testplayer_0, memberList);
+            testteam.FormationStrategy.RelativePositions[testplayer_1] = new Point(0, 1);
+            testteam.FormationStrategy.RelativePositions[testplayer_2] = new Point(0, 2);
+            testteam.FormationStrategy.RelativePositions[testplayer_3] = new Point(0, 3);
+            testteam.FormationStrategy.RelativePositions[testplayer_4] = new Point(0, 4);
+
             testnpc_0 = new Entity();
             testnpc_0.SpriteSheet = "images/entities/kevin_sheet";
             testnpc_0.SpriteRectangle = new Rectangle(0, 16, 16, 16);
@@ -87,10 +134,16 @@ namespace BesmashGame {
             batch = new SpriteBatch(graphics.GraphicsDevice);
 
             testplayer_0.StepTime = 200;
-            testplayer_1.StepTime = 400;
+            testplayer_1.StepTime = 200;
+            testplayer_2.StepTime = 200;
+            testplayer_3.StepTime = 200;
+            testplayer_4.StepTime = 200;
 
-            testplayer_0.Position = new Vector2(1, 1);
+            testplayer_0.Position = new Vector2(1, 3);
             testplayer_1.Position = new Vector2(2, 1);
+            testplayer_2.Position = new Vector2(3, 1);
+            testplayer_3.Position = new Vector2(3, 1);
+            testplayer_4.Position = new Vector2(3, 1);
 
             testnpc_0.Position = new Vector2(2, 2);
             testnpc_1.Position = new Vector2(8, 8);
@@ -98,12 +151,16 @@ namespace BesmashGame {
             testmap.init(this);
             testmap.Slave = testplayer_0;
             testmap.addEntity(testplayer_1);
+            testmap.addEntity(testplayer_2);
+            testmap.addEntity(testplayer_3);
+            testmap.addEntity(testplayer_4);
             testmap.addEntity(testnpc_0);
             testmap.addEntity(testnpc_1);
         }
 
         // temporary (real update in ScreenManager)
         long timer = 0;
+        int slave = 0;
         protected override void Update(GameTime gameTime) {
             if(Keyboard.GetState().IsKeyDown(Keys.Escape)) Exit();
             if(timer < 200) timer += gameTime.ElapsedGameTime.Milliseconds;
@@ -115,13 +172,27 @@ namespace BesmashGame {
                 || Keyboard.GetState().IsKeyDown(Keys.Left)
                 || Keyboard.GetState().IsKeyDown(Keys.Add)
                 || Keyboard.GetState().IsKeyDown(Keys.OemMinus)
-                || Keyboard.GetState().IsKeyDown(Keys.Space)) {
+                || Keyboard.GetState().IsKeyDown(Keys.Space)
+                || Keyboard.GetState().IsKeyDown(Keys.D1)
+                || Keyboard.GetState().IsKeyDown(Keys.D2)
+                || Keyboard.GetState().IsKeyDown(Keys.D3)
+                || Keyboard.GetState().IsKeyDown(Keys.D4)) {
                     timer = 0;
                 }
 
+                if(Keyboard.GetState().IsKeyDown(Keys.D1))
+                    setTeamFormation(0);
+                if(Keyboard.GetState().IsKeyDown(Keys.D2))
+                    setTeamFormation(1);
+                if(Keyboard.GetState().IsKeyDown(Keys.D3))
+                    setTeamFormation(2);
+                if(Keyboard.GetState().IsKeyDown(Keys.D4))
+                    setTeamFormation(3);
+
                 if(Keyboard.GetState().IsKeyDown(Keys.Space)) {
-                    testmap.Slave = testmap.Slave == testplayer_0
-                        ? testplayer_1 : testplayer_0;
+                    Player leader = testteam.Members[(slave++)%testteam.Members.Count];
+                    // testteam.Leader = leader;
+                    testmap.Slave = leader;
                 }
 
                 if(Keyboard.GetState().IsKeyDown(Keys.Add)) {
@@ -153,6 +224,7 @@ namespace BesmashGame {
 
             base.Update(gameTime);
             testmap.update(gameTime);
+            testteam.update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime) {
