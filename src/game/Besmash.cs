@@ -1,238 +1,59 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-
-using GameStateManagement;
-using BesmashContent;
-using System.Collections.Generic;
-using System.Linq;
+﻿
 
 namespace BesmashGame {
-    // Nur eine Demo bisheriger Funktionalitaeten
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
+    using Microsoft.Xna.Framework.Input;
+
+    using GameStateManagement;
+    using BesmashContent;
+    using BesmashGame.Config;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Screens;
+
     public class Besmash : Game {
+        /// Manager of this game.
+        public GameManager Manager {get; set;}
+
+        private string gameStateFile = "";
         private GraphicsDeviceManager graphics;
         private ScreenManager screenManager;
         private SpriteBatch batch;
 
-        private TileMap testmap;
-
-        private Player testplayer_0;
-        private Player testplayer_1;
-        private Player testplayer_2;
-        private Player testplayer_3;
-        private Player testplayer_4;
-        private Team testteam;
-
-        private Entity testnpc_0;
-        private Entity testnpc_1;
-
-        // "Bouncy"-CollisionResolver (see Movable for more info)
-        private CollisionResolver bouncyCR;
-
-        private Point[,] formations = {
-            {new Point(0, 1), new Point(0, 2), new Point(0, 3), new Point(0, 4)},
-            {new Point(1, 1), new Point(-1, 1), new Point(2, 2), new Point(-2, 2)},
-            {new Point(1, 0), new Point(-1, 0), new Point(2, 1), new Point(-2, 1)},
-            {new Point(1, -1), new Point(-1, -1), new Point(2, -2), new Point(-2, -2)},
-        };
-
-        private void setTeamFormation(int i) {
-            if(i >= formations.GetLength(0)) return;
-            testteam.FormationStrategy.RelativePositions[testplayer_1] = formations[i, 0];
-            testteam.FormationStrategy.RelativePositions[testplayer_2] = formations[i, 1];
-            testteam.FormationStrategy.RelativePositions[testplayer_3] = formations[i, 2];
-            testteam.FormationStrategy.RelativePositions[testplayer_4] = formations[i, 3];
-        }
-
-        public Besmash() {
+        public Besmash() : this("") {}
+        public Besmash(string gameStateFile) {
+            this.gameStateFile = gameStateFile;
             Content.RootDirectory = "Content";
             graphics = new GraphicsDeviceManager(this);
 
-            bouncyCR = (x, y, mo) => {
-                if(mo != null && mo != testmap.Slave) {
-                    if(mo is Entity && !(mo is Player))
-                        return new Point(-x, -y);
-
-                    if(mo is Tile && ((Tile)mo).Solid)
-                        return new Point(0, 0);
-                }
-
-                return null;
-            };
-
-            // GameStateManagement-System (uncomment to unleash chaos)
-            // screenManager = new ScreenManager(this);
-            // screenManager.AddScreen(new BackgroundScreen(), null);
-            // screenManager.AddScreen(new MainMenuScreen(), null);
-            // Components.Add(screenManager);
+            screenManager = new ScreenManager(this);
+            screenManager.AddScreen(new BackgroundScreen("menu/texture/background"), null);
+            screenManager.AddScreen(new MainMenuScreen(), null);
+            Components.Add(screenManager);
         }
 
         protected override void LoadContent() {
+            Manager = GameManager.newInstance();
             Content.Load<object>("menu/texture/gradient");
-
-            testplayer_0 = new Player();
-            testplayer_0.SpriteSheet = "images/entities/kevin_sheet";
-            testplayer_0.SpriteRectangle = new Rectangle(0, 32, 16, 16);
-            testplayer_0.load(Content);
-
-            testplayer_1 = new Player();
-            testplayer_1.SpriteSheet = "images/entities/kevin_sheet";
-            testplayer_1.SpriteRectangle = new Rectangle(0, 32, 16, 16);
-            testplayer_1.load(Content);
-
-            testplayer_2 = new Player();
-            testplayer_2.SpriteSheet = "images/entities/kevin_sheet";
-            testplayer_2.SpriteRectangle = new Rectangle(0, 32, 16, 16);
-            testplayer_2.load(Content);
-
-            testplayer_3 = new Player();
-            testplayer_3.SpriteSheet = "images/entities/kevin_sheet";
-            testplayer_3.SpriteRectangle = new Rectangle(0, 32, 16, 16);
-            testplayer_3.load(Content);
-
-            testplayer_4 = new Player();
-            testplayer_4.SpriteSheet = "images/entities/kevin_sheet";
-            testplayer_4.SpriteRectangle = new Rectangle(0, 32, 16, 16);
-            testplayer_4.load(Content);
-
-            List<Player> memberList = new List<Player>();
-            memberList.Add(testplayer_1);
-            memberList.Add(testplayer_2);
-            memberList.Add(testplayer_3);
-            memberList.Add(testplayer_4);
-            testteam = new Team(testplayer_0, memberList);
-            testteam.FormationStrategy.RelativePositions[testplayer_1] = new Point(0, 1);
-            testteam.FormationStrategy.RelativePositions[testplayer_2] = new Point(0, 2);
-            testteam.FormationStrategy.RelativePositions[testplayer_3] = new Point(0, 3);
-            testteam.FormationStrategy.RelativePositions[testplayer_4] = new Point(0, 4);
-
-            testnpc_0 = new Entity();
-            testnpc_0.SpriteSheet = "images/entities/kevin_sheet";
-            testnpc_0.SpriteRectangle = new Rectangle(0, 16, 16, 16);
-            testnpc_0.load(Content);
-
-            testnpc_1 = new Entity();
-            testnpc_1.SpriteSheet = "images/entities/kevin_sheet";
-            testnpc_1.SpriteRectangle = new Rectangle(0, 0, 16, 16);
-            testnpc_1.load(Content);
-
-            testmap = Content.Load<TileMap>("testmap_50x50");
-            testmap.load(Content);
         }
 
         protected override void Initialize() {
             base.Initialize();
-
-            // graphics.PreferredBackBufferWidth = graphics.GraphicsDevice.DisplayMode.Width;
-            // graphics.PreferredBackBufferHeight = graphics.GraphicsDevice.DisplayMode.Height;
-            // graphics.IsFullScreen = true;
-
-            graphics.PreferredBackBufferWidth = 1280;
-            graphics.PreferredBackBufferHeight = 768;
-
-            graphics.ApplyChanges();
-            batch = new SpriteBatch(graphics.GraphicsDevice);
-
-            testplayer_0.StepTime = 200;
-            testplayer_1.StepTime = 200;
-            testplayer_2.StepTime = 200;
-            testplayer_3.StepTime = 200;
-            testplayer_4.StepTime = 200;
-
-            testplayer_0.Position = new Vector2(1, 3);
-            testplayer_1.Position = new Vector2(2, 1);
-            testplayer_2.Position = new Vector2(3, 1);
-            testplayer_3.Position = new Vector2(3, 1);
-            testplayer_4.Position = new Vector2(3, 1);
-
-            testnpc_0.Position = new Vector2(2, 2);
-            testnpc_1.Position = new Vector2(8, 8);
-            
-            testmap.init(this);
-            testmap.Slave = testplayer_0;
-            testmap.addEntity(testplayer_1);
-            testmap.addEntity(testplayer_2);
-            testmap.addEntity(testplayer_3);
-            testmap.addEntity(testplayer_4);
-            testmap.addEntity(testnpc_0);
-            testmap.addEntity(testnpc_1);
+            // graphics.PreferredBackBufferWidth = 1280;
+            // graphics.PreferredBackBufferHeight = 768;
         }
 
         // temporary (real update in ScreenManager)
-        long timer = 0;
-        int slave = 0;
         protected override void Update(GameTime gameTime) {
-            if(Keyboard.GetState().IsKeyDown(Keys.Escape)) Exit();
-            if(timer < 200) timer += gameTime.ElapsedGameTime.Milliseconds;
-            
-            if(timer > 200) {
-                if(Keyboard.GetState().IsKeyDown(Keys.Up)
-                || Keyboard.GetState().IsKeyDown(Keys.Right)
-                || Keyboard.GetState().IsKeyDown(Keys.Down)
-                || Keyboard.GetState().IsKeyDown(Keys.Left)
-                || Keyboard.GetState().IsKeyDown(Keys.Add)
-                || Keyboard.GetState().IsKeyDown(Keys.OemMinus)
-                || Keyboard.GetState().IsKeyDown(Keys.Space)
-                || Keyboard.GetState().IsKeyDown(Keys.D1)
-                || Keyboard.GetState().IsKeyDown(Keys.D2)
-                || Keyboard.GetState().IsKeyDown(Keys.D3)
-                || Keyboard.GetState().IsKeyDown(Keys.D4)) {
-                    timer = 0;
-                }
-
-                if(Keyboard.GetState().IsKeyDown(Keys.D1))
-                    setTeamFormation(0);
-                if(Keyboard.GetState().IsKeyDown(Keys.D2))
-                    setTeamFormation(1);
-                if(Keyboard.GetState().IsKeyDown(Keys.D3))
-                    setTeamFormation(2);
-                if(Keyboard.GetState().IsKeyDown(Keys.D4))
-                    setTeamFormation(3);
-
-                if(Keyboard.GetState().IsKeyDown(Keys.Space)) {
-                    Player leader = testteam.Members[(slave++)%testteam.Members.Count];
-                    // testteam.Leader = leader;
-                    testmap.Slave = leader;
-                }
-
-                if(Keyboard.GetState().IsKeyDown(Keys.Add)) {
-                    int vw = testmap.Viewport.X+1;
-                    int vh = testmap.Viewport.Y+1;
-                    testmap.Viewport = new Point(vw, vh);
-                }
-
-                if(Keyboard.GetState().IsKeyDown(Keys.OemMinus)) {
-                    int vw = testmap.Viewport.X > 1 ? testmap.Viewport.X-1 : 1;
-                    int vh = testmap.Viewport.Y > 1 ? testmap.Viewport.Y-1 : 1;
-                    testmap.Viewport = new Point(vw, vh);
-                }
-
-                if(testmap.Slave != null) {
-                    if(Keyboard.GetState().IsKeyDown(Keys.Up))
-                        testmap.Slave.move(0, -1, bouncyCR);
-
-                    if(Keyboard.GetState().IsKeyDown(Keys.Right))
-                        testmap.Slave.move(1, 0, bouncyCR);
-
-                    if(Keyboard.GetState().IsKeyDown(Keys.Down))
-                        testmap.Slave.move(0, 1, bouncyCR);
-
-                    if(Keyboard.GetState().IsKeyDown(Keys.Left))
-                        testmap.Slave.move(-1, 0, bouncyCR);
-                }
-            }
-
+            // if(Keyboard.GetState().IsKeyDown(Keys.Escape)) Exit();
             base.Update(gameTime);
-            testmap.update(gameTime);
-            testteam.update(gameTime);
         }
 
+        // The real drawing happens inside the screen manager component.
         protected override void Draw(GameTime gameTime) {
             GraphicsDevice.Clear(Color.Black);
-
-            // The real drawing happens inside the screen manager component.
             base.Draw(gameTime);
-            testmap.draw(batch);
         }
     }
 }

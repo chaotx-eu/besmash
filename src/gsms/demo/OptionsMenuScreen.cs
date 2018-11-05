@@ -9,7 +9,7 @@
 
 #endregion File Description
 
-namespace GameStateManagement
+namespace GameStateManagement.Demo
 {
     /// <summary>
     /// The options screen is brought up over the top of the main menu

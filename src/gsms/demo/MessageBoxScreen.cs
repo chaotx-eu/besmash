@@ -18,7 +18,7 @@ using System;
 
 #endregion Using Statements
 
-namespace GameStateManagement
+namespace GameStateManagement.Demo
 {
     /// <summary>
     /// A popup message box screen, used to display "are you sure?"

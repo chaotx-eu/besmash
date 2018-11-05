@@ -20,7 +20,7 @@ using System.Threading;
 
 #endregion Using Statements
 
-namespace GameStateManagement
+namespace GameStateManagement.Demo
 {
     /// <summary>
     /// This screen implements the actual game logic. It is just a

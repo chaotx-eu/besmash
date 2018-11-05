@@ -18,7 +18,7 @@ using System;
 
 #endregion Using Statements
 
-namespace GameStateManagement
+namespace GameStateManagement.Demo
 {
     /// <summary>
     /// The background screen sits behind all the other menu screens.
