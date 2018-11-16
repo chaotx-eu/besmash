@@ -66,7 +66,10 @@ namespace BesmashGame.Screens {
             if (covered) pauseAlpha = Math.Min(pauseAlpha + 1f / 32, 1);
             else pauseAlpha = Math.Max(pauseAlpha - 1f / 32, 0);
 
-            if(IsActive) ActiveMap.update(gameTime);
+            if(IsActive) {
+                ActiveMap.update(gameTime);
+                Manager.ActiveSave.Team.update(gameTime);
+            }
         }
 
         public override void HandleInput(InputState input) {

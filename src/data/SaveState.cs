@@ -77,7 +77,6 @@ namespace BesmashGame {
         public SaveState() {
             creationDate = DateTime.Now;
             Maps.Add(DEFAULT_MAP);
-            Team = new Team();
         }
 
         /// Loads Content required for the ActiveMap
@@ -92,41 +91,45 @@ namespace BesmashGame {
         /// Loads the default map of this game.
         public TileMap loadDefaultMap(ContentManager content) {
             TileMap map = content.Load<TileMap>(DEFAULT_MAP);
-            Player tick = new Player();
-            Player trick = new Player();
-            Player track = new Player();
-            Player[] member = {trick, track};
+            Player[] members = new Player[7];
+            Player leader = new Player();
 
-            Team.Leader = tick;
-            Team.addMember(trick);
-            Team.addMember(track);
-            tick.StepTime = 250;
+            for(int i = -1; i < members.Length; ++i) {
+                Player player = i < 0 ? leader : new Player();
+                player.SpriteSheet = "images/entities/kevin_sheet";
+                player.SpriteRectangle = new Rectangle(0, 32, 16, 16);
+                player.Position = new Vector2(2+i, 1);
+                player.StepTime = 250;
+                if(i >= 0) members[i] = player;
+            };
 
+            Team = new Team(leader, members);
+            Team.Formation[members[0]] = new Point(1, 1);
+            Team.Formation[members[1]] = new Point(-1, 1);
+            Team.Formation[members[2]] = new Point(0, 2);
+            Team.Formation[members[3]] = new Point(2, 2);
+            Team.Formation[members[4]] = new Point(-2, 2);
+            Team.Formation[members[5]] = new Point(1, -2);
+            Team.Formation[members[6]] = new Point(-1, -2);
+
+            // some example npcs
             Entity donald = new Entity();
             Entity dagobert = new Entity();
-
-            tick.Position = new Vector2(1, 1);
-            donald.Position = new Vector2(8, 8);
-            dagobert.Position = new Vector2(32, 7);
-
-            tick.SpriteSheet = "images/entities/kevin_sheet";
-            trick.SpriteSheet = "images/entities/kevin_sheet";
-            track.SpriteSheet = "images/entities/kevin_sheet";
-            tick.SpriteRectangle = new Rectangle(0, 32, 16, 16);
-            trick.SpriteRectangle = new Rectangle(0, 32, 16, 16);
-            track.SpriteRectangle = new Rectangle(0, 32, 16, 16);
-
             donald.SpriteSheet = "images/entities/kevin_sheet";
             dagobert.SpriteSheet = "images/entities/kevin_sheet";
             donald.SpriteRectangle = new Rectangle(0, 16, 16, 16);
             dagobert.SpriteRectangle = new Rectangle(0, 48, 16, 16);
+            donald.Position = new Vector2(8, 8);
+            dagobert.Position = new Vector2(32, 7);
 
-            map.addEntity(tick);
-            map.addEntity(trick);
-            map.addEntity(track);
+            foreach(Player member in members)
+                map.addEntity(member);
+
+            map.addEntity(leader);
             map.addEntity(donald);
             map.addEntity(dagobert);
             map.Slave = Team.Leader;
+            map.BackgroundMusicFile = "super_smash_bros_remix";
             return map;
         }
     }

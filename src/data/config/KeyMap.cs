@@ -30,7 +30,7 @@ namespace BesmashGame.Config {
             }
         }
 
-        /// Adds an action to this KeyMap which is riggered when
+        /// Adds an action to this KeyMap which is triggered when
         /// the passed key is pressed in the currently set context.
         public void addAction(Keys key, KeyCallback callback) {
             if(!keys.ContainsKey(Context))

@@ -100,6 +100,12 @@
 /processorParam:TextureFormat=Color
 /build:menu/texture/gradient.png
 
+#begin super_smash_bros_remix.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:super_smash_bros_remix.mp3
+
 #begin testmap_50x50.xml
 /importer:XmlImporter
 /processor:PassThroughProcessor
