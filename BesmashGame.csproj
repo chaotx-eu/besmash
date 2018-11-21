@@ -16,7 +16,10 @@
 
   <ItemGroup>
     <Reference Include="BesmashContent">
-      <HintPath>libs/BesmashContent</HintPath>
+      <HintPath>libs/BesmashContent.dll</HintPath>
+    </Reference>
+    <Reference Include="GSMXtended">
+      <HintPath>libs/GSMXtended.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

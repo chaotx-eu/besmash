@@ -4,13 +4,13 @@ namespace BesmashGame {
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
+    using Microsoft.Xna.Framework.Content;
 
     using GameStateManagement;
     using BesmashContent;
     using BesmashGame.Config;
     using System.Collections.Generic;
     using System.Linq;
-    using Screens;
 
     public class Besmash : Game {
         /// Manager of this game.
@@ -20,6 +20,7 @@ namespace BesmashGame {
         private GraphicsDeviceManager graphics;
         private ScreenManager screenManager;
         private SpriteBatch batch;
+        private MainMenuScreen mainMenu;
 
         public Besmash() : this("") {}
         public Besmash(string gameStateFile) {
@@ -27,21 +28,44 @@ namespace BesmashGame {
             Content.RootDirectory = "Content";
             graphics = new GraphicsDeviceManager(this);
 
+            mainMenu = new MainMenuScreen();
             screenManager = new ScreenManager(this);
-            screenManager.AddScreen(new BackgroundScreen("menu/texture/background"), null);
-            screenManager.AddScreen(new MainMenuScreen(), null);
+            // screenManager.AddScreen(new BackgroundScreen("menu/texture/background"), null);
+            // screenManager.AddScreen(mainMenu, null);
+            LoadingScreen.Load(screenManager, false, null, mainMenu);
             Components.Add(screenManager);
+        }
+
+        /// Sets all necessery properties to match
+        /// the current game configuration
+        public void initConfig() {
+            GameConfig config = Manager.Configuration;
+
+            // set resolution
+            graphics.PreferredBackBufferWidth = config.Resolution.X;
+            graphics.PreferredBackBufferHeight = config.Resolution.Y;
+            graphics.IsFullScreen = config.IsFullscreen;
+            graphics.ApplyChanges();
+
+            // set sfx volume
+            // TODO
+
+            // set music volume
+            // TODO
+
+            // set language
+            // TODO
         }
 
         protected override void LoadContent() {
             Manager = GameManager.newInstance();
-            Content.Load<object>("menu/texture/gradient");
+            Manager.Configuration.load(Content);
+            mainMenu.GameManager = Manager;
         }
 
         protected override void Initialize() {
             base.Initialize();
-            // graphics.PreferredBackBufferWidth = 1280;
-            // graphics.PreferredBackBufferHeight = 768;
+            initConfig();
         }
 
         // temporary (real update in ScreenManager)

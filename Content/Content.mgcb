@@ -14,6 +14,32 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin fonts/game_font1.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:fonts/game_font1.spritefont
+
+#begin fonts/menu_font1.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:fonts/menu_font1.spritefont
+
+#begin images/blank.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/blank.png
+
 #begin images/entities/kevin_sheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -50,21 +76,7 @@
 /processorParam:TextureFormat=Color
 /build:images/maps/demo1_sheet.png
 
-#begin menu/font/gamefont.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:menu/font/gamefont.spritefont
-
-#begin menu/font/menufont.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:menu/font/menufont.spritefont
-
-#begin menu/texture/background.png
+#begin images/menu/main_background.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -74,31 +86,17 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:menu/texture/background.png
+/build:images/menu/main_background.png
 
-#begin menu/texture/blank.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:menu/texture/blank.png
+#begin lang/de.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:lang/de.xml
 
-#begin menu/texture/gradient.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:menu/texture/gradient.png
+#begin lang/en.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:lang/en.xml
 
 #begin super_smash_bros_remix.mp3
 /importer:Mp3Importer

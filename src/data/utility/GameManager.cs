@@ -1,4 +1,7 @@
 namespace BesmashGame.Config {
+    using GameStateManagement;
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Input;
     using System.Collections.Generic;
     using System.Runtime.Serialization;
     using System.IO;
@@ -8,8 +11,8 @@ namespace BesmashGame.Config {
     /// Manages the current state of the game.
     /// E.g. holds save states maps and entities.
     /// This class is serializable.
-    [KnownType(typeof(BesmashContent.Player))]
     [DataContract]
+    [KnownType(typeof(BesmashContent.Player))]
     public class GameManager {
         public static string GAME_FOLDER {get;} = Environment.GetFolderPath(
             Environment.SpecialFolder.ApplicationData)
@@ -62,14 +65,16 @@ namespace BesmashGame.Config {
 
         private GameManager(string gsf) {
             Directory.CreateDirectory(GAME_FOLDER);
-            Configuration = new GameConfig();
+            // Configuration = new GameConfig();
+            Configuration = GameConfig.createDefault();
             GameStateFile = gsf;
         }
 
         /// Saves the game and all currently set
         /// configurations to the game state file
         public void save() {
-            ActiveSave.SavedDate = DateTime.Now;            
+            if(ActiveSave != null) // TODO => param bool saveGameState
+                ActiveSave.SavedDate = DateTime.Now;            
             DataContractSerializer serializer = new DataContractSerializer(typeof(GameManager));
             Stream stream = File.Open(GameStateFile, FileMode.Create);
 

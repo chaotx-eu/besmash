@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<XnaContent xmlns:ns='Microsoft.Xna.Framework'>
+	<Asset Type="Language">
+		<ID>en</ID>
+		<Title>English</Title>
+		
+		<Words>
+			<Word>
+				<Key>Settings</Key>
+				<Value>Settings</Value>
+			</Word>
+			<Word>
+				<Key>Play</Key>
+				<Value>Play</Value>
+			</Word>
+			<Word>
+				<Key>Quit</Key>
+				<Value>Quit</Value>
+			</Word>
+		</Words>
+	</Asset>
+</XnaContent>
