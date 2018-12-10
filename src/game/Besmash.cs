@@ -13,8 +13,12 @@ namespace BesmashGame {
     using System.Linq;
 
     public class Besmash : Game {
-        /// Manager of this game.
+        /// Manager of this game
         public GameManager Manager {get; set;}
+
+        /// Flag which indicates that the game
+        /// configuration has changed
+        public bool ConfigChanged {get; set;} = true;
 
         private string gameStateFile = "";
         private GraphicsDeviceManager graphics;
@@ -28,18 +32,20 @@ namespace BesmashGame {
             Content.RootDirectory = "Content";
             graphics = new GraphicsDeviceManager(this);
 
-            mainMenu = new MainMenuScreen();
+            mainMenu = new MainMenuScreen("images/blank", null);
             screenManager = new ScreenManager(this);
-            // screenManager.AddScreen(new BackgroundScreen("menu/texture/background"), null);
-            // screenManager.AddScreen(mainMenu, null);
-            LoadingScreen.Load(screenManager, false, null, mainMenu);
+            LoadingScreen.Load(screenManager, true, null,
+                new BackgroundScreen("images/menu/main_background"), mainMenu);
+
             Components.Add(screenManager);
         }
 
-        /// Sets all necessery properties to match
+        /// Loads required resources and sets
+        /// all necessery properties to match
         /// the current game configuration
-        public void initConfig() {
+        public void loadConfig() {
             GameConfig config = Manager.Configuration;
+            config.load(Content);
 
             // set resolution
             graphics.PreferredBackBufferWidth = config.Resolution.X;
@@ -52,26 +58,60 @@ namespace BesmashGame {
 
             // set music volume
             // TODO
-
-            // set language
-            // TODO
         }
 
+        /// Loads required resources for the
+        /// current active save state in the
+        /// game manager (i.e. active map)
+        public void loadSave() {
+            if(Manager != null && Manager.ActiveSave != null)
+                Manager.ActiveSave.load(Content, this);
+        }
+
+        /// Loads the game manager and the config
         protected override void LoadContent() {
             Manager = GameManager.newInstance();
-            Manager.Configuration.load(Content);
             mainMenu.GameManager = Manager;
+            // loadConfig(); // moved to update
+            // loadSave();
+        }
+
+        /// Checks wether an action key or button, defined in the
+        /// current game config of the game manager, is pressed
+        public bool isActionTriggered(string context, string action, int gamepadIndex) {
+            if(Manager.Configuration.KeyMaps.ContainsKey(context)
+            && Manager.Configuration.KeyMaps[context].ContainsKey(action)) {
+                foreach(Keys key in Manager.Configuration.KeyMaps[context][action].TriggerKeys)
+                    if(Keyboard.GetState().IsKeyDown(key))
+                        return true;
+
+                foreach(Buttons button in Manager.Configuration.KeyMaps[context][action].TriggerButtons)
+                    if(GamePad.GetState(gamepadIndex).IsButtonDown(button))
+                        return true;
+            }
+
+            return false;
+        }
+
+        /// Overload for convenience, always checks
+        /// input for the gamepad at index 0
+        public bool isActionTriggered(string context, string action) {
+            return isActionTriggered(context, action, 0);
         }
 
         protected override void Initialize() {
             base.Initialize();
-            initConfig();
         }
 
         // temporary (real update in ScreenManager)
         protected override void Update(GameTime gameTime) {
             // if(Keyboard.GetState().IsKeyDown(Keys.Escape)) Exit();
             base.Update(gameTime);
+
+            if(ConfigChanged) {
+                loadConfig();
+                ConfigChanged = false;
+            }
         }
 
         // The real drawing happens inside the screen manager component.

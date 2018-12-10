@@ -2,6 +2,7 @@
 <XnaContent xmlns:ns='Microsoft.Xna.Framework'>
 	<Asset Type='TileMap'>
 		<Title>Demo_0 TileSet</Title>
+		<Viewport>6 6</Viewport>
 		<Tiles>
 			<Tile>
 				<SpriteSheet>images/maps/demo0_sheet</SpriteSheet>

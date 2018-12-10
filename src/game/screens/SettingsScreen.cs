@@ -6,6 +6,9 @@ namespace BesmashGame {
     using Microsoft.Xna.Framework.Input;
     using System.Collections.Generic;
 
+    // some testing
+    using System.Threading;
+
     public class SettingsScreen : BesmashScreen {
         public static string DEFAULT_BACKGROUND = "images/menu/main_background";
         public static string PRIMARY_FONT = "fonts/menu_font1";
@@ -16,6 +19,8 @@ namespace BesmashGame {
         
         public SettingsScreen(BesmashScreen parent)
         : base(parent) {
+            IsPopup = true; // TODO test
+
             VList vlItems = new VList(
                 new TextItem("Video", PRIMARY_FONT),
                 new TextItem("Audio", PRIMARY_FONT),
@@ -39,37 +44,21 @@ namespace BesmashGame {
             spSettings.PercentHeight = 100;
             spSettings.HAlignment = HAlignment.Left;
 
-            vlItems.KeyPressedEvent += (sender, args) => {
-                List<Keys> keys = GameManager.Configuration.KeyMaps["menu"]["menu_right"].TriggerKeys;
-                List<Buttons> buttons = GameManager.Configuration.KeyMaps["menu"]["menu_right"].TriggerButtons;
-                foreach(Keys key in keys) {
-                    if(args.KeyboardState.Value.IsKeyDown(key)) {
-                        showPane(vlItems.SelectedIndex, vsPane, asPane, csPane, gsPane);
-                        vlItems.IsFocused = vlItems.SelectedIndex == 4;
-                        return;
-                    }
-                }
-
-                foreach(Buttons button in buttons) {
-                    if(args.GamePadState.Value.IsButtonDown(button)) {
-                        showPane(vlItems.SelectedIndex, vsPane, asPane, csPane, gsPane);
-                        vlItems.IsFocused = vlItems.SelectedIndex == 4;
-                        return;
-                    }
-                }
-            };
-
             vlItems.ActionEvent += (sender, args) => {
                 showPane(vlItems.SelectedIndex, vsPane, asPane, csPane, gsPane);
                 vlItems.IsFocused = args.SelectedIndex == 4;
 
-                if(args.SelectedIndex == 4) {
+                if(args.SelectedIndex == 4) { // Back
                     if(!Config.Equals(GameManager.Configuration)) {
                         ConfirmDialog dialog = new ConfirmDialog(this, (answer) =>  {
                             if(answer == 0) {
                                 GameManager.Configuration = Config;
-                                GameManager.save();
-                                ((Besmash)ScreenManager.Game).initConfig();
+                                Thread thread = new Thread(() => {
+                                    GameManager.save();
+                                    ((Besmash)ScreenManager.Game).ConfigChanged = true;
+                                });
+
+                                thread.Start();
                             }
 
                             if(answer != 2) {
@@ -131,6 +120,11 @@ namespace BesmashGame {
                 if(args.SelectedIndex == 2) csPane.hide(false);
                 if(args.SelectedIndex == 3) gsPane.hide(false);
                 if(args.SelectedIndex == 4) msPane.hide(false);
+            };
+
+            vlItems.CancelEvent += (sender, args) => {
+                Alpha = 0;
+                ExitScreen();
             };
 
             vlItems.Color = Color.DarkSlateBlue;

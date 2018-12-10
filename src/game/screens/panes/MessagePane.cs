@@ -11,6 +11,10 @@ namespace BesmashGame {
                 .Configuration.Language
                 .translate(message),
                 "fonts/menu_font1"));
+
+            // TODO (test)
+            PixelPerSecond = -1;
+            Children[0].PixelPerSecond = -1;            
         }
     }
 }

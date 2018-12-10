@@ -91,7 +91,7 @@ namespace BesmashGame {
         /// Loads the default map of this game.
         public TileMap loadDefaultMap(ContentManager content) {
             TileMap map = content.Load<TileMap>(DEFAULT_MAP);
-            Player[] members = new Player[7];
+            Player[] members = new Player[3];
             Player leader = new Player();
 
             for(int i = -1; i < members.Length; ++i) {
@@ -106,11 +106,11 @@ namespace BesmashGame {
             Team = new Team(leader, members);
             Team.Formation[members[0]] = new Point(1, 1);
             Team.Formation[members[1]] = new Point(-1, 1);
-            Team.Formation[members[2]] = new Point(0, 2);
-            Team.Formation[members[3]] = new Point(2, 2);
-            Team.Formation[members[4]] = new Point(-2, 2);
-            Team.Formation[members[5]] = new Point(1, -2);
-            Team.Formation[members[6]] = new Point(-1, -2);
+            Team.Formation[members[2]] = new Point(0, 1);
+            // Team.Formation[members[3]] = new Point(2, 2);
+            // Team.Formation[members[4]] = new Point(-2, 2);
+            // Team.Formation[members[5]] = new Point(1, -2);
+            // Team.Formation[members[6]] = new Point(-1, -2);
 
             // some example npcs
             Entity donald = new Entity();

@@ -21,6 +21,11 @@
 				<Key>Language</Key>
 				<Value>Sprache</Value>
 			</Word>
+
+			<Word>
+				<Key>Hello World</Key>
+				<Value>Hallo Welt</Value>
+			</Word>
 		</Words>
 	</Asset>
 </XnaContent>

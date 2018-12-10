@@ -4,6 +4,8 @@ namespace BesmashGame {
     using GameStateManagement;
     using Microsoft.Xna.Framework;
 
+    using System;
+
     public class MainMenuScreen : BesmashScreen {
         public static string DEFAULT_BACKGROUND = "images/menu/main_background";
         public static string PRIMARY_FONT = "fonts/menu_font1";
@@ -11,7 +13,7 @@ namespace BesmashGame {
 
         public MainMenuScreen() : this(null) {}
         public MainMenuScreen(GameManager gameManager) : this(DEFAULT_BACKGROUND, gameManager) {}
-        public MainMenuScreen(string backgroundImage, GameManager gameManager) {
+        public MainMenuScreen(string backgroundImage, GameManager gameManager) : base(null, gameManager) {
             TextItem itemSettings = new TextItem("Settings", PRIMARY_FONT);
             TextItem itemPlay = new TextItem("Play", PRIMARY_FONT);
             TextItem itemQuit = new TextItem("Quit", PRIMARY_FONT);
@@ -30,10 +32,9 @@ namespace BesmashGame {
                     ScreenManager.AddScreen(
                         new SettingsScreen(this), null);
 
-                // TODO
-                // if(args.SelectedItem == itemPlay)
-                //     ScreenManager.AddScreen(
-                //         new SaveMenuScreen(), null);
+                if(args.SelectedItem == itemPlay)
+                    ScreenManager.AddScreen(
+                        new SaveMenuScreen(this), null);
 
                 if(args.SelectedItem == itemQuit)
                     ScreenManager.Game.Exit();
@@ -41,10 +42,6 @@ namespace BesmashGame {
 
             MainContainer.TextureFile = backgroundImage;
             MainContainer.add(vlItems);
-        }
-
-        public override void LoadContent() {
-            base.LoadContent(); // for debug breakpoint
         }
     }
 }

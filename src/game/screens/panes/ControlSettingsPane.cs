@@ -139,7 +139,7 @@ namespace BesmashGame {
             base.hide(takeFocus, alpha);
             for(int i = 0; i < hPanes.Count; ++i) {
                 if(i != hlCategories.SelectedIndex)
-                    XtendedScreen.applyAlpha(hPanes[i], 0);
+                    Container.applyAlpha(hPanes[i], 0);
             }
         }
 
@@ -148,7 +148,7 @@ namespace BesmashGame {
             base.show(giveFocus, alpha);
             for(int i = 0; i < hPanes.Count; ++i) {
                 if(i != hlCategories.SelectedIndex)
-                    XtendedScreen.applyAlpha(hPanes[i], 0);
+                    Container.applyAlpha(hPanes[i], 0);
             }
         }
 

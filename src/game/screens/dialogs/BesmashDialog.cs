@@ -7,6 +7,7 @@ namespace BesmashGame {
         public BesmashDialog(BesmashScreen parent, GameManager gameManager)
         : base(parent, gameManager) {
             IsPopup = true;
+            HideParent = false;
         }
     }
 }

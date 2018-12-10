@@ -12,7 +12,7 @@ namespace BesmashGame {
         public void hide(bool takeFocus) {hide(takeFocus, 0);}
         public void hide(float alpha) {hide(true, alpha);}
         public virtual void hide(bool takeFocus, float alpha) {
-            XtendedScreen.applyAlpha(this, alpha);
+            Container.applyAlpha(this, alpha);
             if(takeFocus) onFocusLoss(null);
         }
 
@@ -22,7 +22,7 @@ namespace BesmashGame {
         public void show(bool giveFocus) {show(giveFocus, 1);}
         public void show(float alpha) {show(true, alpha);}
         public virtual void show(bool giveFocus, float alpha) {
-            XtendedScreen.applyAlpha(this, alpha);
+            Container.applyAlpha(this, alpha);
             if(giveFocus) onFocusRequest(null);
         }
 

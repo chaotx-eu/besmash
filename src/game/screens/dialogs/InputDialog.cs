@@ -23,7 +23,7 @@ namespace BesmashGame {
         : this(parent, input, "Press a new Key or Button") {}
 
         public InputDialog(BesmashScreen parent, UserInput input,
-        string message) : this(parent, input, message, 5) {}
+        string message) : this(parent, input, message, 4) {}
 
         public InputDialog(BesmashScreen parent, UserInput input,
         string message, int time) : this(parent, input, message, time, a => {}) {}

@@ -8,14 +8,14 @@ namespace BesmashGame.Config {
     using BesmashContent;
     
     public class GameConfig {
-        /// Commonly used resolutions
+        /// Supported resolutions
         public static Point[] CommonResolutions = {
             new Point(1280, 720),
             new Point(1920, 1028),
             new Point(2560, 1440)
         };
 
-        /// Languages supported by the game
+        /// Supported languages
         public static Language[] SupportedLanguages = {
             new Language("en", "English", "lang/en"),
             new Language("de", "Deutsch", "lang/de")

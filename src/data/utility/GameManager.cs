@@ -73,8 +73,12 @@ namespace BesmashGame.Config {
         /// Saves the game and all currently set
         /// configurations to the game state file
         public void save() {
-            if(ActiveSave != null) // TODO => param bool saveGameState
-                ActiveSave.SavedDate = DateTime.Now;            
+            if(ActiveSave != null) { // TODO => param bool saveGameState
+                ActiveSave.SavedDate = DateTime.Now;
+                if(!SaveStates.Contains(ActiveSave))
+                    SaveStates.Add(ActiveSave);
+            }
+
             DataContractSerializer serializer = new DataContractSerializer(typeof(GameManager));
             Stream stream = File.Open(GameStateFile, FileMode.Create);
 
