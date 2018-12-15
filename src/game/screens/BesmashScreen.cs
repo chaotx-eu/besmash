@@ -96,12 +96,23 @@ namespace BesmashGame {
 
             // updates parent screen while its fading off
             // (or if UpdateParent is true)
-            // TODO: temporary solution until I figured out
-            // a good wa to determine wether a screen is
-            // currently fading off (i. e. if(ParentScreen.IsFading))
-            if(!IsExiting/* && (UpdateParent || ParentScreen.IsFading) */)
-                if(ParentScreen != null)
-                    ParentScreen.Update(gameTime, false, true);
+            if(ParentScreen != null && !IsExiting
+            && (UpdateParent || ParentScreen.IsFadingOff))
+                ParentScreen.Update(gameTime, false, true);
+
+            // update IsFadingOff property
+            if(isFadingOff) {
+                if(fadeOffTime > TransitionOffTime.Milliseconds*2)
+                    isFadingOff = false;
+                else
+                    fadeOffTime += gameTime.ElapsedGameTime.Milliseconds;
+            }
+        }
+
+        private int fadeOffTime;
+        private bool isFadingOff;
+        public bool IsFadingOff {
+            get {return isFadingOff;}
         }
 
         /// Hides this screen and all its components
@@ -110,6 +121,10 @@ namespace BesmashGame {
             isHidden = true;
             defaultAlpha = Alpha;
             Alpha = 0;
+
+            isFadingOff = true;
+            fadeOffTime = 0;
+            resetInputTimer(MainContainer);
         }
 
         /// Shows a previously hidden screen
@@ -121,8 +136,7 @@ namespace BesmashGame {
 
         private void resetInputTimer(ScreenComponent c) {
             if(c is MenuList)
-                ((MenuList)c).InputTimer = -256;    // (TODO property) time input will be ignored initialy
-                                                    // (plus the MenuLists MillisPerInput value)
+                ((MenuList)c).InputTimer = -((MenuList)c).MillisPerInput*2;
 
             if(c is Container)
                 ((Container)c).Children.ToList()

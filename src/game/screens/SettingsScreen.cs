@@ -47,6 +47,7 @@ namespace BesmashGame {
             vlItems.ActionEvent += (sender, args) => {
                 showPane(vlItems.SelectedIndex, vsPane, asPane, csPane, gsPane);
                 vlItems.IsFocused = args.SelectedIndex == 4;
+                // vlItems.InputTimer = -vlItems.MillisPerInput*10;
 
                 if(args.SelectedIndex == 4) { // Back
                     if(!Config.Equals(GameManager.Configuration)) {

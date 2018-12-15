@@ -2,6 +2,7 @@ namespace BesmashGame {
     using GSMXtended;
     using GameStateManagement;
     using Microsoft.Xna.Framework;
+    using System.Linq;
 
     public class GameMenuScreen : BesmashScreen {
         public GameMenuScreen(GameplayScreen parent) : base(parent) {
@@ -24,13 +25,8 @@ namespace BesmashGame {
                 }
 
                 if(args.SelectedItem == entryQuit) {
-                    Alpha = 0;
                     ExitScreen();
                     parent.quit(true);
-                    // ScreenManager.AddScreen(new MainMenuScreen(), null);
-                    LoadingScreen.Load(ScreenManager, true, null,
-                        new BackgroundScreen("images/menu/main_background"),
-                        new MainMenuScreen("images/blank", GameManager));
                 }
             };
 
@@ -43,6 +39,14 @@ namespace BesmashGame {
             MainContainer.Alpha = 0.5f;
             MainContainer.Color = Color.Black;
             MainContainer.add(menuEntries);
+        }
+
+        public override void Update(GameTime gameTime,
+        bool otherScreenHasFocus, bool coveredByOtherScreen) {
+            base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
+
+            if(!ScreenManager.GetScreens().Contains(this))
+                ScreenManager.AddScreen(new MainMenuScreen("images/blank", GameManager), null);
         }
     }
 }

@@ -26,9 +26,9 @@ namespace BesmashGame {
             };
 
             VPane vpMain = new VPane(vpMessage, hlAnswers);
-            vpMain.PercentWidth = 80;   // TODO
-            vpMain.PercentHeight = 100; // TODO
-            vpMain.HAlignment = HAlignment.Right;
+            vpMain.Color = Color.Black;
+            vpMain.PercentWidth = 100;
+            vpMain.Alpha = 0.7f;
 
             hlAnswers.select(0);
             hlAnswers.IsFocused = true;

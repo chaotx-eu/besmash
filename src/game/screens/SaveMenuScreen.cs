@@ -139,11 +139,12 @@ namespace BesmashGame {
                 GameManager.ActiveSave = (args.SelectedItem is TextItem) ? new SaveState()
                     : GameManager.SaveStates[args.SelectedIndex - (vlSaves.Children.Contains(tiNewGame) ? 1 : 0)];
 
-                Alpha = 0;
                 ExitScreen();
+                ParentScreen.ExitScreen();
                 ((Besmash)ScreenManager.Game).loadSave();
-                LoadingScreen.Load(ScreenManager, true, null,
-                    new GameplayScreen(ParentScreen));
+                ScreenManager.AddScreen(new GameplayScreen(ParentScreen), null);
+                // LoadingScreen.Load(ScreenManager, false, null,
+                //     new GameplayScreen(this));
             };
 
             vlSaves.CancelEvent += (sender, args) => {

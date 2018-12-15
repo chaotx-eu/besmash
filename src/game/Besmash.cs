@@ -34,7 +34,7 @@ namespace BesmashGame {
 
             mainMenu = new MainMenuScreen("images/blank", null);
             screenManager = new ScreenManager(this);
-            LoadingScreen.Load(screenManager, true, null,
+            LoadingScreen.Load(screenManager, false, null,
                 new BackgroundScreen("images/menu/main_background"), mainMenu);
 
             Components.Add(screenManager);

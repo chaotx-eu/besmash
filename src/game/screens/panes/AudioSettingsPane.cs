@@ -11,8 +11,8 @@ namespace BesmashGame {
             hlSFX = new HList(new TextItem("Off", "fonts/menu_font1"));
 
             for(int i = 10; i <= 100; i += 10) {
-                hlMusic.add(new TextItem(i.ToString(), "fonts/menu_font1"));
-                hlSFX.add(new TextItem(i.ToString(), "fonts/menu_font1"));
+                hlMusic.add(new TextItem(" " + i.ToString() + " ", "fonts/menu_font1"));
+                hlSFX.add(new TextItem(" " + i.ToString() + " ", "fonts/menu_font1"));
             }
 
             VList vlNames = new VList(
@@ -32,6 +32,7 @@ namespace BesmashGame {
             vlNames.CancelEvent += (sender, args) => {
                 hlMusic.IsFocused = false;
                 hlSFX.IsFocused = false;
+                vlNames.select(0);
                 hide(0.5f);
             };
 

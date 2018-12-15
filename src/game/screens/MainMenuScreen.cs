@@ -20,7 +20,7 @@ namespace BesmashGame {
             VList vlItems = new VList(itemSettings, itemPlay, itemQuit);
 
             // debug
-            vlItems.Color = Color.Gray;
+            // vlItems.Color = Color.Gray;
 
             vlItems.IsFocused = true;
             vlItems.IsStatic = false;

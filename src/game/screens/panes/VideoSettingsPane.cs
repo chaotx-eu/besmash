@@ -32,6 +32,7 @@ namespace BesmashGame {
             vlNames.CancelEvent += (sender, args) => {
                 hlResolutions.IsFocused = false;
                 hlFullscreen.IsFocused = false;
+                vlNames.select(0);
                 hide(0.5f);
             };
 

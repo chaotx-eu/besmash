@@ -3,6 +3,7 @@ namespace BesmashGame {
     using BesmashContent;
     using GSMXtended;
     using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
     using GameStateManagement;
     using System.Linq;
@@ -35,12 +36,14 @@ namespace BesmashGame {
             Game = (Besmash)ScreenManager.Game;
             Map = GameManager.ActiveSave.ActiveMap;
             Team = GameManager.ActiveSave.Team;
+            TileMap.MapAlpha = 0;
         }
 
         public override void Update(GameTime gameTime,
         bool otherScreenHasFocus, bool coveredByOtherScreen) {
             base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
             GameManager.ActiveSave.ActiveMap.update(gameTime);
+            TileMap.MapAlpha = MainContainer.Alpha;
         }
 
         public override void Draw(GameTime gameTime) {
@@ -67,12 +70,8 @@ namespace BesmashGame {
             if(Game.isActionTriggered("game", "move_right")) Map.Slave.move(1, 0, cr);
             if(Game.isActionTriggered("game", "move_down")) Map.Slave.move(0, 1, cr);
             if(Game.isActionTriggered("game", "move_left")) Map.Slave.move(-1, 0, cr);
-            if(Game.isActionTriggered("game", "menu")) {
-                // quit(true);
-                // return;
-                // ScreenManager.AddScreen(new SettingsScreen(this), null);
+            if(Game.isActionTriggered("game", "menu"))
                 ScreenManager.AddScreen(new GameMenuScreen(this), null);
-            }
 
             // interaction
             // Config.KeyMaps["game"]["interact"]
@@ -86,13 +85,8 @@ namespace BesmashGame {
         // closes the screen and may save the game
         public void quit(bool save) {
             if(save) GameManager.save();
-            // TODO
-            // LoadingScreen.Load(ScreenManager, true, null,
-            //     new BackgroundScreen("images/blank"),
-            //     new MainMenuScreen(GameManager));
-            // ScreenManager.AddScreen(new MainMenuScreen(GameManager), null);
-            Alpha = 0;
             ExitScreen();
+            Alpha = 0;
         }
     }
 }

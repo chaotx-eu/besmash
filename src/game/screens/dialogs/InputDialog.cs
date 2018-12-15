@@ -40,12 +40,12 @@ namespace BesmashGame {
 
             // TODO make this somehow accessible from outside
             VPane vpMain = new VPane(tiMessage, tiTime);
-            vpMain.PercentWidth = 100; // TODO default should be 100
-            vpMain.PercentHeight = 100;
-            vpMain.HAlignment = HAlignment.Right; // TODO default should be centered
+            vpMain.Color = Color.Black;
+            vpMain.PercentWidth = 100;
+            vpMain.Alpha = 0.7f;
 
             MainContainer.Color = Color.Black;
-            MainContainer.Alpha = 0.7f;
+            MainContainer.Alpha = 0.5f;
             MainContainer.add(vpMain);
         }
 
