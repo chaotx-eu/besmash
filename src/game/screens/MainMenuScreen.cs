@@ -19,6 +19,10 @@ namespace BesmashGame {
             TextItem itemQuit = new TextItem("Quit", PRIMARY_FONT);
             VList vlItems = new VList(itemSettings, itemPlay, itemQuit);
 
+            itemSettings.DefaultScale = 1.5f;
+            itemPlay.DefaultScale = 1.5f;
+            itemQuit.DefaultScale = 1.5f;
+
             // debug
             // vlItems.Color = Color.Gray;
 

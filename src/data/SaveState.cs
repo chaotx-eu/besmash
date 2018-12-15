@@ -92,12 +92,12 @@ namespace BesmashGame {
         public TileMap loadDefaultMap(ContentManager content) {
             TileMap map = content.Load<TileMap>(DEFAULT_MAP);
             Player[] members = new Player[3];
-            Player leader = new Player();
+            Player leader = new Player("images/entities/kevin_sheet");
 
             for(int i = -1; i < members.Length; ++i) {
-                Player player = i < 0 ? leader : new Player();
-                player.SpriteSheet = "images/entities/kevin_sheet";
-                player.SpriteRectangle = new Rectangle(0, 32, 16, 16);
+                Player player = i < 0 ? leader : new Player("images/entities/kevin_sheet");
+                // player.SpriteSheet = "images/entities/kevin_sheet";
+                // player.SpriteRectangle = new Rectangle(0, 32, 16, 16);
                 player.Position = new Vector2(2+i, 1);
                 player.StepTime = 250;
                 if(i >= 0) members[i] = player;
@@ -113,12 +113,14 @@ namespace BesmashGame {
             // Team.Formation[members[6]] = new Point(-1, -2);
 
             // some example npcs
-            Entity donald = new Entity();
-            Entity dagobert = new Entity();
+            Entity donald = new NeutralNPC();
+            Entity dagobert = new NeutralNPC();
             donald.SpriteSheet = "images/entities/kevin_sheet";
             dagobert.SpriteSheet = "images/entities/kevin_sheet";
             donald.SpriteRectangle = new Rectangle(0, 16, 16, 16);
             dagobert.SpriteRectangle = new Rectangle(0, 48, 16, 16);
+
+            // position auf der map
             donald.Position = new Vector2(8, 8);
             dagobert.Position = new Vector2(32, 7);
 
