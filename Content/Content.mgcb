@@ -83,6 +83,18 @@
 /processorParam:TextureFormat=Color
 /build:images/maps/demo1_sheet.png
 
+#begin images/maps/dungeon_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/maps/dungeon_sheet.png
+
 #begin images/menu/main_background.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -105,13 +117,14 @@
 /processor:PassThroughProcessor
 /build:lang/en.xml
 
+#begin maps/dungeon1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:maps/dungeon1.xml
+
 #begin super_smash_bros_remix.mp3
 /importer:Mp3Importer
 /processor:SongProcessor
 /processorParam:Quality=Best
 /build:super_smash_bros_remix.mp3
 
-#begin testmap_50x50.xml
-/importer:XmlImporter
-/processor:PassThroughProcessor
-/build:testmap_50x50.xml
