@@ -192,9 +192,3 @@
 /processor:PassThroughProcessor
 /build:maps/forestMap.xml
 
-#begin super_smash_bros_remix.mp3
-/importer:Mp3Importer
-/processor:SongProcessor
-/processorParam:Quality=Best
-/build:super_smash_bros_remix.mp3
-
