@@ -47,6 +47,18 @@
 /processorParam:TextureFormat=Color
 /build:images/blank.png
 
+#begin images/entities/grey_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/entities/grey_sheet.png
+
 #begin images/entities/kevin_sheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -58,6 +70,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:images/entities/kevin_sheet.png
+
+#begin images/entities/pink_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/entities/pink_sheet.png
+
+#begin images/entities/red_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/entities/red_sheet.png
+
+#begin images/entities/white_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/entities/white_sheet.png
 
 #begin images/maps/demo0_sheet.png
 /importer:TextureImporter
@@ -83,6 +131,30 @@
 /processorParam:TextureFormat=Color
 /build:images/maps/demo1_sheet.png
 
+#begin images/maps/dungeon_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/maps/dungeon_sheet.png
+
+#begin images/maps/sheet_darkforest.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/maps/sheet_darkforest.png
+
 #begin images/menu/main_background.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -105,13 +177,24 @@
 /processor:PassThroughProcessor
 /build:lang/en.xml
 
+#begin maps/dungeon1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:maps/dungeon1.xml
+
+#begin maps/dungeon2.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:maps/dungeon2.xml
+
+#begin maps/forestMap.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:maps/forestMap.xml
+
 #begin super_smash_bros_remix.mp3
 /importer:Mp3Importer
 /processor:SongProcessor
 /processorParam:Quality=Best
 /build:super_smash_bros_remix.mp3
 
-#begin testmap_50x50.xml
-/importer:XmlImporter
-/processor:PassThroughProcessor
-/build:testmap_50x50.xml

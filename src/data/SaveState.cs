@@ -12,7 +12,7 @@ namespace BesmashGame {
     [DataContract(IsReference = true)]
     public class SaveState {
         /// Map to be loaded if no map has been specified yet.
-        public static string DEFAULT_MAP {get;} = "testmap_50x50";
+        public static string DEFAULT_MAP {get;} = "maps/dungeon1";
 
         /// List of maps ordered by the last time they
         /// were visited with the active map being at index 0.
@@ -102,7 +102,7 @@ namespace BesmashGame {
 
             for(int i = -1; i < members.Length; ++i) {
                 Player player = i < 0 ? leader : new Player("images/entities/kevin_sheet");
-                player.Position = new Vector2(2+i, 1);
+                player.Position = new Vector2(46+i, 93);
                 player.StepTime = 250;
                 if(i >= 0) members[i] = player;
             };
