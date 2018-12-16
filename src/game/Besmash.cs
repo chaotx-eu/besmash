@@ -65,7 +65,7 @@ namespace BesmashGame {
         /// game manager (i.e. active map)
         public void loadSave() {
             if(Manager != null && Manager.ActiveSave != null)
-                Manager.ActiveSave.load(Content, this);
+                Manager.ActiveSave.load(this);
         }
 
         /// Loads the game manager and the config

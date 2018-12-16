@@ -62,6 +62,9 @@ namespace BesmashGame {
         [DataMember]
         public TileMap ActiveMap {get; set;}
 
+        /// Conent manager of this save state
+        public ContentManager Content {get; private set;}
+
         /// General info of this save state.
         public string Info { get {
             return "Save: " + CreationDate.ToString();
@@ -80,11 +83,14 @@ namespace BesmashGame {
         }
 
         /// Loads Content required for the ActiveMap
-        public void load(ContentManager content, Game game) {
-            if(ActiveMap == null)
-                ActiveMap = loadDefaultMap(content);
+        public void load(Game game) {
+            if(Content == null)
+                Content = new ContentManager(game.Services, "Content");
 
-            ActiveMap.load(content);
+            if(ActiveMap == null)
+                ActiveMap = loadDefaultMap(Content);
+
+            ActiveMap.load(Content);
             ActiveMap.init(game);
         }
 
@@ -96,8 +102,6 @@ namespace BesmashGame {
 
             for(int i = -1; i < members.Length; ++i) {
                 Player player = i < 0 ? leader : new Player("images/entities/kevin_sheet");
-                // player.SpriteSheet = "images/entities/kevin_sheet";
-                // player.SpriteRectangle = new Rectangle(0, 32, 16, 16);
                 player.Position = new Vector2(2+i, 1);
                 player.StepTime = 250;
                 if(i >= 0) members[i] = player;

@@ -3,13 +3,14 @@ namespace BesmashGame {
     using GSMXtended;
     using BesmashContent;
     using GameStateManagement;
+    using System;
     using System.Linq;
     using System.Collections.Generic;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Input;
 
     public class SaveMenuScreen : BesmashScreen {
-        private static int MAX_SAVES {get;} = 3;
+        private static int MAX_SAVES {get;} = 5;
 
         private TextItem tiNewGame;
         private InputInfoPane inputInfoPane;
@@ -64,6 +65,7 @@ namespace BesmashGame {
                 vlSaves.add(tiNewGame);
 
             int i = 0;
+            GameManager.SaveStates.Sort((s1, s2) => -DateTime.Compare(s1.SavedDate, s2.SavedDate));
             GameManager.SaveStates.ForEach(saveState => {
                 TextItem saveInfo = new TextItem("", "fonts/menu_font1");
                 TextItem saveDetail = new TextItem("", "fonts/menu_font2");
@@ -81,7 +83,7 @@ namespace BesmashGame {
                 saveThumbnail.DefaultScale = 4;
                 saveThumbnail.MillisPerScale = 128;
 
-                saveInfo.Text = "  " + i + ": " + saveState.SavedDate;
+                saveInfo.Text = "" + saveState.SavedDate;
                 saveDetail.Text = "Created at: "
                     + saveState.CreationDate + ", Total Playtime: "
                     + saveState.Playtime;
