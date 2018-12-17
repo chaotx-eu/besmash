@@ -9,18 +9,6 @@ namespace BesmashGame {
     using System.Linq;
 
     public class GameplayScreen : BesmashScreen {
-        // reference to the GameConfig object
-        private GameConfig Config {get; set;}
-
-        // reference to the Game object
-        private Besmash Game {get; set;}
-
-        // reference to the active loaded map
-        private TileMap Map {get; set;}
-
-        // reference to the active team
-        private Team Team {get; set;}
-
         public GameplayScreen(BesmashScreen parent)
         : base(parent) {
             MainContainer.PercentWidth = 100;
@@ -32,10 +20,6 @@ namespace BesmashGame {
             base.LoadContent();
             // should be loaded alread at this point
             // GameManager.ActiveSave.ActiveMap.load(Content);
-            Config = GameManager.Configuration;
-            Game = (Besmash)ScreenManager.Game;
-            Map = GameManager.ActiveSave.ActiveMap;
-            Team = GameManager.ActiveSave.Team;
             TileMap.MapAlpha = 0;
         }
 
@@ -55,22 +39,26 @@ namespace BesmashGame {
         /// with objects or opening menus (moving through menus
         /// is handled internally by the GSMXtended lib) (TODO)
         public override void HandleInput(InputState inputState) {
+            GameConfig config = GameManager.Configuration;
+            Besmash game = (Besmash)ScreenManager.Game;
+            TileMap map = GameManager.ActiveSave.ActiveMap;
+            Team team = GameManager.ActiveSave.Team;
             PlayerIndex player;
 
             // test
             CollisionResolver cr = (x, y, mo) => {
                 if(mo is Tile && ((Tile)mo).Solid
-                || mo is Entity && !Team.Members.Contains(mo))
+                || mo is Entity && !team.Members.Contains(mo))
                     return Point.Zero;
 
                 return null;
             };
 
-            if(Game.isActionTriggered("game", "move_up")) Map.Slave.move(0, -1, cr);
-            if(Game.isActionTriggered("game", "move_right")) Map.Slave.move(1, 0, cr);
-            if(Game.isActionTriggered("game", "move_down")) Map.Slave.move(0, 1, cr);
-            if(Game.isActionTriggered("game", "move_left")) Map.Slave.move(-1, 0, cr);
-            if(Game.isActionTriggered("game", "menu"))
+            if(game.isActionTriggered("game", "move_up")) map.Slave.move(0, -1, cr);
+            if(game.isActionTriggered("game", "move_right")) map.Slave.move(1, 0, cr);
+            if(game.isActionTriggered("game", "move_down")) map.Slave.move(0, 1, cr);
+            if(game.isActionTriggered("game", "move_left")) map.Slave.move(-1, 0, cr);
+            if(game.isActionTriggered("game", "menu"))
                 ScreenManager.AddScreen(new GameMenuScreen(this), null);
 
             // interaction

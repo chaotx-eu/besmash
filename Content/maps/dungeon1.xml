@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <XnaContent xmlns:ns='Microsoft.Xna.Framework'>
-	<Asset Type='TileMap'>
+	<Asset Type='Dungeon1Map'>
 		<Title>Dungeon Tile Set</Title>
+		<Viewport>8 8</Viewport>
 		<Tiles>
 			<Tile>
 				<SpriteSheet>images\maps\dungeon_sheet</SpriteSheet>
