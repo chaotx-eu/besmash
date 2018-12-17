@@ -6,6 +6,7 @@ namespace BesmashGame {
     using System.Runtime.Serialization;
     using GameStateManagement;
     using System;
+    using System.Xml.Serialization;
     
     /// Holds the data of a single playthrough for
     /// one player.
@@ -89,7 +90,7 @@ namespace BesmashGame {
 
             if(ActiveMap == null)
                 ActiveMap = loadBattleTestMap(Content);
-
+            BattleManager.newInstance().map = ActiveMap;
             ActiveMap.load(Content);
             ActiveMap.init(game);
         }
@@ -160,6 +161,10 @@ namespace BesmashGame {
             // Team.Formation[members[4]] = new Point(-2, 2);
             // Team.Formation[members[5]] = new Point(1, -2);
             // Team.Formation[members[6]] = new Point(-1, -2);
+            
+
+            //Das Teil stürzt sonst ab:
+            BattleManager.newInstance().map = map;
 
             // some example enemies:
             Stats Enemy1Stats = new Stats(7, 11, 5, 8, 6, 14, 1.0f, 1.0f, 4);
@@ -174,7 +179,10 @@ namespace BesmashGame {
 
             Enemy enemy1 = new Enemy(Enemy1Stats, Enemy1Abilities, NPC.FightingStyle.Meelee, 10);
             enemy1.SpriteSheet = "images/entities/enemies/Rat_Spritesheet";
-            enemy1.SpriteRectangle = new Rectangle(0, 16, 16, 16);
+            enemy1.SpriteRectangle = new Rectangle(0, 0, 16, 16);
+            
+            EffectManager.newInstance().addEffect(new EffectAnimation("images/Effects/Status/Poison_Effect", new Microsoft.Xna.Framework.Rectangle(0, 16, 16, 16), 8, leader.Position));
+            Status.addStatus(leader, Status.Type.poison);
 
             // position auf der map
             enemy1.Position = new Vector2(10,10);
