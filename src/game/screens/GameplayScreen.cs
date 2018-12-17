@@ -23,11 +23,24 @@ namespace BesmashGame {
             TileMap.MapAlpha = 0;
         }
 
+        private int actionTimer;
         public override void Update(GameTime gameTime,
         bool otherScreenHasFocus, bool coveredByOtherScreen) {
             base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
             TileMap.MapAlpha = MainContainer.Alpha;
             GameManager.ActiveSave.update(gameTime);
+
+            // TODO TEST
+            if(actionTimer < 500)
+                actionTimer += gameTime.ElapsedGameTime.Milliseconds;
+            else if(((Besmash)ScreenManager.Game).isActionTriggered("game", "interact")) {
+                if(GameManager.ActiveSave.ActiveMap.State == TileMap.MapState.Roaming)
+                    GameManager.ActiveSave.ActiveMap.setFightingState(GameManager.ActiveSave.Team);
+                else
+                    GameManager.ActiveSave.ActiveMap.setRoamingState(GameManager.ActiveSave.Team);
+
+                actionTimer = 0;
+            }
         }
 
         public override void Draw(GameTime gameTime) {
@@ -60,6 +73,14 @@ namespace BesmashGame {
             if(game.isActionTriggered("game", "move_left")) map.Slave.move(-1, 0, cr);
             if(game.isActionTriggered("game", "menu"))
                 ScreenManager.AddScreen(new GameMenuScreen(this), null);
+
+            // // TODO TEST
+            // if(game.isActionTriggered("game", "interact")) {
+            //     if(GameManager.ActiveSave.ActiveMap.State == TileMap.MapState.Roaming)
+            //         GameManager.ActiveSave.ActiveMap.setFightingState(GameManager.ActiveSave.Team);
+            //     else
+            //         GameManager.ActiveSave.ActiveMap.setRoamingState(GameManager.ActiveSave.Team);
+            // }
 
             // interaction
             // Config.KeyMaps["game"]["interact"]
