@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <XnaContent xmlns:ns='Microsoft.Xna.Framework'>
-	<Asset Type='TileMap'>
+	<Asset Type='ForestMap'>
 		<Title>Demo Tile Set</Title>
+		<Viewport>8 8</Viewport>
 		<Tiles>
 			<Tile>
 				<SpriteSheet>images\maps\sheet_darkforest</SpriteSheet>
@@ -11523,7 +11524,7 @@
 				<SpriteRectangle>16 96 16 16</SpriteRectangle>
 				<Rotation>0</Rotation>
 				<Position>45 16</Position>
-				<Solid>true</Solid>
+				<Solid>false</Solid>
 			</Tile>
 			<Tile>
 				<SpriteSheet>images\maps\sheet_darkforest</SpriteSheet>
