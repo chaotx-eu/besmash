@@ -43,7 +43,7 @@ namespace BesmashGame {
         bool otherScreenHasFocus, bool coveredByOtherScreen) {
             base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
             TileMap.MapAlpha = MainContainer.Alpha;
-            GameManager.ActiveSave.ActiveMap.update(gameTime);
+            GameManager.ActiveSave.update(gameTime);
         }
 
         public override void Draw(GameTime gameTime) {
