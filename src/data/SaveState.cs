@@ -97,7 +97,9 @@ namespace BesmashGame {
 
             TileMap prevMap = ActiveMap;
             ActiveMap = Content.Load<TileMap>(mapFile);
-            ActiveMap.init(game);
+            if(!ActiveMap.Initialized)
+                ActiveMap.init(game);
+                
             ActiveMap.onLoad(prevMap, Team);
             ActiveMap.load(Content);
             LastMap = mapFile;

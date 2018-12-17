@@ -47,36 +47,8 @@ namespace BesmashGame {
             vlItems.ActionEvent += (sender, args) => {
                 showPane(vlItems.SelectedIndex, vsPane, asPane, csPane, gsPane);
                 vlItems.IsFocused = args.SelectedIndex == 4;
-                // vlItems.InputTimer = -vlItems.MillisPerInput*10;
-
-                if(args.SelectedIndex == 4) { // Back
-                    if(!Config.Equals(GameManager.Configuration)) {
-                        ConfirmDialog dialog = new ConfirmDialog(this, (answer) =>  {
-                            if(answer == 0) {
-                                GameManager.Configuration = Config;
-                                Thread thread = new Thread(() => {
-                                    GameManager.save();
-                                    ((Besmash)ScreenManager.Game).ConfigChanged = true;
-                                });
-
-                                thread.Start();
-                            }
-
-                            if(answer != 2) {
-                                Alpha = 0;
-                                ExitScreen();
-                            }
-                        }, "Some settings have changed!", "Overwrite them?");
-
-                        // TODO => make dialog layout adjustable
-                        // dialog.MainContainer.PercentWidth = 80;
-                        // dialog.MainContainer.HAlignment = HAlignment.Right;
-                        ScreenManager.AddScreen(dialog, null);
-                    } else {
-                        Alpha = 0;
-                        ExitScreen();
-                    }
-                }
+                if(args.SelectedIndex == 4)
+                    close();
             };
 
             vsPane.PercentWidth = 80;
@@ -123,10 +95,8 @@ namespace BesmashGame {
                 if(args.SelectedIndex == 4) msPane.hide(false);
             };
 
-            vlItems.CancelEvent += (sender, args) => {
-                Alpha = 0;
-                ExitScreen();
-            };
+            vlItems.CancelEvent += (sender, args)
+                => close();
 
             vlItems.Color = Color.DarkSlateBlue;
             vlItems.Alpha = 0.3f;
@@ -149,6 +119,33 @@ namespace BesmashGame {
         protected void showPane(int i, params BesmashMenuPane[] panes) {
             if(i < panes.Length)
                 panes[i].show(true, 1);
+        }
+
+        /// Trys to close this screen, opens confirmation
+        /// dialog if any configuration has changed
+        public void close() {
+            if(!Config.Equals(GameManager.Configuration)) {
+                ConfirmDialog dialog = new ConfirmDialog(this, (answer) =>  {
+                    if(answer == 0) {
+                        GameManager.Configuration = Config;
+                        Thread thread = new Thread(() => {
+                            GameManager.save();
+                            ((Besmash)ScreenManager.Game).ConfigChanged = true;
+                        });
+
+                        thread.Start();
+                    }
+
+                    if(answer != 2) {
+                        Alpha = 0;
+                        ExitScreen();
+                    }
+                }, "Some settings have changed!", "Overwrite them?");
+                ScreenManager.AddScreen(dialog, null);
+            } else {
+                Alpha = 0;
+                ExitScreen();
+            }
         }
     }
 }
