@@ -88,7 +88,7 @@ namespace BesmashGame {
                 Content = new ContentManager(game.Services, "Content");
 
             if(ActiveMap == null)
-                ActiveMap = loadDefaultMap(Content);
+                ActiveMap = loadBattleTestMap(Content);
 
             ActiveMap.load(Content);
             ActiveMap.init(game);
@@ -134,6 +134,55 @@ namespace BesmashGame {
             map.addEntity(leader);
             map.addEntity(donald);
             map.addEntity(dagobert);
+            map.Slave = Team.Leader;
+            map.BackgroundMusicFile = "super_smash_bros_remix";
+            return map;
+        }
+        
+        public TileMap loadBattleTestMap(ContentManager content) 
+        {
+            TileMap map = content.Load<TileMap>(DEFAULT_MAP);
+            Player[] members = new Player[3];
+            Player leader = new Player("images/entities/enemies/Rat_Spritesheet");
+
+            for(int i = -1; i < members.Length; ++i) {
+                Player player = i < 0 ? leader : new Player("images/entities/kevin_sheet");
+                player.Position = new Vector2(2+i, 1);
+                player.StepTime = 250;
+                if(i >= 0) members[i] = player;
+            };
+
+            Team = new Team(leader, members);
+            Team.Formation[members[0]] = new Point(1, 1);
+            Team.Formation[members[1]] = new Point(-1, 1);
+            Team.Formation[members[2]] = new Point(0, 1);
+            // Team.Formation[members[3]] = new Point(2, 2);
+            // Team.Formation[members[4]] = new Point(-2, 2);
+            // Team.Formation[members[5]] = new Point(1, -2);
+            // Team.Formation[members[6]] = new Point(-1, -2);
+
+            // some example enemies:
+            Stats Enemy1Stats = new Stats(7, 11, 5, 8, 6, 14, 1.0f, 1.0f, 4);
+            //Abilities to choose from:
+            OffensiveAbility poisonBite = new OffensiveAbility(null, 25, "Poisonous_Bite", 35, 1, false);
+            poisonBite.potentialStatus = new OffensiveAbility.PossibleStatus[1];
+            poisonBite.potentialStatus[0] = new OffensiveAbility.PossibleStatus(Status.Type.poison, 30);
+            OffensiveAbility bite = new OffensiveAbility(null, 15, "bite", 25, 1, false);
+            MovementAbility run = new MovementAbility(null, 0, "Run", null, null);
+            HealAbility endure = new HealAbility(null, 40, "Endure_Pain", 0, 50);
+            Ability[] Enemy1Abilities = {poisonBite, bite, run, endure};
+
+            Enemy enemy1 = new Enemy(Enemy1Stats, Enemy1Abilities, NPC.FightingStyle.Meelee, 10);
+            enemy1.SpriteSheet = "images/entities/enemies/Rat_Spritesheet";
+            enemy1.SpriteRectangle = new Rectangle(0, 16, 16, 16);
+
+            // position auf der map
+            enemy1.Position = new Vector2(10,10);
+            foreach(Player member in members)
+                map.addEntity(member);
+
+            map.addEntity(enemy1);
+            map.addEntity(leader);
             map.Slave = Team.Leader;
             map.BackgroundMusicFile = "super_smash_bros_remix";
             return map;

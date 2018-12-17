@@ -15,6 +15,7 @@ namespace BesmashGame {
     public class Besmash : Game {
         /// Manager of this game
         public GameManager Manager {get; set;}
+        public BattleManager Battle{get; set;}
 
         /// Flag which indicates that the game
         /// configuration has changed
@@ -65,12 +66,18 @@ namespace BesmashGame {
         /// game manager (i.e. active map)
         public void loadSave() {
             if(Manager != null && Manager.ActiveSave != null)
+            {
                 Manager.ActiveSave.load(this);
+                Battle = BattleManager.newInstance();
+                if(Manager.ActiveSave.ActiveMap != null)
+                    Battle.map = Manager.ActiveSave.ActiveMap;
+            }
         }
 
         /// Loads the game manager and the config
         protected override void LoadContent() {
             Manager = GameManager.newInstance();
+            Battle = BattleManager.newInstance();
             mainMenu.GameManager = Manager;
             // loadConfig(); // moved to update
             // loadSave();
