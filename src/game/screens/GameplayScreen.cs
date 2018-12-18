@@ -9,6 +9,8 @@ namespace BesmashGame {
     using System.Linq;
 
     public class GameplayScreen : BesmashScreen {
+        private BattleOverlayPane battleOverlay;
+
         public GameplayScreen(BesmashScreen parent)
         : base(parent) {
             MainContainer.PercentWidth = 100;
@@ -17,9 +19,10 @@ namespace BesmashGame {
         }
 
         public override void LoadContent() {
+            battleOverlay = new BattleOverlayPane(GameManager.ActiveSave);
+            MainContainer.Children.ToList().Clear();
+            MainContainer.add(battleOverlay);
             base.LoadContent();
-            // should be loaded alread at this point
-            // GameManager.ActiveSave.ActiveMap.load(Content);
             TileMap.MapAlpha = 0;
         }
 
@@ -34,18 +37,21 @@ namespace BesmashGame {
             if(actionTimer < 500)
                 actionTimer += gameTime.ElapsedGameTime.Milliseconds;
             else if(((Besmash)ScreenManager.Game).isActionTriggered("game", "interact")) {
-                if(GameManager.ActiveSave.ActiveMap.State == TileMap.MapState.Roaming)
+                if(GameManager.ActiveSave.ActiveMap.State == TileMap.MapState.Roaming) {
                     GameManager.ActiveSave.ActiveMap.setFightingState(GameManager.ActiveSave.Team);
-                else
+                    battleOverlay.show();
+                } else {
                     GameManager.ActiveSave.ActiveMap.setRoamingState(GameManager.ActiveSave.Team);
+                    battleOverlay.hide();
+                }
 
                 actionTimer = 0;
             }
         }
 
         public override void Draw(GameTime gameTime) {
-            base.Draw(gameTime);
             GameManager.ActiveSave.ActiveMap.draw(ImageBatch);
+            base.Draw(gameTime);
         }
 
         /// Handling user input, e.g. moving player, interacting
