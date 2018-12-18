@@ -181,7 +181,7 @@ namespace BesmashGame {
             enemy1.SpriteSheet = "images/entities/enemies/Rat_Spritesheet";
             enemy1.SpriteRectangle = new Rectangle(0, 0, 16, 16);
             
-            EffectManager.newInstance().addEffect(new EffectAnimation("images/Effects/Status/Poison_Effect", new Microsoft.Xna.Framework.Rectangle(0, 16, 16, 16), 8, leader.Position));
+            EffectManager.newInstance().addEffect(new EffectAnimation("images/Effects/Status/Poison_Effect", new Microsoft.Xna.Framework.Rectangle(0, 0, 16, 16), 8, leader.Position));
             Status.addStatus(leader, Status.Type.poison);
 
             // position auf der map
