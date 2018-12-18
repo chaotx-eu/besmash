@@ -26,8 +26,8 @@ namespace BesmashGame {
                         HPane hpInfo = new HPane(tiName, tiStat);
                         tiName.HAlignment = HAlignment.Left;
                         tiStat.HAlignment = HAlignment.Right;
-                        tiName.Scale = 0.5f;
-                        tiStat.Scale = 0.5f;
+                        tiName.DefaultScale = 0.5f;
+                        tiStat.DefaultScale = 0.5f;
                         hpInfo.PercentWidth = 100;
 
                         tiNameMap.Add(player, tiName);

@@ -37,12 +37,16 @@ namespace BesmashGame {
             if(actionTimer < 500)
                 actionTimer += gameTime.ElapsedGameTime.Milliseconds;
             else if(((Besmash)ScreenManager.Game).isActionTriggered("game", "interact")) {
+                battleOverlay.toggleMode();
+
                 if(GameManager.ActiveSave.ActiveMap.State == TileMap.MapState.Roaming) {
                     GameManager.ActiveSave.ActiveMap.setFightingState(GameManager.ActiveSave.Team);
                     battleOverlay.show();
                 } else {
-                    GameManager.ActiveSave.ActiveMap.setRoamingState(GameManager.ActiveSave.Team);
-                    battleOverlay.hide();
+                    if(battleOverlay.Mode == BattleOverlayPane.OverlayMode.Hidden) {
+                        GameManager.ActiveSave.ActiveMap.setRoamingState(GameManager.ActiveSave.Team);
+                        battleOverlay.hide();
+                    }
                 }
 
                 actionTimer = 0;
