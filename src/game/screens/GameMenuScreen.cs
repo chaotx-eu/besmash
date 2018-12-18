@@ -45,7 +45,7 @@ namespace BesmashGame {
         bool otherScreenHasFocus, bool coveredByOtherScreen) {
             base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
 
-            if(!ScreenManager.GetScreens().Contains(this))
+            if(!ScreenManager.GetScreens().Contains(ParentScreen))
                 ScreenManager.AddScreen(new MainMenuScreen("images/blank", GameManager), null);
         }
     }

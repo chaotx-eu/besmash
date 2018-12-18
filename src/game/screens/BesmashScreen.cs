@@ -136,7 +136,7 @@ namespace BesmashGame {
 
         private void resetInputTimer(ScreenComponent c) {
             if(c is MenuList)
-                ((MenuList)c).InputTimer = -((MenuList)c).MillisPerInput*2;
+                ((MenuList)c).InputTimer = -((MenuList)c).MillisPerInput;
 
             if(c is Container)
                 ((Container)c).Children.ToList()

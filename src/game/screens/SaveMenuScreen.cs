@@ -145,8 +145,6 @@ namespace BesmashGame {
                 ParentScreen.ExitScreen();
                 ((Besmash)ScreenManager.Game).loadSave();
                 ScreenManager.AddScreen(new GameplayScreen(ParentScreen), null);
-                // LoadingScreen.Load(ScreenManager, false, null,
-                //     new GameplayScreen(this));
             };
 
             vlSaves.CancelEvent += (sender, args) => {
