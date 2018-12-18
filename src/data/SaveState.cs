@@ -172,7 +172,7 @@ namespace BesmashGame {
             OffensiveAbility poisonBite = new OffensiveAbility(null, 25, "Poisonous_Bite", 35, 1, false);
             poisonBite.potentialStatus = new OffensiveAbility.PossibleStatus[1];
             poisonBite.potentialStatus[0] = new OffensiveAbility.PossibleStatus(Status.Type.poison, 30);
-            OffensiveAbility bite = new OffensiveAbility(null, 15, "bite", 25, 1, false);
+            OffensiveAbility bite = new OffensiveAbility(null, 15, "Bite", 25, 1, false);
             MovementAbility run = new MovementAbility(null, 0, "Run", null, null);
             HealAbility endure = new HealAbility(null, 40, "Endure_Pain", 0, 50);
             Ability[] Enemy1Abilities = {poisonBite, bite, run, endure};

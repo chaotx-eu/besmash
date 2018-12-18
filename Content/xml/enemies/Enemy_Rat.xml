@@ -1,0 +1,71 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<XnaContent>
+    <Asset Type = "Enemy">
+        <SpriteSheet>images/entities/enemies/Rat_Spritesheet</SpriteSheet>
+        <SpriteRectangle>
+            <X> 0 </X>
+            <Y> 16 </Y>
+            <Width> 16 </Width>
+            <Height> 16 </Height>
+        </SpriteRectangle>
+        <Vector2> 0 0 </Vector2>
+        <Helmet></Helmet>
+        <Chestplate></Chestplate>
+        <Pants></Pants>
+        <Weapons></Weapons>
+        <BaseStats>
+            <BaseVit>7</BaseVit>
+            <BaseATK>11</BaseATK>
+            <BaseMGA>5</BaseMGA>
+            <BaseDEF>8</BaseDEF>
+            <BaseMGD>6</BaseMGD>
+            <BaseAGI>14</BaseAGI>
+            <BaseACC>1.0f</BaseACC>
+            <BaseDDG>1.0f</BaseDDG>
+            <BaseSPD>4</BaseSPD>
+
+            <VITModifier>1.0f</VITModifier>
+            <ATKModifier>1.0f</ATKModifier>
+            <MGAModifier>1.0f</MGAModifier>
+            <DEFModifier>1.0f</DEFModifier>
+            <MGDModifier>1.0f</MGDModifier>
+            <AGIModifier>1.0f</AGIModifier>
+            <ACCModifier>1.0f</ACCModifier>
+            <DDGModifier>1.0f</DDGModifier>
+            <SPDModifier>1.0f</SPDModifier>
+        </BaseStats>
+        <Abilities>
+            <Item>
+                <AbilityName>Poisonous_Bite</AbilityName>
+                <AbilityCost>25</AbilityCost>
+                <BaseDamage>35</BaseDamage>
+                <BaseACC>1.0f</BaseACC>
+                <maxRange>1</maxRange>
+                <IsMagical>false</IsMagical>
+                <potentialBuffs>
+                    <Item>
+                        <type>Buff.Type.poison</type>
+                        <chance>30</chance>
+                    </Item>
+                </potentialBuffs>
+            </Item>
+            <Item>
+                <AbilityName>Bite</AbilityName>
+                <AbilityCost>15</AbilityCost>
+                <BaseDamage>25</BaseDamage>
+                <BaseACC>1.0f</BaseACC>
+                <maxRange>1</maxRange>
+                <IsMagical>false</IsMagical>
+            </Item>
+            <Item>
+                <AbilityName>Run</AbilityName>
+                <AbilityCost>15</AbilityCost>
+            </Item>
+            <Item>
+                <AbilityName>Endure_Pain</AbilityName>
+                <AbilityCost>40</AbilityCost>
+                <HealAmount>50</HealAmount>
+            </Item>
+        </Abilities>
+    </Asset>
+</XnaContent>
