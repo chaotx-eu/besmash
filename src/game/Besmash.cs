@@ -16,6 +16,9 @@ namespace BesmashGame {
         /// Manager of this game
         public GameManager Manager {get; set;}
 
+        /// Manager for handling battle logic
+        public BattleManager BattleManager {get; set;}
+
         /// Flag which indicates that the game
         /// configuration has changed
         public bool ConfigChanged {get; set;} = true;
