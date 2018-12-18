@@ -181,14 +181,19 @@ namespace BesmashGame {
             enemy1.SpriteSheet = "images/entities/enemies/Rat_Spritesheet";
             enemy1.SpriteRectangle = new Rectangle(0, 0, 16, 16);
             
-            EffectManager.newInstance().addEffect(new EffectAnimation("images/Effects/Status/Poison_Effect", new Microsoft.Xna.Framework.Rectangle(0, 0, 16, 16), 8, leader.Position));
-            Status.addStatus(leader, Status.Type.poison);
+            // EffectManager.newInstance().addEffect(new EffectAnimation("images/Effects/Status/Poison_Effect", new Microsoft.Xna.Framework.Rectangle(0, 16, 16, 16), 8, leader.Position));
+            // Status.addStatus(leader, Status.Type.poison);
 
             // position auf der map
             enemy1.Position = new Vector2(10,10);
             foreach(Player member in members)
                 map.addEntity(member);
 
+            // direkter test
+            EffectAnimation effect = new EffectAnimation("images/Effects/Status/Poison_Effect", new Microsoft.Xna.Framework.Rectangle(0, 0, 16, 16), 8, leader.Position);
+            effect.startEffect();
+
+            map.addEntity(effect);
             map.addEntity(enemy1);
             map.addEntity(leader);
             map.Slave = Team.Leader;
