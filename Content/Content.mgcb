@@ -199,6 +199,11 @@
 /processor:PassThroughProcessor
 /build:maps/dungeon2.xml
 
+#begin maps/dungeon3.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:maps/dungeon3.xml
+
 #begin maps/forestMap.xml
 /importer:XmlImporter
 /processor:PassThroughProcessor

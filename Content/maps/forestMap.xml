@@ -11524,7 +11524,7 @@
 				<SpriteRectangle>16 96 16 16</SpriteRectangle>
 				<Rotation>0</Rotation>
 				<Position>45 16</Position>
-				<Solid>true</Solid>
+				<Solid>false</Solid>
 			</Tile>
 			<Tile>
 				<SpriteSheet>images\maps\sheet_darkforest</SpriteSheet>
