@@ -61,10 +61,14 @@ namespace BesmashGame {
                     player.CurrentAP, player.MaxAP);
 
                 tiNameMap[player].Text = name;
+                tiNameMap[player].Color = player.ContainingMap.Cursor != null
+                    && player.ContainingMap.Cursor.Position.Equals(player.Position)
+                    ? Color.Yellow : Color.White;
+
                 tiStatMap[player].Text = stats;
                 tiStatMap[player].Color = percentHP < 1/3f
                     ? Color.Red : percentHP < 1/2f
-                    ? Color.Yellow : Color.White;
+                    ? Color.Orange : Color.White;
             });
         }
     }
