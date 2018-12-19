@@ -20,7 +20,7 @@ namespace BesmashGame {
 
         public override void LoadContent() {
             battleOverlay = new BattleOverlayPane(GameManager.ActiveSave);
-            MainContainer.Children.ToList().Clear();
+            MainContainer.remove(MainContainer.Children.ToArray());
             MainContainer.add(battleOverlay);
             base.LoadContent();
             TileMap.MapAlpha = 0;
@@ -36,17 +36,13 @@ namespace BesmashGame {
             // TODO TEST
             if(actionTimer < 500)
                 actionTimer += gameTime.ElapsedGameTime.Milliseconds;
-            else if(((Besmash)ScreenManager.Game).isActionTriggered("game", "interact")) {
-                battleOverlay.toggleMode();
-
-                if(GameManager.ActiveSave.ActiveMap.State == TileMap.MapState.Roaming) {
-                    GameManager.ActiveSave.ActiveMap.setFightingState(GameManager.ActiveSave.Team);
-                    battleOverlay.show();
+            else if(((Besmash)ScreenManager.Game).isActionTriggered("game", "inspect")) {
+                if(battleOverlay.IsActive) {
+                    battleOverlay.hide();
+                    GameManager.ActiveSave.ActiveMap.setRoamingState(GameManager.ActiveSave.Team);
                 } else {
-                    if(battleOverlay.Mode == BattleOverlayPane.OverlayMode.Hidden) {
-                        GameManager.ActiveSave.ActiveMap.setRoamingState(GameManager.ActiveSave.Team);
-                        battleOverlay.hide();
-                    }
+                    battleOverlay.show();
+                    GameManager.ActiveSave.ActiveMap.setFightingState(GameManager.ActiveSave.Team.Leader.Target);
                 }
 
                 actionTimer = 0;
@@ -62,6 +58,7 @@ namespace BesmashGame {
         /// with objects or opening menus (moving through menus
         /// is handled internally by the GSMXtended lib) (TODO)
         public override void HandleInput(InputState inputState) {
+            base.HandleInput(inputState);
             GameConfig config = GameManager.Configuration;
             Besmash game = (Besmash)ScreenManager.Game;
             TileMap map = GameManager.ActiveSave.ActiveMap;
@@ -77,10 +74,13 @@ namespace BesmashGame {
                 return null;
             };
 
-            if(game.isActionTriggered("game", "move_up")) map.Slave.move(0, -1, cr);
-            if(game.isActionTriggered("game", "move_right")) map.Slave.move(1, 0, cr);
-            if(game.isActionTriggered("game", "move_down")) map.Slave.move(0, 1, cr);
-            if(game.isActionTriggered("game", "move_left")) map.Slave.move(-1, 0, cr);
+            if(map.Slave != null) {
+                if(game.isActionTriggered("game", "move_up")) map.Slave.move(0, -1, cr);
+                if(game.isActionTriggered("game", "move_right")) map.Slave.move(1, 0, cr);
+                if(game.isActionTriggered("game", "move_down")) map.Slave.move(0, 1, cr);
+                if(game.isActionTriggered("game", "move_left")) map.Slave.move(-1, 0, cr);
+            }
+
             if(game.isActionTriggered("game", "menu"))
                 ScreenManager.AddScreen(new GameMenuScreen(this), null);
 

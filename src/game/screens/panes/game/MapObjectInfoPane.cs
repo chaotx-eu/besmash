@@ -3,7 +3,7 @@ namespace BesmashGame {
     using BesmashContent;
     using Microsoft.Xna.Framework;
 
-    public class MapObjectInfoPane : VPane {
+    public class MapObjectInfoPane : OverlayPane {
         public Cursor MapCursor {get; private set;}
 
         private TextItem tiType;
@@ -11,6 +11,9 @@ namespace BesmashGame {
         private TextItem tiInfo;
 
         public MapObjectInfoPane(Cursor cursor) {
+            VPane vpMain = new VPane();
+            vpMain.PercentWidth = vpMain.PercentHeight = 100;
+
             MapCursor = cursor;
             tiType = new TextItem("", "fonts/game_font1");
             tiLife = new TextItem("", "fonts/game_font1");
@@ -25,8 +28,10 @@ namespace BesmashGame {
                 cent.PercentWidth = 100;
                 gapL.PercentWidth = 5;
                 gapL.HAlignment = HAlignment.Left;
-                add(cent);
+                vpMain.add(cent);
             }
+
+            add(vpMain);
         }
 
         public override void update(GameTime gameTime) {

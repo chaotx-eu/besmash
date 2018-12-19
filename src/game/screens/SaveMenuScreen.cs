@@ -19,15 +19,17 @@ namespace BesmashGame {
         private List<ImageItem> saveThumbnails = new List<ImageItem>();
 
         private Keys backKey;
-        private Keys deleteKey = Keys.Tab; // TODO
+        private Keys deleteKey;
         private Buttons backButton;
-        private Buttons deleteButton = Buttons.X; // TODO
+        private Buttons deleteButton;
 
         public SaveMenuScreen(BesmashScreen parent)
         : base(parent) {
             tiNewGame = new TextItem("+ New Game", "fonts/menu_font1");
             backKey = GameManager.Configuration.KeyMaps["menu"]["menu_cancel"].TriggerKeys[0];
             backButton = GameManager.Configuration.KeyMaps["menu"]["menu_cancel"].TriggerButtons[0];
+            deleteKey = GameManager.Configuration.KeyMaps["menu"]["menu_option"].TriggerKeys[0];
+            deleteButton = GameManager.Configuration.KeyMaps["menu"]["menu_option"].TriggerButtons[0];
 
             Dictionary<Keys, string> keyInfoMap = new Dictionary<Keys, string>();
             Dictionary<Buttons, string> buttonInfoMap = new Dictionary<Buttons, string>();

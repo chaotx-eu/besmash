@@ -6,18 +6,19 @@ namespace BesmashGame {
     using BesmashContent;
     using GSMXtended;
 
-    public class TeamInfoPane : VPane {
+    public class TeamInfoPane : OverlayPane {
         private static int MAX_TITLE_LEN {get;} = 15;
 
         private Dictionary<Player, TextItem> tiNameMap;
         private Dictionary<Player, TextItem> tiStatMap;
         private Team team;
+        private VPane vpMain = new VPane();
 
         public Team Team {
             get {return team;}
             set {
                 if(value != null) {
-                    Children.ToList().Clear();
+                    vpMain.remove(vpMain.Children.ToArray());
                     tiNameMap = new Dictionary<Player, TextItem>();
                     tiStatMap = new Dictionary<Player, TextItem>();
                     value.Player.ForEach(player => {
@@ -32,7 +33,7 @@ namespace BesmashGame {
 
                         tiNameMap.Add(player, tiName);
                         tiStatMap.Add(player, tiStat);
-                        add(hpInfo);
+                        vpMain.add(hpInfo);
                     });
                 }
 
@@ -42,6 +43,8 @@ namespace BesmashGame {
 
         public TeamInfoPane(Team team) {
             Team = team;
+            vpMain.PercentWidth = vpMain.PercentHeight = 100;
+            add(vpMain);
         }
 
         public override void update(GameTime gameTime) {

@@ -1,7 +1,7 @@
 namespace BesmashGame {
     using GSMXtended;
 
-    public class ActionInfoPane : StackPane {
+    public class ActionInfoPane : OverlayPane {
         public TextItem ActionText {get; private set;}
 
         public ActionInfoPane(string actionName) {

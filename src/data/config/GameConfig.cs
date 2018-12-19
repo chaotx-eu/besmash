@@ -77,6 +77,7 @@ namespace BesmashGame.Config {
             KeyMaps["menu"].Add("menu_down", new UserInput("menu.menu_down"));
             KeyMaps["menu"].Add("menu_left", new UserInput("menu.menu_left"));
             KeyMaps["menu"].Add("menu_confirm", new UserInput("menu.menu_confirm"));
+            KeyMaps["menu"].Add("menu_option", new UserInput("menu.menu_option"));
             KeyMaps["menu"].Add("menu_cancel", new UserInput("menu.menu_cancel"));
             KeyMaps["menu"].Add("menu_close", new UserInput("menu.menu_close"));
 
@@ -85,6 +86,7 @@ namespace BesmashGame.Config {
             KeyMaps["menu"]["menu_down"].TriggerKeys.Add(Keys.Down);
             KeyMaps["menu"]["menu_left"].TriggerKeys.Add(Keys.Left);
             KeyMaps["menu"]["menu_confirm"].TriggerKeys.Add(Keys.Enter);
+            KeyMaps["menu"]["menu_option"].TriggerKeys.Add(Keys.Tab);
             KeyMaps["menu"]["menu_cancel"].TriggerKeys.Add(Keys.Back);
             KeyMaps["menu"]["menu_close"].TriggerKeys.Add(Keys.Escape);
 
@@ -97,6 +99,7 @@ namespace BesmashGame.Config {
             KeyMaps["menu"]["menu_left"].TriggerButtons.Add(Buttons.DPadLeft);
             KeyMaps["menu"]["menu_left"].TriggerButtons.Add(Buttons.LeftThumbstickLeft);
             KeyMaps["menu"]["menu_confirm"].TriggerButtons.Add(Buttons.A);
+            KeyMaps["menu"]["menu_option"].TriggerButtons.Add(Buttons.X);
             KeyMaps["menu"]["menu_cancel"].TriggerButtons.Add(Buttons.B);
             // KeyMaps["menu"]["menu_close"].TriggerButtons.Add(Buttons.X);
 
@@ -107,6 +110,7 @@ namespace BesmashGame.Config {
             KeyMaps["game"].Add("move_left", new UserInput("game.move_left"));
             KeyMaps["game"].Add("move_right", new UserInput("game.move_right"));
             KeyMaps["game"].Add("interact", new UserInput("game.interact"));
+            KeyMaps["game"].Add("inspect", new UserInput("game.inspect"));
             KeyMaps["game"].Add("cancel", new UserInput("game.cancel"));
             KeyMaps["game"].Add("menu", new UserInput("game.menu"));
             // KeyMaps["game"].Add("pause", new UserInput("game.pause"));
