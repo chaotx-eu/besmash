@@ -30,6 +30,7 @@ BesmashMenuPane <|-- AudioSettingsPane
 BesmashMenuPane <|-- ControlSettingsPane
 BesmashMenuPane <|-- GameplaySettingsPane
 BesmashMenuPane <|-- VideoSettingsPane
+<<<<<<< HEAD
 HPane <|-- InputInfoPane
 note top of HPane: GSMXtended
 
