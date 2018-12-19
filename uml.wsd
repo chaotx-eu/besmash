@@ -1,0 +1,46 @@
+@startuml
+title Besmash Game Class-Diagramm
+
+GameConfig --> "1" UserInput
+GameManager --> "1" GameConfig
+GameManager --> "1" SaveState
+
+BesmashDialog <|-- ConfirmDialog
+BesmashDialog <|-- InputDialog
+
+OverlayPane <|-- ActionInfoPane
+OverlayPane <|-- BattleOrderPane
+OverlayPane <|-- MapObjectInfoPane
+OverlayPane <|-- PlayerActionPane
+OverlayPane <|-- ActionListPane
+OverlayPane <|-- TeamInfoPane
+OverlayPane <|-- TargetSelectionPane
+OverlayPane <|-- BattleOverlayPane
+
+BattleOverlay --> "1" TeamInfoPane
+BattleOverlay --> "1" BattleOrderPane
+BattleOverlay --> "1" BattleOverlayPane
+PlayerActionPane --> "1" ActionInfoPane
+PlayerActionPane --> "1" MapObjectInfoPane
+PlayerActionPane --> "1" PlayerActionPane
+PlayerActionPane --> "1" ActionListPane
+PlayerActionPane --> "1" TargetSelectionPane
+
+BesmashMenuPane <|-- AudioSettingsPane
+BesmashMenuPane <|-- ControlSettingsPane
+BesmashMenuPane <|-- GameplaySettingsPane
+BesmashMenuPane <|-- VideoSettingsPane
+HPane(GSMXtended) <|-- InputInfoPane
+
+GameScreen(GameStateManagement) <|-- XtendedScreen(GSMXtended)
+XtendedScreen(GSMXtended) <|-- BesmashScreen
+BesmashScreen <|-- MainMenuScreen
+BesmashScreen <|-- GameMenuScreen
+BesmashScreen <|-- SaveMenuScreen
+BesmashScreen <|-- SettingsScreen
+BesmashScreen <|-- GameplayScreen
+Game <|-- Besmash
+Besmash --> "1" GameManager
+Besmash --> "1" MainMenuScreen
+
+@enduml

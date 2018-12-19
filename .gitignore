@@ -4,3 +4,7 @@
 ## out
 **/bin
 **/obj
+
+## PlantUML
+# **/*.wsd
+**/out
