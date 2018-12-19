@@ -115,9 +115,21 @@ namespace BesmashGame.Config
 
         public void addToBattle(Creature Creature, FightingInfo.Faction alignment)
         {
+            if(Creature is Enemy && ((Enemy)Creature).Group.getMember() != null)
+            {
+                this.addGroupOfEnemies(((Enemy)Creature).Group.getMember(), alignment);
+            }
             FightingInfo FightingInfo = new FightingInfo(Creature, alignment);     //Erstellt eine FightingInfo, die auf die angegebene Creature verweist
 
             BattleUtils.FightingEntities.Add(FightingInfo);
+        }
+        public void addGroupOfEnemies(List<Enemy> enemies,  FightingInfo.Faction alignment)
+        {
+            foreach(Enemy e in enemies)
+            {
+                FightingInfo FightingInfo = new FightingInfo(e, alignment);     //Erstellt eine FightingInfo, die auf die angegebene Creature verweist
+                BattleUtils.FightingEntities.Add(FightingInfo);
+            }
         }
 
         public void removeFromBattle(Creature Creature)

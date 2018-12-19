@@ -118,6 +118,7 @@ namespace BesmashGame {
         public TileMap loadBattleTestMap(ContentManager content) 
         {
             TileMap map = content.Load<TileMap>(DEFAULT_MAP);
+            /*
             Player[] members = new Player[3];
             Player leader = new Player("images/entities/enemies/Rat_Spritesheet");
 
@@ -173,6 +174,7 @@ namespace BesmashGame {
             map.addEntity(leader);
             map.Slave = Team.Leader;
             map.BackgroundMusicFile = "super_smash_bros_remix";
+            */
             return map;
         }
     }
