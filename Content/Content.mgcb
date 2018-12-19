@@ -71,18 +71,6 @@
 /processorParam:TextureFormat=Color
 /build:images/entities/Enemies/Rat_Spritesheet.png
 
-#begin images/entities/Enemies/RatteV1.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:images/entities/Enemies/RatteV1.png
-
 #begin images/entities/kevin_sheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -140,25 +128,4 @@
 /importer:XmlImporter
 /processor:PassThroughProcessor
 /build:lang/en.xml
-
-#begin super_smash_bros_remix.mp3
-/importer:Mp3Importer
-/processor:SongProcessor
-/processorParam:Quality=Best
-/build:super_smash_bros_remix.mp3
-
-#begin testmap_50x50.xml
-/importer:XmlImporter
-/processor:PassThroughProcessor
-/build:testmap_50x50.xml
-
-#begin xml/enemies/Enemy_Rat.xml
-/importer:XmlImporter
-/processor:PassThroughProcessor
-/build:xml/enemies/Enemy_Rat.xml
-
-#begin xml/enemies/Enemy_Rat.xml
-/importer:XmlImporter
-/processor:PassThroughProcessor
-/build:xml/enemies/Enemy_Rat.xml
 

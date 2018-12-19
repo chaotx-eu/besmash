@@ -1,4 +1,5 @@
 namespace BesmashGame {
+    using BesmashGame.Config;
     using BesmashContent;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Content;

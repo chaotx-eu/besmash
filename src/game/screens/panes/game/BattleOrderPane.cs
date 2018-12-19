@@ -1,6 +1,6 @@
 namespace BesmashGame {
     using GSMXtended;
-    using BesmashContent;
+    using BesmashGame.Config;
     using Microsoft.Xna.Framework;
     
     public class BattleOrderPane : HPane {
