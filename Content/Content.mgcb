@@ -129,3 +129,139 @@
 /processor:PassThroughProcessor
 /build:lang/en.xml
 
+#begin lang/maps/dungeon1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:lang/maps/dungeon1.xml
+
+#begin lang/maps/dungeon2.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:lang/maps/dungeon2.xml
+
+#begin lang/maps/dungeon3.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:lang/maps/dungeon3.xml
+
+#begin lang/maps/forestMap.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:lang/maps/forestMap.xml
+
+#begin maps/dungeon1.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:maps/dungeon1.xml
+
+#begin maps/dungeon2.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:maps/dungeon2.xml
+
+#begin maps/dungeon3.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:maps/dungeon3.xml
+
+#begin maps/forestMap.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:maps/forestMap.xml
+
+#begin images/entities/Enemies/RatteV1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/entities/Enemies/RatteV1.png
+
+#begin images/entities/generic_cursor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/entities/generic_cursor.png
+
+#begin images/entities/grey_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/entities/grey_sheet.png
+
+#begin images/entities/pink_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/entities/pink_sheet.png
+
+#begin images/entities/red_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/entities/red_sheet.png
+
+#begin images/entities/white_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/entities/white_sheet.png
+
+#begin images/maps/dungeon_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/maps/dungeon_sheet.png
+
+#begin images/maps/sheet_darkforest.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/maps/sheet_darkforest.png
+

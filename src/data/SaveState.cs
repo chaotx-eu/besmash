@@ -113,6 +113,7 @@ namespace BesmashGame {
             string nextMap = ActiveMap.OtherMap;
             if(nextMap != null) load(Game, nextMap);
             ActiveMap.update(gameTime);
+            BattleManager.newInstance().update();
         }
         
         public TileMap loadBattleTestMap(ContentManager content) 

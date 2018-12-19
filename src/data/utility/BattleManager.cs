@@ -23,7 +23,13 @@ namespace BesmashGame.Config
         }
         public void update()
         {
-            if(BattleUtils.FightingEntities.Exists(x=> x.Creature is Player))
+            //Eventuelll aus BattleUtil hinzuzufügenes Zeug adden
+            if(BattleUtils.newInstance().AddTheeseGroups != null)
+            foreach(BattleUtils.groupToAdd g in BattleUtils.newInstance().AddTheeseGroups)
+            {
+                this.addGroupOfEnemies(g.group, g.Alignment);
+            }
+            if(BattleUtils.FightingEntities != null && BattleUtils.FightingEntities.Exists(x=> x.Creature is Player))
             {
                 FightingInfo Player = BattleUtils.FightingEntities.Find(x=> x.Creature is Player);
                 if(BattleUtils.FightingEntities.Exists(x=> !FightingInfo.IsFriendlyTo(Player, x)))
@@ -128,6 +134,14 @@ namespace BesmashGame.Config
             foreach(Enemy e in enemies)
             {
                 FightingInfo FightingInfo = new FightingInfo(e, alignment);     //Erstellt eine FightingInfo, die auf die angegebene Creature verweist
+                BattleUtils.FightingEntities.Add(FightingInfo);
+            }
+        }
+        public void addGroupOfEnemies(List<Creature> creatures,  FightingInfo.Faction alignment)
+        {
+            foreach(Enemy c in creatures)
+            {
+                FightingInfo FightingInfo = new FightingInfo(c, alignment);     //Erstellt eine FightingInfo, die auf die angegebene Creature verweist
                 BattleUtils.FightingEntities.Add(FightingInfo);
             }
         }
