@@ -155,6 +155,42 @@
 /processorParam:TextureFormat=Color
 /build:images/maps/dungeon_sheet.png
 
+#begin images/maps/house1_exteriour.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/maps/house1_exteriour.png
+
+#begin images/maps/house1_interiour.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/maps/house1_interiour.png
+
+#begin images/maps/plains_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/maps/plains_sheet.png
+
 #begin images/maps/sheet_darkforest.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -203,6 +239,16 @@
 /importer:XmlImporter
 /processor:PassThroughProcessor
 /build:maps/dungeon3.xml
+
+#begin maps/forest1_ext.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:maps/forest1_ext.xml
+
+#begin maps/forest1_int.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:maps/forest1_int.xml
 
 #begin maps/forestMap.xml
 /importer:XmlImporter

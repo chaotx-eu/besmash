@@ -26,33 +26,33 @@ namespace BesmashGame {
             TileMap.MapAlpha = 0;
         }
 
-        private int actionTimer;
         public override void Update(GameTime gameTime,
         bool otherScreenHasFocus, bool coveredByOtherScreen) {
             base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
             TileMap.MapAlpha = MainContainer.Alpha;
             GameManager.ActiveSave.update(gameTime);
 
-            // TODO TEST
-            if(actionTimer < 500)
-                actionTimer += gameTime.ElapsedGameTime.Milliseconds;
-            else if(((Besmash)ScreenManager.Game).isActionTriggered("game", "inspect")) {
-                if(battleOverlay.IsActive) {
-                    battleOverlay.hide();
-                    GameManager.ActiveSave.ActiveMap.setRoamingState(GameManager.ActiveSave.Team);
-                } else {
-                    battleOverlay.show();
-                    GameManager.ActiveSave.ActiveMap.setFightingState(GameManager.ActiveSave.Team.Leader.Target);
-                }
-
-                actionTimer = 0;
-            }
+            Besmash game = (Besmash)ScreenManager.Game;
+            if(inputTimer < millisPerInput)
+                inputTimer += gameTime.ElapsedGameTime.Milliseconds;
+            else if(game.isActionTriggered("game", "move_up")
+            || game.isActionTriggered("game", "move_right")
+            || game.isActionTriggered("game", "move_down")
+            || game.isActionTriggered("game", "move_left")
+            || game.isActionTriggered("game", "interact")
+            || game.isActionTriggered("game", "inspect")
+            || game.isActionTriggered("game", "cancel")
+            || game.isActionTriggered("game", "menu"))
+                inputTimer = -1;
         }
 
         public override void Draw(GameTime gameTime) {
             GameManager.ActiveSave.ActiveMap.draw(ImageBatch);
             base.Draw(gameTime);
         }
+
+        private int millisPerInput = 256;
+        private int inputTimer;
 
         /// Handling user input, e.g. moving player, interacting
         /// with objects or opening menus (moving through menus
@@ -65,43 +65,49 @@ namespace BesmashGame {
             Team team = GameManager.ActiveSave.Team;
             PlayerIndex player;
 
-            // test
-            CollisionResolver cr = (x, y, mo) => {
-                if(mo is Tile && ((Tile)mo).Solid
-                || mo is Entity && !team.Members.Contains(mo))
-                    return Point.Zero;
-
-                return null;
-            };
-
             if(map.Slave != null) {
-                if(game.isActionTriggered("game", "move_up")) map.Slave.move(0, -1, cr);
-                if(game.isActionTriggered("game", "move_right")) map.Slave.move(1, 0, cr);
-                if(game.isActionTriggered("game", "move_down")) map.Slave.move(0, 1, cr);
-                if(game.isActionTriggered("game", "move_left")) map.Slave.move(-1, 0, cr);
+                if(game.isActionTriggered("game", "move_up")) map.Slave.move(0, -1);
+                if(game.isActionTriggered("game", "move_right")) map.Slave.move(1, 0);
+                if(game.isActionTriggered("game", "move_down")) map.Slave.move(0, 1);
+                if(game.isActionTriggered("game", "move_left")) map.Slave.move(-1, 0);
+                if(inputTimer >= 0) return;
+
+                GameManager.ActiveSave.Team.Player.ForEach(p => {
+                    if(game.isActionTriggered("game", "cancel"))
+                        p.StepTimeMultiplier = 0.7f;
+                    else p.StepTimeMultiplier = 1;
+                });
+
+                if(game.isActionTriggered("game", "interact")) {
+                    int x = (int)map.Slave.Position.X + (
+                        map.Slave.Facing == Facing.EAST ? 1 :
+                        map.Slave.Facing == Facing.WEST ? -1 : 0);
+
+                    int y = (int)map.Slave.Position.Y + (
+                        map.Slave.Facing == Facing.SOUTH ? 1 :
+                        map.Slave.Facing == Facing.NORTH ? -1 : 0);
+
+                    map.getTiles(x, y).ForEach(tile => tile.trigger(map.Slave));
+                }
+
+                // if(game.isActionTriggered("game", "inspect")) {
+                //     if(battleOverlay.IsActive) {
+                //         battleOverlay.hide();
+                //         GameManager.ActiveSave.ActiveMap
+                //             .setRoamingState(GameManager.ActiveSave.Team);
+                //     } else {
+                //         battleOverlay.show();
+                //         GameManager.ActiveSave.ActiveMap
+                //             .setFightingState(GameManager.ActiveSave.Team.Leader.Target);
+                //     }
+                // }
             }
 
             if(game.isActionTriggered("game", "menu"))
                 ScreenManager.AddScreen(new GameMenuScreen(this), null);
-
-            // // TODO TEST
-            // if(game.isActionTriggered("game", "interact")) {
-            //     if(GameManager.ActiveSave.ActiveMap.State == TileMap.MapState.Roaming)
-            //         GameManager.ActiveSave.ActiveMap.setFightingState(GameManager.ActiveSave.Team);
-            //     else
-            //         GameManager.ActiveSave.ActiveMap.setRoamingState(GameManager.ActiveSave.Team);
-            // }
-
-            // interaction
-            // Config.KeyMaps["game"]["interact"]
-
-            // open game menu
-            // Config.KeyMaps["game"]["menu"]
-
-            // open other menus/guis?
         }
 
-        // closes the screen and may save the game
+        /// Closes the screen and may save the game
         public void quit(bool save) {
             if(save) GameManager.save();
             GameManager.ActiveSave.Content.Unload();

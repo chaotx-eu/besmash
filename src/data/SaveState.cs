@@ -12,7 +12,7 @@ namespace BesmashGame {
     [DataContract(IsReference = true)]
     public class SaveState {
         /// Map to be loaded if no map has been specified yet.
-        public static string DEFAULT_MAP {get;} = "maps/forestMap";
+        public static string DEFAULT_MAP {get;} = "maps/forest1_ext";
 
         /// Overall playtime in seconds.
         [DataMember]
