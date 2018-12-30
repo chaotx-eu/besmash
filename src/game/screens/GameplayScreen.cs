@@ -78,15 +78,18 @@ namespace BesmashGame {
                 });
 
                 if(game.isActionTriggered("game", "interact")) {
-                    int x = (int)map.Slave.Position.X + (
-                        map.Slave.Facing == Facing.EAST ? 1 :
-                        map.Slave.Facing == Facing.WEST ? -1 : 0);
+                    int x = map.Slave.Facing == Facing.EAST ? 1 :
+                        map.Slave.Facing == Facing.WEST ? -1 : 0;
 
-                    int y = (int)map.Slave.Position.Y + (
-                        map.Slave.Facing == Facing.SOUTH ? 1 :
-                        map.Slave.Facing == Facing.NORTH ? -1 : 0);
+                    int y = map.Slave.Facing == Facing.SOUTH ? 1 :
+                        map.Slave.Facing == Facing.NORTH ? -1 : 0;
 
-                    map.getTiles(x, y).ForEach(tile => tile.trigger(map.Slave));
+                    map.getTiles((int)map.Slave.Position.X + x, (int)map.Slave.Position.Y + y)
+                        .ForEach(tile => tile.trigger(map.Slave));
+
+                    // TODO test ability
+                    if(map.Slave is Creature)
+                        ((Creature)map.Slave).BasicAttack.execute(new Point(x, y));
                 }
 
                 // if(game.isActionTriggered("game", "inspect")) {
