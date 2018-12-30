@@ -25,6 +25,9 @@ namespace BesmashGame {
             base.LoadContent();
             TileMap.MapAlpha = 0;
         }
+        
+        private int millisPerAction = 256;
+        private int actionTimer;
 
         public override void Update(GameTime gameTime,
         bool otherScreenHasFocus, bool coveredByOtherScreen) {
@@ -33,8 +36,8 @@ namespace BesmashGame {
             GameManager.ActiveSave.update(gameTime);
 
             Besmash game = (Besmash)ScreenManager.Game;
-            if(inputTimer < millisPerInput)
-                inputTimer += gameTime.ElapsedGameTime.Milliseconds;
+            if(actionTimer < millisPerAction)
+                actionTimer += gameTime.ElapsedGameTime.Milliseconds;
             else if(game.isActionTriggered("game", "move_up")
             || game.isActionTriggered("game", "move_right")
             || game.isActionTriggered("game", "move_down")
@@ -43,16 +46,13 @@ namespace BesmashGame {
             || game.isActionTriggered("game", "inspect")
             || game.isActionTriggered("game", "cancel")
             || game.isActionTriggered("game", "menu"))
-                inputTimer = -1;
+                actionTimer = -1;
         }
 
         public override void Draw(GameTime gameTime) {
             GameManager.ActiveSave.ActiveMap.draw(ImageBatch);
             base.Draw(gameTime);
         }
-
-        private int millisPerInput = 256;
-        private int inputTimer;
 
         /// Handling user input, e.g. moving player, interacting
         /// with objects or opening menus (moving through menus
@@ -63,15 +63,14 @@ namespace BesmashGame {
             Besmash game = (Besmash)ScreenManager.Game;
             TileMap map = GameManager.ActiveSave.ActiveMap;
             Team team = GameManager.ActiveSave.Team;
-            PlayerIndex player;
 
             if(map.Slave != null) {
                 if(game.isActionTriggered("game", "move_up")) map.Slave.move(0, -1);
                 if(game.isActionTriggered("game", "move_right")) map.Slave.move(1, 0);
                 if(game.isActionTriggered("game", "move_down")) map.Slave.move(0, 1);
                 if(game.isActionTriggered("game", "move_left")) map.Slave.move(-1, 0);
-                if(inputTimer >= 0) return;
 
+                if(actionTimer >= 0) return;
                 GameManager.ActiveSave.Team.Player.ForEach(p => {
                     if(game.isActionTriggered("game", "cancel"))
                         p.StepTimeMultiplier = 0.7f;

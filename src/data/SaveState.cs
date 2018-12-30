@@ -111,6 +111,7 @@ namespace BesmashGame {
             string nextMap = ActiveMap.OtherMap;
             if(nextMap != null) load(Game, nextMap);
             ActiveMap.update(gameTime);
+            Team.update(gameTime);
         }
     }
 }
