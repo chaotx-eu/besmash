@@ -6,11 +6,10 @@ namespace BesmashGame {
     using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework.Input;
     using GameStateManagement;
+    using System.Collections.Generic;
     using System.Linq;
     using Debug;
 
-    using System.Collections.Generic;
-    using Microsoft.Xna.Framework.Input;
 
     public class GameplayScreen : BesmashScreen {
         private BattleOverlayPane battleOverlay;
@@ -33,21 +32,13 @@ namespace BesmashGame {
             MainContainer.add(debugPane);
             base.LoadContent();
             TileMap.MapAlpha = 0;
-            prevState = Keyboard.GetState();
         }
-        
-        private int millisPerAction = 160;
-        private int actionTimer;
 
         public override void Update(GameTime gameTime,
         bool otherScreenHasFocus, bool coveredByOtherScreen) {
             base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
             TileMap.MapAlpha = MainContainer.Alpha;
             GameManager.ActiveSave.update(gameTime);
-
-            // throttles input time for user actions
-            if(actionTimer < millisPerAction)
-                actionTimer += gameTime.ElapsedGameTime.Milliseconds;
 
             // update debug pane
             debugPane.Map = GameManager.ActiveSave.ActiveMap;
@@ -61,7 +52,6 @@ namespace BesmashGame {
         /// Handling user input, e.g. moving player, interacting
         /// with objects or opening menus (moving through menus
         /// is handled internally by the GSMXtended lib) (TODO)
-        private KeyboardState prevState;
         public override void HandleInput(InputState inputState) {
             base.HandleInput(inputState);
             GameConfig config = GameManager.Configuration;
@@ -70,24 +60,20 @@ namespace BesmashGame {
             Team team = GameManager.ActiveSave.Team;
 
             if(map.Slave != null) {
-                if(game.isActionTriggered("game", "move_up")) map.Slave.move(0, -1);
-                if(game.isActionTriggered("game", "move_right")) map.Slave.move(1, 0);
-                if(game.isActionTriggered("game", "move_down")) map.Slave.move(0, 1);
-                if(game.isActionTriggered("game", "move_left")) map.Slave.move(-1, 0);
-                if(prevState == null) prevState = Keyboard.GetState();
+                if(game.isActionTriggered("game", "move_up", true)) map.Slave.move(0, -1);
+                if(game.isActionTriggered("game", "move_right", true)) map.Slave.move(1, 0);
+                if(game.isActionTriggered("game", "move_down", true)) map.Slave.move(0, 1);
+                if(game.isActionTriggered("game", "move_left", true)) map.Slave.move(-1, 0);
 
-                if(Keyboard.GetState().IsKeyDown(config.KeyMaps["game"]["cancel"].TriggerKeys[0])
-                && !prevState.IsKeyDown(config.KeyMaps["game"]["cancel"].TriggerKeys[0]))
+                if(game.isActionTriggered("game", "cancel"))
                     GameManager.ActiveSave.Team.Player
                         .ForEach(p => p.StepTimeMultiplier = 0.7f);
 
-                if(!Keyboard.GetState().IsKeyDown(config.KeyMaps["game"]["cancel"].TriggerKeys[0])
-                && prevState.IsKeyDown(config.KeyMaps["game"]["cancel"].TriggerKeys[0]))
+                if(!game.isActionTriggered("game", "cancel", true))
                     GameManager.ActiveSave.Team.Player
                         .ForEach(p => p.StepTimeMultiplier = 1f);
 
-                if(Keyboard.GetState().IsKeyDown(config.KeyMaps["game"]["interact"].TriggerKeys[0])
-                && !prevState.IsKeyDown(config.KeyMaps["game"]["interact"].TriggerKeys[0])) {
+                if(game.isActionTriggered("game", "interact")) {
                     int x = map.Slave.Facing == Facing.EAST ? 1 :
                         map.Slave.Facing == Facing.WEST ? -1 : 0;
 
@@ -106,8 +92,7 @@ namespace BesmashGame {
                     }
                 }
 
-                if(Keyboard.GetState().IsKeyDown(config.KeyMaps["game"]["inspect"].TriggerKeys[0])
-                && !prevState.IsKeyDown(config.KeyMaps["game"]["inspect"].TriggerKeys[0]))
+                if(game.isActionTriggered("game", "inspect", 200))
                     debugPane.toggle();
 
                 // if(game.isActionTriggered("game", "inspect")) {
@@ -123,11 +108,8 @@ namespace BesmashGame {
                 // }
             }
 
-            if(Keyboard.GetState().IsKeyDown(config.KeyMaps["game"]["menu"].TriggerKeys[0])
-            && !prevState.IsKeyDown(config.KeyMaps["game"]["menu"].TriggerKeys[0]))
+            if(game.isActionTriggered("game", "menu"))
                 ScreenManager.AddScreen(new GameMenuScreen(this), null);
-
-            prevState = Keyboard.GetState();
         }
 
         /// Closes the screen and may save the game

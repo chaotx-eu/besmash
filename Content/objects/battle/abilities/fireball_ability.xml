@@ -7,9 +7,9 @@
 
         <!-- Ability -->
         <Title>Fireball</Title>
-        <!-- <HitAnimation>objects/battle/animations/sword_animation</HitAnimation> -->
-        <ChargeAnimation>objects/battle/animations/fire_charge_animation</ChargeAnimation>
-        <Projectile>objects/battle/projectiles/lightning_projectile</Projectile>
+        <HitAnimation>objects/battle/animations/sword_animation</HitAnimation>
+        <!-- <ChargeAnimation>objects/battle/animations/fire_charge_animation</ChargeAnimation> -->
+        <!-- <Projectile>objects/battle/projectiles/lightning_projectile</Projectile> -->
         <!-- <User>path/to/creature</User> -->
     </Asset>
 </XnaContent>

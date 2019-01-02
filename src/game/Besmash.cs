@@ -11,6 +11,7 @@ namespace BesmashGame {
     using BesmashGame.Config;
     using System.Collections.Generic;
     using System.Linq;
+    using System;
 
     public class Besmash : Game {
         /// Manager of this game
@@ -79,27 +80,109 @@ namespace BesmashGame {
             // loadSave();
         }
 
-        /// Checks wether an action key or button, defined in the
-        /// current game config of the game manager, is pressed
-        public bool isActionTriggered(string context, string action, int gamepadIndex) {
+        private HashSet<Keys> pressedKeys = new HashSet<Keys>();
+        private HashSet<Buttons> pressedButtons = new HashSet<Buttons>();
+        private Dictionary<Keys, TimeSpan> keyTimerMap = new Dictionary<Keys, TimeSpan>();
+        private Dictionary<Buttons, TimeSpan> buttonTimerMap = new Dictionary<Buttons, TimeSpan>();
+        
+        /// Overload for convenience, always checks input for
+        /// the gamepad at index 0 with ongoing set to false
+        public bool isActionTriggered(string context, string action) {
+            return isActionTriggered(context, action, false);
+        }
+
+        /// Overload for convenience, always checks
+        /// input for the gamepad at index 0
+        public bool isActionTriggered(string context, string action, bool ongoing) {
+            return isActionTriggered(context, action, ongoing, 0);
+        }
+
+        /// Overload for convenience. Check input with idleTime, gamePad
+        /// index will always be 0
+        public bool isActionTriggered(string context, string action, int idleTime) {
+            return isActionTriggered(context, action, idleTime, 0);
+        }
+
+        /// Checks wether an action is triggered but will return false in any
+        /// case for following calls until idleTime milliseconds have passed
+        public bool isActionTriggered(string context, string action, int idleTime, int gamepadIndex) {
             if(Manager.Configuration.KeyMaps.ContainsKey(context)
             && Manager.Configuration.KeyMaps[context].ContainsKey(action)) {
-                foreach(Keys key in Manager.Configuration.KeyMaps[context][action].TriggerKeys)
-                    if(Keyboard.GetState().IsKeyDown(key))
-                        return true;
+                foreach(Keys key in Manager.Configuration
+                .KeyMaps[context][action].TriggerKeys) {
+                    if(Keyboard.GetState().IsKeyDown(key)) {
+                        if(!keyTimerMap.ContainsKey(key)) {
+                            keyTimerMap.Add(key, gameTime.TotalGameTime);
+                            return true;
+                        }
 
-                foreach(Buttons button in Manager.Configuration.KeyMaps[context][action].TriggerButtons)
-                    if(GamePad.GetState(gamepadIndex).IsButtonDown(button))
-                        return true;
+                        if(gameTime.TotalGameTime
+                        .Subtract(keyTimerMap[key])
+                        .TotalMilliseconds >= idleTime) {
+                            keyTimerMap[key] = gameTime.TotalGameTime;
+                            return true;
+                        }
+                    }
+                }
+
+                foreach(Buttons button in Manager.Configuration
+                .KeyMaps[context][action].TriggerButtons) {
+                    if(GamePad.GetState(gamepadIndex).IsButtonDown(button)) {
+                        if(!buttonTimerMap.ContainsKey(button)) {
+                            buttonTimerMap.Add(button, gameTime.TotalGameTime);
+                            return true;
+                        }
+
+                        if(gameTime.TotalGameTime
+                        .Subtract(buttonTimerMap[button])
+                        .TotalMilliseconds >= idleTime) {
+                            buttonTimerMap[button] = gameTime.TotalGameTime;
+                            return true;
+                        }
+                    }
+                }
             }
 
             return false;
         }
 
-        /// Overload for convenience, always checks
-        /// input for the gamepad at index 0
-        public bool isActionTriggered(string context, string action) {
-            return isActionTriggered(context, action, 0);
+        /// Checks wether an action key or button, defined in the
+        /// current game config of the game manager is pressed.
+        /// If ongoing is true the function will return true
+        /// whenever this function is called while the key/button
+        /// is held down otherwise it will return true only on its
+        /// first call and false until the pressed key/button is
+        /// released and then pressed again
+        public bool isActionTriggered(string context, string action, bool ongoing, int gamepadIndex) {
+            if(Manager.Configuration.KeyMaps.ContainsKey(context)
+            && Manager.Configuration.KeyMaps[context].ContainsKey(action)) {
+                foreach(Keys key in Manager.Configuration
+                .KeyMaps[context][action].TriggerKeys) {
+                    bool keyPressed = Keyboard.GetState().IsKeyDown(key);
+
+                    if(keyPressed && (ongoing || !pressedKeys.Contains(key))) {
+                        pressedKeys.Add(key);
+                        return true;
+                    }
+
+                    if(!keyPressed)
+                        pressedKeys.Remove(key);
+                }
+
+                foreach(Buttons button in Manager.Configuration
+                .KeyMaps[context][action].TriggerButtons) {
+                    bool buttonPressed = GamePad.GetState(gamepadIndex).IsButtonDown(button);
+                    if(buttonPressed && (ongoing || !pressedButtons.Contains(button))) {
+                        pressedButtons.Add(button);
+                        return true;
+                    }
+
+                    if(!buttonPressed)
+                        pressedButtons.Remove(button);
+                }
+            }
+
+            return false;
         }
 
         protected override void Initialize() {
@@ -107,9 +190,11 @@ namespace BesmashGame {
         }
 
         // temporary (real update in ScreenManager)
+        private GameTime gameTime;
         protected override void Update(GameTime gameTime) {
             // if(Keyboard.GetState().IsKeyDown(Keys.Escape)) Exit();
             base.Update(gameTime);
+            this.gameTime = gameTime;
 
             if(ConfigChanged) {
                 loadConfig();
