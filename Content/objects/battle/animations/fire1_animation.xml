@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+    <Asset Type="SpriteAnimation">
+        <SpriteSheet>images/battle/animations/fire_animation</SpriteSheet>
+        <Layer>1</Layer>
+
+        <SpriteCount>8</SpriteCount>
+        <SpriteSize>16 16</SpriteSize>
+        <SpritesPerSecond>8</SpritesPerSecond>
+        <MaxIterations>4</MaxIterations>
+    </Asset>
+</XnaContent>

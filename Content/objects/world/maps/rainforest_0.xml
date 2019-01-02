@@ -1,0 +1,4906 @@
+<?xml version='1.0' encoding='utf-8'?>
+<XnaContent xmlns:ns='Microsoft.Xna.Framework'>
+	<Asset Type='RainForest'>
+		<Title>Plains Set</Title>
+		<Viewport>8 8</Viewport>
+
+		<Tiles>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 0</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 0</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 1</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 1</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 2</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 2</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 2</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 2</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 2</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 2</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 2</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 2</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 2</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 2</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 2</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 3</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 3</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 3</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 3</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 3</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 3</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 3</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 3</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 3</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 3</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 3</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 4</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 4</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 4</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 4</Position>
+				<Solid>true</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>48 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 4</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 4</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 4</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 4</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 4</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 4</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 4</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 5</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 5</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 16 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 5</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 5</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 5</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 16 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 5</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 5</Position>
+				<Solid>true</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>16 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 5</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 5</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 5</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 5</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 6</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 6</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>16 32 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 6</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>16 32 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 6</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>16 16 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 6</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>48 16 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 6</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 6</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 6</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 6</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 7</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 7</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>16 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 7</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>16 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 7</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>48 32 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 7</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>32 32 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 7</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 7</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 7</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 7</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 8</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 8</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>48 16 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 8</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 8</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 8</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 16 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 8</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>16 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 8</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 8</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 8</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 8</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 9</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 32 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 9</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 9</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 32 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 9</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>48 16 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 9</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 9</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 9</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 9</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 9</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 9</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 9</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 10</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 10</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 10</Position>
+				<Solid>true</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>16 32 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 10</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>32 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 10</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 10</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 10</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 10</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 10</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 10</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 10</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 11</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 11</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>32 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 11</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>16 16 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 11</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>48 16 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 11</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 11</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 11</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 11</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 12</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 12</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>48 16 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 12</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>48 32 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 12</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 12</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 12</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 12</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 13</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 13</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 13</Position>
+				<Solid>true</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 13</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 13</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 13</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 13</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 14</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 14</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>32 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 14</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>48 32 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 14</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 14</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 14</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 14</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 14</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 14</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 14</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 14</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 15</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 15</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>48 16 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 15</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 15</Position>
+				<Solid>true</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 15</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 15</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 15</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 15</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 15</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 15</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 16</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 16</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>16 32 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 16</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 16 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 16</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 16</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 16</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 16</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 17</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 17</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>48 16 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 17</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 17</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 17</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 17</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>16 32 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 18</Position>
+				<Solid>false</Solid>
+				<Layer>1</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 18</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 18</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>0 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>1 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>2 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>3 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>4 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>5 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>6 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>7 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>8 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>9 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>10 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>11 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>12 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>13 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>14 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>15 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>16 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>17 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>18 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>
+				<SpriteRectangle>0 0 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 19</Position>
+				<Solid>false</Solid>
+				<Layer>0</Layer>
+			</Tile>
+			<Tile>
+				<SpriteSheet>images/world/maps/generic_trees_sheet</SpriteSheet>
+				<SpriteRectangle>0 48 16 16</SpriteRectangle>
+				<Rotation>0</Rotation>
+				<Position>19 19</Position>
+				<Solid>true</Solid>
+				<Layer>2</Layer>
+			</Tile>
+		</Tiles>
+	</Asset>
+</XnaContent>

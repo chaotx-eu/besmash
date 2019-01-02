@@ -6,6 +6,7 @@ namespace BesmashGame {
     public class BesmashMenuPane : VPane {
         public event EventHandler FocusRequestEvent;
         public event EventHandler FocusLossEvent;
+        public bool IsFocused {get; protected set;}
 
         /// Hides this pane and takes away any focus
         public void hide() {hide(true, 0);}
@@ -13,7 +14,10 @@ namespace BesmashGame {
         public void hide(float alpha) {hide(true, alpha);}
         public virtual void hide(bool takeFocus, float alpha) {
             Container.applyAlpha(this, alpha);
-            if(takeFocus) onFocusLoss(null);
+            if(takeFocus) {
+                onFocusLoss(null);
+                IsFocused = false;
+            }
         }
 
         /// Shows this pane with the passed alpha set
@@ -23,7 +27,16 @@ namespace BesmashGame {
         public void show(float alpha) {show(true, alpha);}
         public virtual void show(bool giveFocus, float alpha) {
             Container.applyAlpha(this, alpha);
-            if(giveFocus) onFocusRequest(null);
+            if(giveFocus) {
+                onFocusRequest(null);
+                IsFocused = true;
+            }
+        }
+
+        /// Show this pane if not focused otherwise hides it
+        public void toggle() {
+            if(IsFocused) hide();
+            else show();
         }
 
         /// Call this method in child classes whenever
