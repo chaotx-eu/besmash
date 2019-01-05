@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<XnaContent xmlns:ns="Microsoft.Xna.Frameword">
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
     <Asset Type="Projectile">
         <!-- GameObject -->
         <SpriteSheet>images/battle/projectiles/fireball_projectile</SpriteSheet>
@@ -12,6 +12,20 @@
         <StepTime>164</StepTime>
 
         <!-- Projectile -->
-        <CollisionAnimation>objects/battle/animations/sword_animation</CollisionAnimation>
+        <HitAbility>
+            <Components>
+                <Component>
+                    <Animation>objects/battle/animations/firesplash_animation</Animation>
+
+                    <Children>
+                        <Component>
+                            <Animation>objects/battle/animations/fire1_animation</Animation>
+                            <Position>0 -1</Position>
+                            <FrameOffset>-2</FrameOffset>
+                        </Component>
+                    </Children>
+                </Component>
+            </Components>
+        </HitAbility>
     </Asset>
 </XnaContent>

@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<XnaContent xmlns:ns="Microsoft.Xna.Frameword">
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
     <Asset Type="Ability">
-        <!-- GameObject -->
-        <SpriteSheet>unused(TODO)</SpriteSheet>
-        <!-- <SpriteRectangle>0 0 16 16</SpriteRectangle> -->
-
-        <!-- Ability -->
         <Title>Fireball</Title>
-        <HitAnimation>objects/battle/animations/sword_animation</HitAnimation>
-        <!-- <ChargeAnimation>objects/battle/animations/fire_charge_animation</ChargeAnimation> -->
-        <!-- <Projectile>objects/battle/projectiles/lightning_projectile</Projectile> -->
-        <!-- <User>path/to/creature</User> -->
+
+        <Components>
+            <Component>
+                <Animation>objects/battle/animations/fire_charge_animation</Animation>
+                <!-- <Position>0 0</Position> -->
+                <!-- <TimeOffset>0</TimeOffset> -->
+                <!-- <FrameOffset>0</FrameOffset> -->
+
+                <Children>
+                    <Component>
+                        <!-- no Animation -->
+                        <Projectile>objects/battle/projectiles/fireball_projectile</Projectile>
+                        <Position>0 0</Position>
+                        <!-- <TimeOffset>500</TimeOffset> -->
+                        <FrameOffset>-1</FrameOffset> <!-- -1 => after last frame of parent -->
+                    </Component>
+                </Children>
+            </Component>
+        </Components>
     </Asset>
 </XnaContent>

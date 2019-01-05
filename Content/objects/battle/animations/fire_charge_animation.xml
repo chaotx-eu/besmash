@@ -7,5 +7,6 @@
 		<SpriteCount>15</SpriteCount>
 		<SpriteSize>16 16</SpriteSize>
 		<SpritesPerSecond>10</SpritesPerSecond>
+		<RotateRelative>true</RotateRelative>
 	</Asset>
 </XnaContent>

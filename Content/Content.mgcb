@@ -59,6 +59,18 @@
 /processorParam:TextureFormat=Color
 /build:images/battle/animations/fire_charge_animation.png
 
+#begin images/battle/animations/firesplash_animation.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/battle/animations/firesplash_animation.png
+
 #begin images/battle/animations/sword_animation.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -311,6 +323,11 @@
 /importer:XmlImporter
 /processor:PassThroughProcessor
 /build:objects/battle/animations/fire1_animation.xml
+
+#begin objects/battle/animations/firesplash_animation.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/animations/firesplash_animation.xml
 
 #begin objects/battle/animations/sword_animation.xml
 /importer:XmlImporter

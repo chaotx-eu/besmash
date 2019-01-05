@@ -73,27 +73,19 @@ namespace BesmashGame {
                     GameManager.ActiveSave.Team.Player
                         .ForEach(p => p.StepTimeMultiplier = 1f);
 
+                int x = map.Slave.Facing == Facing.East ? 1 :
+                    map.Slave.Facing == Facing.West ? -1 : 0;
+
+                int y = map.Slave.Facing == Facing.South ? 1 :
+                    map.Slave.Facing == Facing.North ? -1 : 0;
+
                 if(game.isActionTriggered("game", "interact")) {
-                    int x = map.Slave.Facing == Facing.EAST ? 1 :
-                        map.Slave.Facing == Facing.WEST ? -1 : 0;
-
-                    int y = map.Slave.Facing == Facing.SOUTH ? 1 :
-                        map.Slave.Facing == Facing.NORTH ? -1 : 0;
-
-                    map.getTiles((int)map.Slave.Position.X + x, (int)map.Slave.Position.Y + y)
-                        .ForEach(tile => tile.trigger(map.Slave));
-
-                    // TODO test abilities
-                    if(map.Slave is Creature) {
-                        Creature player = (Creature)map.Slave;
-                        // player.BasicAttack.execute(new Point(x, y));
-                        player.Abilities.Where(a => a.Title == "Fireball")
-                            .ToList().ForEach(a => a.execute(new Point(x, y)));
-                    }
+                    map.getTiles(
+                        (int)map.Slave.Position.X + x,
+                        (int)map.Slave.Position.Y + y
+                    ).ForEach(tile
+                        => tile.trigger(map.Slave));
                 }
-
-                if(game.isActionTriggered("game", "inspect", 200))
-                    debugPane.toggle();
 
                 // if(game.isActionTriggered("game", "inspect")) {
                 //     if(battleOverlay.IsActive) {
@@ -106,6 +98,29 @@ namespace BesmashGame {
                 //             .setFightingState(GameManager.ActiveSave.Team.Leader.Target);
                 //     }
                 // }
+
+                if(game.isActionTriggered("game", "action1")) {
+                    if(map.Slave is Creature) {
+                        Creature slave = (Creature)map.Slave;
+
+                        if(slave.Abilities.Where(a => a.Title == "Fireball").Count() == 0)
+                            slave.addAbility("objects/battle/abilities/fireball_ability", GameManager.ActiveSave.Content);
+                    }
+                }
+
+                if(game.isActionTriggered("game", "action2", 500)) {
+                    // TODO test abilities
+                    if(map.Slave is Creature) {
+                        Creature player = (Creature)map.Slave;
+                        // player.BasicAttack.execute(new Point(x, y));
+                        player.Abilities.Where(a => a.Title == "Fireball")
+                            .ToList().ForEach(a => a.execute());
+                            // .ToList().ForEach(a => a.execute(new Point(x, y)));
+                    }
+                }
+
+                if(game.isActionTriggered("game", "action3"))
+                    debugPane.toggle();
             }
 
             if(game.isActionTriggered("game", "menu"))

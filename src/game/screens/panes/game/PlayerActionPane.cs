@@ -31,7 +31,7 @@ namespace BesmashGame {
             TargetSelectionPane = new TargetSelectionPane(player.ContainingMap);
 
             // TODO
-            TextItem tiAttack = new TextItem(player.BasicAttack != null ? player.BasicAttack.Title : "FooBar", "fonts/game_font1");
+            TextItem tiAttack = new TextItem("Attack", "fonts/game_font1");
             TextItem tiSkills = new TextItem("Skills", "fonts/game_font1");
             TextItem tiMove = new TextItem("Move", "fonts/game_font1");
             TextItem tiDefend = new TextItem("Defend", "fonts/game_font1");

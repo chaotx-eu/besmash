@@ -7,6 +7,5 @@
 		<SpriteCount>13</SpriteCount>
 		<SpriteSize>16 16</SpriteSize>
 		<SpritesPerSecond>32</SpritesPerSecond>
-		<FollowUpAnimation>objects/battle/animations/fire1_animation</FollowUpAnimation>
 	</Asset>
 </XnaContent>

@@ -115,9 +115,14 @@ namespace BesmashGame.Config {
             KeyMaps["game"].Add("menu", new UserInput("game.menu"));
             // KeyMaps["game"].Add("pause", new UserInput("game.pause"));
 
+            KeyMaps["game"].Add("action1", new UserInput("game.action1"));
+            KeyMaps["game"].Add("action2", new UserInput("game.action2"));
+            KeyMaps["game"].Add("action3", new UserInput("game.action3"));
+            KeyMaps["game"].Add("action4", new UserInput("game.action4"));
+
             // Default game menu action- keys and buttons
-            KeyMaps.Add("game_menu", new Dictionary<string, UserInput>());
-            // TODO
+            // KeyMaps.Add("game_menu", new Dictionary<string, UserInput>());
+            // TODO game menu context keys
         }
 
         /// Loads required content for configurations (e.g. language)
