@@ -70,6 +70,9 @@ namespace BesmashGame.Config {
 
         /// No public access, use createDefault instead
         private GameConfig(bool not_used) : this() {
+            // TODO move this 'construct' to BesmashContent so
+            // it can be made compatible with content serializer
+
             // Default menu action- keys and buttons
             KeyMaps.Add("menu", new Dictionary<string, UserInput>());
             KeyMaps["menu"].Add("menu_up", new UserInput("menu.menu_up"));
@@ -113,12 +116,48 @@ namespace BesmashGame.Config {
             KeyMaps["game"].Add("inspect", new UserInput("game.inspect"));
             KeyMaps["game"].Add("cancel", new UserInput("game.cancel"));
             KeyMaps["game"].Add("menu", new UserInput("game.menu"));
-            // KeyMaps["game"].Add("pause", new UserInput("game.pause"));
 
-            KeyMaps["game"].Add("action1", new UserInput("game.action1"));
-            KeyMaps["game"].Add("action2", new UserInput("game.action2"));
-            KeyMaps["game"].Add("action3", new UserInput("game.action3"));
-            KeyMaps["game"].Add("action4", new UserInput("game.action4"));
+            KeyMaps["game"]["move_up"].TriggerKeys.Add(Keys.Up);
+            KeyMaps["game"]["move_right"].TriggerKeys.Add(Keys.Right);
+            KeyMaps["game"]["move_down"].TriggerKeys.Add(Keys.Down);
+            KeyMaps["game"]["move_left"].TriggerKeys.Add(Keys.Left);
+            KeyMaps["game"]["interact"].TriggerKeys.Add(Keys.Enter);
+            KeyMaps["game"]["inspect"].TriggerKeys.Add(Keys.LeftShift);
+            KeyMaps["game"]["cancel"].TriggerKeys.Add(Keys.Back);
+            KeyMaps["game"]["menu"].TriggerKeys.Add(Keys.Escape);
+
+            KeyMaps["game"]["move_up"].TriggerButtons.Add(Buttons.DPadUp);
+            KeyMaps["game"]["move_right"].TriggerButtons.Add(Buttons.DPadRight);
+            KeyMaps["game"]["move_down"].TriggerButtons.Add(Buttons.DPadDown);
+            KeyMaps["game"]["move_left"].TriggerButtons.Add(Buttons.DPadLeft);
+            KeyMaps["game"]["interact"].TriggerButtons.Add(Buttons.A);
+            KeyMaps["game"]["inspect"].TriggerButtons.Add(Buttons.X);
+            KeyMaps["game"]["cancel"].TriggerButtons.Add(Buttons.B);
+            KeyMaps["game"]["menu"].TriggerButtons.Add(Buttons.Y);
+
+            // Default debug keys
+            KeyMaps.Add("debug", new Dictionary<string, UserInput>());
+            KeyMaps["debug"].Add("action1", new UserInput("debug.action1"));
+            KeyMaps["debug"].Add("action2", new UserInput("debug.action2"));
+            KeyMaps["debug"].Add("action3", new UserInput("debug.action3"));
+            KeyMaps["debug"].Add("action4", new UserInput("debug.action4"));
+            KeyMaps["debug"].Add("action5", new UserInput("debug.action4"));
+            KeyMaps["debug"].Add("action6", new UserInput("debug.action4"));
+            KeyMaps["debug"].Add("action7", new UserInput("debug.action4"));
+            KeyMaps["debug"].Add("action8", new UserInput("debug.action4"));
+            KeyMaps["debug"].Add("action9", new UserInput("debug.action4"));
+            KeyMaps["debug"].Add("action0", new UserInput("debug.action4"));
+
+            KeyMaps["debug"]["action1"].TriggerKeys.Add(Keys.D1);
+            KeyMaps["debug"]["action2"].TriggerKeys.Add(Keys.D2);
+            KeyMaps["debug"]["action3"].TriggerKeys.Add(Keys.D3);
+            KeyMaps["debug"]["action4"].TriggerKeys.Add(Keys.D4);
+            KeyMaps["debug"]["action5"].TriggerKeys.Add(Keys.D5);
+            KeyMaps["debug"]["action6"].TriggerKeys.Add(Keys.D6);
+            KeyMaps["debug"]["action7"].TriggerKeys.Add(Keys.D7);
+            KeyMaps["debug"]["action8"].TriggerKeys.Add(Keys.D8);
+            KeyMaps["debug"]["action9"].TriggerKeys.Add(Keys.D9);
+            KeyMaps["debug"]["action0"].TriggerKeys.Add(Keys.D0);
 
             // Default game menu action- keys and buttons
             // KeyMaps.Add("game_menu", new Dictionary<string, UserInput>());

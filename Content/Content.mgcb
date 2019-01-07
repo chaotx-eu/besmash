@@ -203,6 +203,54 @@
 /processorParam:TextureFormat=Color
 /build:images/world/entities/player/white_sheet.png
 
+#begin images/world/entities/thumbnails/grey_thumb.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/world/entities/thumbnails/grey_thumb.png
+
+#begin images/world/entities/thumbnails/pink_thumb.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/world/entities/thumbnails/pink_thumb.png
+
+#begin images/world/entities/thumbnails/red_thumb.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/world/entities/thumbnails/red_thumb.png
+
+#begin images/world/entities/thumbnails/white_thumb.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/world/entities/thumbnails/white_thumb.png
+
 #begin images/world/maps/demo0_sheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -334,6 +382,11 @@
 /processor:PassThroughProcessor
 /build:objects/battle/animations/sword_animation.xml
 
+#begin objects/battle/effects/physical_damage.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/effects/physical_damage.xml
+
 #begin objects/battle/projectiles/fireball_projectile.xml
 /importer:XmlImporter
 /processor:PassThroughProcessor
@@ -343,6 +396,16 @@
 /importer:XmlImporter
 /processor:PassThroughProcessor
 /build:objects/battle/projectiles/lightning_projectile.xml
+
+#begin objects/world/entities/player/grey_player.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/world/entities/player/grey_player.xml
+
+#begin objects/world/entities/player/pink_player.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/world/entities/player/pink_player.xml
 
 #begin objects/world/maps/forest1_ext.xml
 /importer:XmlImporter

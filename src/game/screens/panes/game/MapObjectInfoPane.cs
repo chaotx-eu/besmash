@@ -44,13 +44,11 @@ namespace BesmashGame {
 
             if(mapObject is Creature) {
                 Creature creature = (Creature)mapObject;
-                // TODO
-                // life = string.Format("Life:  {0:0000} / {1:0000}",
-                //     creature.CurrentHP, creature.MaxHP);
+                life = string.Format("Life:  {0:0000} / {1:0000}",
+                    creature.HP, creature.MaxHP);
 
-                info = "Info:  ";
-                if(creature is Player) info += ((Player)creature).Name;
-                else  info += "'put creature info here'"; // TODO: creature.Description
+                info = "Info:  " + creature.Name
+                    + ", Level: " + creature.Level;
             } else if(mapObject is Tile) {
                 info = "Info:  " + (((Tile)mapObject).Solid ? "Is Solid" : "Is Passable");
             }

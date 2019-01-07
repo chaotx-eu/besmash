@@ -22,6 +22,10 @@
                             <Animation>objects/battle/animations/fire1_animation</Animation>
                             <Position>0 -1</Position>
                             <FrameOffset>-2</FrameOffset>
+
+                            <Effect>
+                                <BaseDamage>20</BaseDamage>
+                            </Effect>
                         </Component>
                     </Children>
                 </Component>

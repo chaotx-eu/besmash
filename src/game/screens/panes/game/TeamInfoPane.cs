@@ -52,21 +52,16 @@ namespace BesmashGame {
             Team.Player.ForEach(player => {
                 string name;
                 string stats;
-                // TODO
-                // float percentHP = player.MaxHP > 0
-                //     ? player.CurrentHP/player.MaxHP : 0;
-                float percentHP = 1;
+                float percentHP = player.MaxHP > 0
+                    ? player.HP/player.MaxHP : 0;
 
                 name = player.Name.Length > MAX_TITLE_LEN
                     ? string.Format("     {0, -15}: ", player.Name.Substring(0, MAX_TITLE_LEN-3) + "... ... ...")
                     : string.Format("     {0, -15}: ", player.Name);
 
-                // TODO
-                // stats = string.Format("  | HP: {0:0000} / {1:0000}  |  AP: {2:000} / {3:000} |     ",
-                //     player.CurrentHP, player.MaxHP,
-                //     player.CurrentAP, player.MaxAP);
-                stats = string.Format("  | HP: {0:0000} / {1:0000}  |  AP: {2:000} / {3:000} |     ",
-                    100, 100, 100, 100);
+                stats = string.Format("   Lvl: {0:000} | HP: {1:0000} / {2:0000}  |  AP: {3:000} / {4:000} |     ",
+                    player.Level, player.HP, player.MaxHP,
+                    player.AP, player.MaxAP);
 
                 tiNameMap[player].Text = name;
                 tiNameMap[player].Color = player.ContainingMap.Cursor != null

@@ -87,19 +87,44 @@ namespace BesmashGame {
                         => tile.trigger(map.Slave));
                 }
 
-                // if(game.isActionTriggered("game", "inspect")) {
-                //     if(battleOverlay.IsActive) {
-                //         battleOverlay.hide();
-                //         GameManager.ActiveSave.ActiveMap
-                //             .setRoamingState(GameManager.ActiveSave.Team);
-                //     } else {
-                //         battleOverlay.show();
-                //         GameManager.ActiveSave.ActiveMap
-                //             .setFightingState(GameManager.ActiveSave.Team.Leader.Target);
-                //     }
-                // }
+                if(game.isActionTriggered("game", "inspect")) {
+                    // TODO
+                }
 
-                if(game.isActionTriggered("game", "action1")) {
+                // debug action: toggle debug pane
+                if(game.isActionTriggered("debug", "action0")) {
+                    debugPane.toggle();
+                }
+
+                // debug action: toggle battle overlay
+                if(game.isActionTriggered("debug", "action9")) {
+                    if(battleOverlay.IsActive) {
+                        battleOverlay.hide();
+                        GameManager.ActiveSave.ActiveMap
+                            .setRoamingState(GameManager.ActiveSave.Team);
+                    } else {
+                        battleOverlay.show();
+                        GameManager.ActiveSave.ActiveMap
+                            .setFightingState(GameManager.ActiveSave.Team.Leader.Target);
+                    }
+                }
+
+                // debug action: give exp to (and level up) team leader
+                if(game.isActionTriggered("debug", "action1")) {
+                    if(map.Slave is Creature) {
+                        (map.Slave as Creature).Exp += 150;
+                         (map.Slave as Creature).levelUp();
+                    }
+                }
+
+                // debug action: give exp to (and level up) first team member
+                if(game.isActionTriggered("debug", "action2")) {
+                    GameManager.ActiveSave.Team.Members[0].Exp += 150;
+                    GameManager.ActiveSave.Team.Members[0].levelUp();
+                }
+
+                // debug action: teach ability to map slave
+                if(game.isActionTriggered("debug", "action3")) {
                     if(map.Slave is Creature) {
                         Creature slave = (Creature)map.Slave;
 
@@ -108,19 +133,21 @@ namespace BesmashGame {
                     }
                 }
 
-                if(game.isActionTriggered("game", "action2", 500)) {
-                    // TODO test abilities
+                // debug action: use first ability of map slave
+                if(game.isActionTriggered("debug", "action4")) {
                     if(map.Slave is Creature) {
                         Creature player = (Creature)map.Slave;
-                        // player.BasicAttack.execute(new Point(x, y));
                         player.Abilities.Where(a => a.Title == "Fireball")
                             .ToList().ForEach(a => a.execute());
-                            // .ToList().ForEach(a => a.execute(new Point(x, y)));
                     }
                 }
 
-                if(game.isActionTriggered("game", "action3"))
-                    debugPane.toggle();
+                // debug action: applay ability effects attached to creatures
+                if(game.isActionTriggered("debug", "action5")) {
+                    map.Entities.Where(e => e is Creature).Cast<Creature>()
+                        .Where(c => c.Effects.Count > 0).ToList()
+                        .ForEach(c => c.applyEffects());
+                }
             }
 
             if(game.isActionTriggered("game", "menu"))

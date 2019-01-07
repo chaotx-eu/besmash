@@ -90,11 +90,18 @@ namespace BesmashGame {
 
         /// Loads the passed mapFile and sets it as active map
         public void load(Besmash game, string mapFile) {
-            if(Team == null)
-                Team = new Team();
-                
             if(Content == null)
                 Content = new ContentManager(game.Services, "Content");
+
+            if(Team == null) {
+                // TODO test new game
+                Team = new Team(
+                    Content.Load<Player>("objects/world/entities/player/grey_player"),
+                    Content.Load<Player>("objects/world/entities/player/pink_player")
+                );
+
+                Team.Formation.Add(Team.Members[0], new Point(0, -2));
+            }
 
             TileMap prevMap = ActiveMap;
             ActiveMap = Content.Load<TileMap>(mapFile);
