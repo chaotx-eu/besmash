@@ -3,7 +3,7 @@ namespace BesmashGame {
     using BesmashContent;
     using Microsoft.Xna.Framework;
 
-    public class MapObjectInfoPane : OverlayPane {
+    public class MapObjectInfoPane : BesmashMenuPane {
         public Cursor MapCursor {get; private set;}
 
         private TextItem tiType;
@@ -34,7 +34,18 @@ namespace BesmashGame {
             add(vpMain);
         }
 
+        public override void show(bool giveFocus, float alpha) {
+            base.show(giveFocus, alpha);
+            Scale = 1;
+        }
+
+        public override void hide(bool takeFocus, float alpha) {
+            base.hide(takeFocus, alpha);
+            Scale = 0;
+        }
+
         public override void update(GameTime gameTime) {
+            if(!IsFocused && IsHidden) return;
             base.update(gameTime); 
             MapObject mapObject = MapCursor.getObject();
             if(mapObject == null) return;

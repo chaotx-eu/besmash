@@ -59,6 +59,9 @@ namespace BesmashGame {
             TileMap map = GameManager.ActiveSave.ActiveMap;
             Team team = GameManager.ActiveSave.Team;
 
+            if(game.isActionTriggered("game", "menu"))
+                ScreenManager.AddScreen(new GameMenuScreen(this), null);
+                
             if(map.Slave != null) {
                 if(game.isActionTriggered("game", "move_up", true)) map.Slave.move(0, -1);
                 if(game.isActionTriggered("game", "move_right", true)) map.Slave.move(1, 0);
@@ -90,68 +93,61 @@ namespace BesmashGame {
                 if(game.isActionTriggered("game", "inspect")) {
                     // TODO
                 }
+            }
 
-                // debug action: toggle debug pane
-                if(game.isActionTriggered("debug", "action0")) {
-                    debugPane.toggle();
-                }
+            // debug action: toggle debug pane
+            if(game.isActionTriggered("debug", "action0")) {
+                debugPane.toggle();
+            }
 
-                // debug action: toggle battle overlay
-                if(game.isActionTriggered("debug", "action9")) {
-                    if(battleOverlay.IsActive) {
-                        battleOverlay.hide();
-                        GameManager.ActiveSave.ActiveMap
-                            .setRoamingState(GameManager.ActiveSave.Team);
-                    } else {
-                        battleOverlay.show();
-                        GameManager.ActiveSave.ActiveMap
-                            .setFightingState(GameManager.ActiveSave.Team.Leader.Target);
-                    }
-                }
-
-                // debug action: give exp to (and level up) team leader
-                if(game.isActionTriggered("debug", "action1")) {
-                    if(map.Slave is Creature) {
-                        (map.Slave as Creature).Exp += 150;
-                         (map.Slave as Creature).levelUp();
-                    }
-                }
-
-                // debug action: give exp to (and level up) first team member
-                if(game.isActionTriggered("debug", "action2")) {
-                    GameManager.ActiveSave.Team.Members[0].Exp += 150;
-                    GameManager.ActiveSave.Team.Members[0].levelUp();
-                }
-
-                // debug action: teach ability to map slave
-                if(game.isActionTriggered("debug", "action3")) {
-                    if(map.Slave is Creature) {
-                        Creature slave = (Creature)map.Slave;
-
-                        if(slave.Abilities.Where(a => a.Title == "Fireball").Count() == 0)
-                            slave.addAbility("objects/battle/abilities/fireball_ability", GameManager.ActiveSave.Content);
-                    }
-                }
-
-                // debug action: use first ability of map slave
-                if(game.isActionTriggered("debug", "action4")) {
-                    if(map.Slave is Creature) {
-                        Creature player = (Creature)map.Slave;
-                        player.Abilities.Where(a => a.Title == "Fireball")
-                            .ToList().ForEach(a => a.execute());
-                    }
-                }
-
-                // debug action: applay ability effects attached to creatures
-                if(game.isActionTriggered("debug", "action5")) {
-                    map.Entities.Where(e => e is Creature).Cast<Creature>()
-                        .Where(c => c.Effects.Count > 0).ToList()
-                        .ForEach(c => c.applyEffects());
+            // debug action: toggle battle overlay
+            if(game.isActionTriggered("debug", "action9")) {
+                if(battleOverlay.IsFocused) {
+                    battleOverlay.hide();
+                    GameManager.ActiveSave.ActiveMap
+                        .setRoamingState(GameManager.ActiveSave.Team);
+                } else {
+                    battleOverlay.show();
+                    GameManager.ActiveSave.ActiveMap
+                        .setFightingState(GameManager.ActiveSave.Team.Leader.Target);
                 }
             }
 
-            if(game.isActionTriggered("game", "menu"))
-                ScreenManager.AddScreen(new GameMenuScreen(this), null);
+            // debug action: give exp to (and level up) team leader
+            if(game.isActionTriggered("debug", "action1")) {
+                GameManager.ActiveSave.Team.Leader.Exp += 150;
+                GameManager.ActiveSave.Team.Leader.levelUp();
+            }
+
+            // debug action: give exp to (and level up) first team member
+            if(game.isActionTriggered("debug", "action2")) {
+                GameManager.ActiveSave.Team.Members[0].Exp += 150;
+                GameManager.ActiveSave.Team.Members[0].levelUp();
+            }
+
+            // debug action: teach ability to map slave
+            if(game.isActionTriggered("debug", "action3")) {
+                Player player = GameManager.ActiveSave.Team.Leader;
+                if(player.Abilities.Where(a => a.Title == "Fireball").Count() == 0) {
+                    player.addAbility(
+                        "objects/battle/abilities/fireball_ability",
+                        GameManager.ActiveSave.Content);
+                }
+            }
+
+            // debug action: use first ability of map slave
+            if(game.isActionTriggered("debug", "action4")) {
+                GameManager.ActiveSave.Team.Leader
+                    .Abilities.Where(a => a.Title == "Fireball")
+                    .ToList().ForEach(a => a.execute());
+            }
+
+            // debug action: applay ability effects attached to creatures
+            if(game.isActionTriggered("debug", "action5")) {
+                map.Entities.Where(e => e is Creature).Cast<Creature>()
+                    .Where(c => c.Effects.Count > 0).ToList()
+                    .ForEach(c => c.applyEffects());
+            }
         }
 
         /// Closes the screen and may save the game

@@ -71,7 +71,7 @@ namespace BesmashGame {
             GameManager.SaveStates.ForEach(saveState => {
                 TextItem saveInfo = new TextItem("", "fonts/menu_font1");
                 TextItem saveDetail = new TextItem("", "fonts/menu_font2");
-                ImageItem saveThumbnail = new ImageItem("images/world/entities/npcs/kevin_sheet", new Rectangle(0, 32, 16, 16));
+                ImageItem saveThumbnail = new ImageItem("images/world/entities/npcs/neutral/kevin_sheet", new Rectangle(0, 32, 16, 16));
                 VPane textPane = new VPane(saveInfo, saveDetail);
                 HPane saveEntry = new HPane(saveThumbnail, textPane);
                 saveEntry.PercentWidth = 100;

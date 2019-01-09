@@ -143,7 +143,7 @@
 /processorParam:TextureFormat=Color
 /build:images/world/entities/cursor/generic_cursor.png
 
-#begin images/world/entities/npcs/kevin_sheet.png
+#begin images/world/entities/npcs/hostile/rat_sheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -153,7 +153,19 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:images/world/entities/npcs/kevin_sheet.png
+/build:images/world/entities/npcs/hostile/rat_sheet.png
+
+#begin images/world/entities/npcs/neutral/kevin_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/world/entities/npcs/neutral/kevin_sheet.png
 
 #begin images/world/entities/player/grey_sheet.png
 /importer:TextureImporter
@@ -396,6 +408,11 @@
 /importer:XmlImporter
 /processor:PassThroughProcessor
 /build:objects/battle/projectiles/lightning_projectile.xml
+
+#begin objects/world/entities/npcs/hostile/big_rat.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/world/entities/npcs/hostile/big_rat.xml
 
 #begin objects/world/entities/player/grey_player.xml
 /importer:XmlImporter

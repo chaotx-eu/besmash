@@ -1,6 +1,7 @@
 namespace BesmashGame.Debug {
     using Microsoft.Xna.Framework;
     using BesmashContent;
+    using BesmashContent.Collections;
     using GSMXtended;
     using System.Collections.Generic;
     using System.Linq;
@@ -88,9 +89,11 @@ namespace BesmashGame.Debug {
             Scale = 1;
         }
 
+        private int timer = 0;
         public override void update(GameTime time) {
+            if(!IsFocused && IsHidden) return;
             base.update(time);
-            fpsText.Text = (1000f/time.ElapsedGameTime.Milliseconds).ToString("0.00");
+            timer += time.ElapsedGameTime.Milliseconds;
 
             if(Map != null) {
                 if(Map.Slave != null) {
@@ -106,6 +109,14 @@ namespace BesmashGame.Debug {
                     .Count().ToString();
                 animationsText.Text = Map.Animations.Count.ToString();
             }
+        }
+
+        private FixedList<int> lastFPS = new FixedList<int>(60);
+        public override void draw() {
+            base.draw();
+            lastFPS.Add((int)(1000f/timer == 0 ? 1000 : timer));
+            fpsText.Text = (lastFPS.Sum()/lastFPS.Count).ToString("0.00");
+            timer = 0;
         }
     }
 }

@@ -5,7 +5,7 @@ namespace BesmashGame {
     using System.Collections.Generic;
     using System.Linq;
 
-    public class TargetSelectionPane : OverlayPane {
+    public class TargetSelectionPane : BesmashMenuPane {
         public static float GRID_CELL_ALPHA {get;} = 0.25f;
 
         public List<Point> Targets {get; private set;}
@@ -16,7 +16,6 @@ namespace BesmashGame {
         public TargetSelectionPane(TileMap map) {
             VPane vpMain = new VPane();
             vpMain.PercentWidth = vpMain.PercentHeight = 100;
-            BackgroundAlpha = 0;
 
             PercentWidth = PercentHeight = 100;
             Targets = new List<Point>();
@@ -37,7 +36,7 @@ namespace BesmashGame {
                     HPane square = new HPane();
                     square.PercentWidth = (int)(100f/width + 0.5f);
                     square.PercentHeight = 100;
-                    square.Alpha = 0; // hidden by default
+                    square.Alpha = 0.3f;
                     hPane.add(square);
                 }
             }
@@ -45,15 +44,15 @@ namespace BesmashGame {
             add(vpMain);
         }
 
-        public override void hide() {
-            base.hide();
-            Container.applyAlpha(this, 0);
-        }
+        // public override void hide() {
+        //     base.hide();
+        //     Container.applyAlpha(this, 0);
+        // }
 
-        public override void show() {
-            base.show();
-            Container.applyAlpha(this, GRID_CELL_ALPHA);
-        }
+        // public override void show() {
+        //     base.show();
+        //     Container.applyAlpha(this, GRID_CELL_ALPHA);
+        // }
 
         public void initGrid(TileMap map, List<Point> possibleTargets) {
             int mapX = map.BattleMapCenter.X - width/2;

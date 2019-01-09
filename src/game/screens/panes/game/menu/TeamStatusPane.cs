@@ -152,26 +152,11 @@ namespace BesmashGame {
             tiPlayerAP.Text = "AP: " + (Team == null ? "n/a" : (Team.Player[s].AP.ToString() + "/" + Team.Player[s].MaxAP.ToString()));
             for(int i = 0; i < 6; ++i) tiPlayerStats[i].Text = Team == null ? "n/a"
                 : Team.Player[s].Stats.get((StatType)i).ToString();
-
-            // reset back to normal speed after first update
-            PPSFactor = 1;
         }
 
-        public bool IsHidden {get {return AlphaMod == 0 && TargetAlphaMod == 0;}}
-        
-        // TODO move new show/hide methods to BesmashPane
-        public new void hide() {
-            AlphaMod = 0;
-            onFocusLoss(null);
-            IsFocused = false;
-        }
-
-        public new void show() {
-            AlphaMod = 1;
-            onFocusRequest(null);
+        public override void show(bool giveFocus, float alpha) {
+            base.show(giveFocus, alpha);
             initThumbnails();
-            PPSFactor = 1000; // TODO test
-            IsFocused = true;
         }
     }
 }

@@ -3,7 +3,7 @@ namespace BesmashGame {
     using BesmashContent;
     using Microsoft.Xna.Framework;
     
-    public class BattleOrderPane : OverlayPane {
+    public class BattleOrderPane : BesmashMenuPane {
         public BattleManager BattleManager {get; private set;}
         public int MaxParticipants {get; protected set;} = 8;
         public ImageItem[] Thumbnails {get; protected set;}
@@ -19,24 +19,23 @@ namespace BesmashGame {
             gapL.PercentWidth = 5;
             hpMain.add(gapL);
 
+            // TODO
             // for(int i = 0; i < MaxParticipants
             // && i < BattleManager.fightingEntities.Count; ++i) {
             //     Thumbnails[i] = new ImageItem("");
             //     hpMain.add(Thumbnails[i]);
             // }
-
             add(hpMain);
         }
 
-        public void update(GameTime gameTime) {
-            base.update(gameTime);
+        public override void show(bool giveFocus, float alpha) {
+            base.show(giveFocus, alpha);
+            Scale = 1;
+        }
 
-            // for(int i = 0; i < MaxParticipants
-            // && i < BattleManager.fightingEntities.Count; ++i) {
-            //     Thumbnails[i].Image = BattleManager
-            //         .fightingEntities[i]
-            //         .Creature.Thumbnail; // TODO
-            // }
+        public override void hide(bool takeFocus, float alpha) {
+            base.hide(takeFocus, alpha);
+            Scale = 0;
         }
     }
 } 

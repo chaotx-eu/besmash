@@ -109,7 +109,10 @@ namespace BesmashGame {
                 ActiveMap.init(game);
                 
             ActiveMap.onLoad(prevMap, Team);
-            ActiveMap.load(Content);
+            // ActiveMap.load(Content); // TODO (remove line) maps have now they own content manager
+            if(prevMap != null) prevMap.unload(); // TODO test!
+            ActiveMap.load();
+            ActiveMap.spawnEntities();
             LastMap = mapFile;
             Game = game;
         }

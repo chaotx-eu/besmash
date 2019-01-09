@@ -4,6 +4,21 @@
 		<Title>Plains Set</Title>
 		<Viewport>8 8</Viewport>
 		
+		<SpawnCount>10 20</SpawnCount>
+		<SpawnPoints>
+			<SpawnPoint>
+				<Position>14 32</Position>
+				<Weight>1</Weight>
+
+				<Spawns>
+					<Spawn>
+						<NPC>objects/world/entities/npcs/hostile/big_rat</NPC>
+						<Weight>1</Weight>
+					</Spawn>
+				</Spawns>
+			</SpawnPoint>
+		</SpawnPoints>
+
 		<Tiles>
 			<Tile>
 				<SpriteSheet>images/world/maps/plains_sheet</SpriteSheet>

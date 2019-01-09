@@ -6,7 +6,7 @@ namespace BesmashGame {
     using BesmashContent;
     using GSMXtended;
 
-    public class TeamInfoPane : OverlayPane {
+    public class TeamInfoPane : BesmashMenuPane {
         private static int MAX_TITLE_LEN {get;} = 15;
 
         private Dictionary<Player, TextItem> tiNameMap;
@@ -47,7 +47,18 @@ namespace BesmashGame {
             add(vpMain);
         }
 
+        public override void show(bool giveFocus, float alpha) {
+            base.show(giveFocus, alpha);
+            Scale = 1;
+        }
+
+        public override void hide(bool takeFocus, float alpha) {
+            base.hide(takeFocus, alpha);
+            Scale = 0;
+        }
+
         public override void update(GameTime gameTime) {
+            if(!IsFocused && IsHidden) return;
             base.update(gameTime);
             Team.Player.ForEach(player => {
                 string name;

@@ -1,19 +1,23 @@
 namespace BesmashGame {
     using GSMXtended;
-    using System;
+    using Microsoft.Xna.Framework;
     using System.Collections.Generic;
+    using System;
 
     public class BesmashMenuPane : VPane {
         public event EventHandler FocusRequestEvent;
         public event EventHandler FocusLossEvent;
         public bool IsFocused {get; protected set;}
+        public bool IsHidden {get {return isHidden && AlphaMod == TargetAlphaMod;}}
+        private bool isHidden;
 
         /// Hides this pane and takes away any focus
         public void hide() {hide(true, 0);}
         public void hide(bool takeFocus) {hide(takeFocus, 0);}
         public void hide(float alpha) {hide(true, alpha);}
         public virtual void hide(bool takeFocus, float alpha) {
-            Container.applyAlpha(this, alpha);
+            isHidden = true;
+            AlphaMod = alpha;
             if(takeFocus) {
                 onFocusLoss(null);
                 IsFocused = false;
@@ -26,11 +30,20 @@ namespace BesmashGame {
         public void show(bool giveFocus) {show(giveFocus, 1);}
         public void show(float alpha) {show(true, alpha);}
         public virtual void show(bool giveFocus, float alpha) {
-            Container.applyAlpha(this, alpha);
+            isHidden = false;
+            AlphaMod = alpha;
+            PPSFactor = 1000; // very fast movement on first update
             if(giveFocus) {
                 onFocusRequest(null);
                 IsFocused = true;
             }
+        }
+
+        /// Update only when focused and not hidden
+        public override void update(GameTime time) {
+            if(!IsFocused && IsHidden) return;
+            base.update(time);
+            PPSFactor = 1;
         }
 
         /// Show this pane if not focused otherwise hides it

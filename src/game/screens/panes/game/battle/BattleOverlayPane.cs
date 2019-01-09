@@ -2,13 +2,11 @@ namespace BesmashGame {
     using GSMXtended;
     using Microsoft.Xna.Framework;
 
-    public class BattleOverlayPane : OverlayPane {
+    public class BattleOverlayPane : BesmashMenuPane {
         private BattleOrderPane battleOrderPane;
         private PlayerActionPane playerActionPane;
 
         public BattleOverlayPane(SaveState activeSave) {
-            BackgroundAlpha = 0;
-
             // player action pane
             playerActionPane = new PlayerActionPane(activeSave.Team.Leader, activeSave); // TODO
 
@@ -22,21 +20,27 @@ namespace BesmashGame {
             battleOrderPane.Alpha = 0.5f;
 
             // put it all together
-            add(battleOrderPane);
-            add(playerActionPane);
-            add(playerActionPane.TargetSelectionPane);
+            StackPane sp = new StackPane(
+                battleOrderPane,
+                playerActionPane,
+                playerActionPane.TargetSelectionPane
+            );
+
+            add(sp);
+            sp.PercentWidth = sp.PercentHeight = 100;
+            PercentWidth = PercentHeight = 100;
         }
 
-        public override void show() {
-            base.show();
-            battleOrderPane.show();
-            playerActionPane.show();
+        public override void show(bool giveFocus, float alpha) {
+            base.show(giveFocus, alpha);
+            battleOrderPane.show(giveFocus, alpha);
+            playerActionPane.show(giveFocus, alpha);
         }
 
-        public override void hide() {
-            base.hide();
-            battleOrderPane.hide();
-            playerActionPane.hide();
+        public override void hide(bool takeFocus, float alpha) {
+            base.hide(takeFocus, alpha);
+            battleOrderPane.hide(takeFocus, alpha);
+            playerActionPane.hide(takeFocus, alpha);
         }
     }
 }
