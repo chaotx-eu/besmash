@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+    <Asset Type="Ability">
+        <Title>Bite</Title>
+        <APCost>20</APCost>
+
+        <Components>
+            <Component>
+                <Animation>objects/battle/animations/sword_animation</Animation>
+                <Position>0 -1</Position>
+                <!-- <TimeOffset>0</TimeOffset> -->
+                <!-- <FrameOffset>0</FrameOffset> -->
+
+                <Effect>
+                    <BaseDamage>35</BaseDamage>
+                </Effect>
+            </Component>
+        </Components>
+    </Asset>
+</XnaContent>

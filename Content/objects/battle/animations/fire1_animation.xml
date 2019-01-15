@@ -7,6 +7,6 @@
         <SpriteCount>8</SpriteCount>
         <SpriteSize>16 16</SpriteSize>
         <SpritesPerSecond>8</SpritesPerSecond>
-        <MaxIterations>4</MaxIterations>
+        <MaxIterations>2</MaxIterations>
     </Asset>
 </XnaContent>

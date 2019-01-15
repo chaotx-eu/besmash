@@ -11,13 +11,13 @@
         <!-- <Facing>East</Facing> -->
 
         <!-- Entity -->
-        <!-- <Title>Adventerer</Title> -->
+        <Title>Big Rat</Title>
 
         <!-- Movable -->
         <SpriteCount>4</SpriteCount>
-        <SpritesPerStep>2</SpritesPerStep>
+        <SpritesPerStep>4</SpritesPerStep>
         <SpritesPerSecond>4</SpritesPerSecond>
-        <StepTime>244</StepTime>
+        <StepTime>190</StepTime>
 
         <!-- Creature -->
         <!-- <Name>Gray Mane</Name> -->
@@ -29,10 +29,13 @@
         <!-- <Pants></Pants> -->
         <!-- <Weapon></Weapon> -->
         <!-- <Level></Level> -->
+        <DefaultAbilities>
+            <Path>objects/battle/abilities/bite_ability</Path>
+        </DefaultAbilities>
 
         <!-- Npc -->
         <RoamingRadius>5</RoamingRadius>
-        <RoamingPause>0 10</RoamingPause>
+        <RoamingPause>0 3</RoamingPause>
         
         <!-- Enemy -->
     </Asset>

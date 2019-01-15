@@ -75,6 +75,7 @@ namespace BesmashGame {
         /// Loads the game manager and the config
         protected override void LoadContent() {
             Manager = GameManager.newInstance();
+            BattleManager = BattleManager.newInstance();
             mainMenu.GameManager = Manager;
             // loadConfig(); // moved to update
             // loadSave();

@@ -101,6 +101,18 @@ namespace BesmashGame {
                 );
 
                 Team.Formation.Add(Team.Members[0], new Point(0, -2));
+
+                int i;
+                Team.Player.ForEach(pl => {
+                    pl.load(Content); // TODO are loaded twice (other location: TileMap)
+                    for(i = 0; i < 3; ++i) { // TODO start level
+                        pl.Exp = pl.MaxExp;
+                        pl.levelUp();
+                    }
+
+                    pl.HP = pl.MaxHP;
+                    pl.AP = pl.MaxAP;
+                });
             }
 
             TileMap prevMap = ActiveMap;

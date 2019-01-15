@@ -114,7 +114,7 @@ namespace BesmashGame.Debug {
         private FixedList<int> lastFPS = new FixedList<int>(60);
         public override void draw() {
             base.draw();
-            lastFPS.Add((int)(1000f/timer == 0 ? 1000 : timer));
+            lastFPS.Add((int)(1000f/(timer == 0 ? 1000 : timer)));
             fpsText.Text = (lastFPS.Sum()/lastFPS.Count).ToString("0.00");
             timer = 0;
         }

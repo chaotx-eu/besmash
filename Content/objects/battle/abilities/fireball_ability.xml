@@ -2,6 +2,7 @@
 <XnaContent xmlns:ns="Microsoft.Xna.Framework">
     <Asset Type="Ability">
         <Title>Fireball</Title>
+        <APCost>40</APCost>
 
         <Components>
             <Component>

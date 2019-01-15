@@ -30,6 +30,10 @@
         <!-- <Pants></Pants> -->
         <!-- <Weapon></Weapon> -->
         <!-- <Level></Level> -->
+        <DefaultAbilities>
+            <Path>objects/battle/abilities/attack_ability</Path>
+            <Path>objects/battle/abilities/defend_ability</Path>
+        </DefaultAbilities>
 
         <!-- Player -->
     </Asset>

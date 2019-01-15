@@ -8,14 +8,17 @@ namespace BesmashGame {
     using GameStateManagement;
     using System.Collections.Generic;
     using System.Linq;
+    using System;
     using Debug;
 
 
     public class GameplayScreen : BesmashScreen {
-        private BattleOverlayPane battleOverlay;
+        /// Reference to the battle manager of the game
+        public BattleManager BattleManager {get; protected set;}
 
         // TODO test
         private DebugPane debugPane;
+        private BattlePane BattlePane {get; set;}
 
         public GameplayScreen(BesmashScreen parent)
         : base(parent) {
@@ -26,19 +29,41 @@ namespace BesmashGame {
 
         public override void LoadContent() {
             debugPane = new DebugPane();
-            battleOverlay = new BattleOverlayPane(GameManager.ActiveSave);
             MainContainer.remove(MainContainer.Children.ToArray());
-            MainContainer.add(battleOverlay);
             MainContainer.add(debugPane);
+
+            // TODO temporary solution?
+            BattleManager = ((Besmash)ScreenManager.Game).BattleManager;
+            BattlePane = new BattlePane(BattleManager);
+            MainContainer.add(BattlePane);
             base.LoadContent();
+
             TileMap.MapAlpha = 0;
         }
 
+        private TileMap.MapState lastState;
         public override void Update(GameTime gameTime,
         bool otherScreenHasFocus, bool coveredByOtherScreen) {
             base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
             TileMap.MapAlpha = MainContainer.Alpha;
             GameManager.ActiveSave.update(gameTime);
+
+            // check if battle started
+            TileMap map = GameManager.ActiveSave.ActiveMap;
+            Team team = GameManager.ActiveSave.Team;
+
+            if(lastState != TileMap.MapState.Fighting
+            && map.State == TileMap.MapState.Fighting) {
+                BattleManager.startBattle(map, map.BattleMap.Participants); // TODO
+                BattlePane.Team = team;
+                BattlePane.show();
+            } else if(lastState != TileMap.MapState.Roaming
+            && map.State == TileMap.MapState.Roaming) {
+                BattlePane.hide();
+                BattleManager.finishBattle(); // TODO
+            }
+
+            lastState = map.State;
 
             // update debug pane
             debugPane.Map = GameManager.ActiveSave.ActiveMap;
@@ -48,6 +73,8 @@ namespace BesmashGame {
             GameManager.ActiveSave.ActiveMap.draw(ImageBatch);
             base.Draw(gameTime);
         }
+
+        private bool running; // player running en-/disabled
 
         /// Handling user input, e.g. moving player, interacting
         /// with objects or opening menus (moving through menus
@@ -63,18 +90,39 @@ namespace BesmashGame {
                 ScreenManager.AddScreen(new GameMenuScreen(this), null);
                 
             if(map.Slave != null) {
-                if(game.isActionTriggered("game", "move_up", true)) map.Slave.move(0, -1);
-                if(game.isActionTriggered("game", "move_right", true)) map.Slave.move(1, 0);
-                if(game.isActionTriggered("game", "move_down", true)) map.Slave.move(0, 1);
-                if(game.isActionTriggered("game", "move_left", true)) map.Slave.move(-1, 0);
+                if(!running && team.Leader.AP >= 50 && game.isActionTriggered("game", "cancel", true)) {
+                    running = true;
+                    team.Player.ForEach(p => p.StepTimeMultiplier = 0.7f);
+                }
 
-                if(game.isActionTriggered("game", "cancel"))
-                    GameManager.ActiveSave.Team.Player
-                        .ForEach(p => p.StepTimeMultiplier = 0.7f);
+                if(running && !game.isActionTriggered("game", "cancel", true) || team.Leader.AP == 0) {
+                    running = false;
+                    team.Player.ForEach(p => p.StepTimeMultiplier = 1);
+                }
 
-                if(!game.isActionTriggered("game", "cancel", true))
-                    GameManager.ActiveSave.Team.Player
-                        .ForEach(p => p.StepTimeMultiplier = 1f);
+                if(game.isActionTriggered("game", "move_up", true)) {
+                    if(map.Slave.move(0, -1)) team.Player.ForEach(
+                        p => p.AP = Math.Max(0, Math.Min(
+                            p.MaxAP, p.AP + (running ? -10 : 10))));
+                }
+
+                if(game.isActionTriggered("game", "move_right", true)) {
+                    if(map.Slave.move(1, 0)) team.Player.ForEach(
+                        p => p.AP = Math.Max(0, Math.Min(
+                            p.MaxAP, p.AP + (running ? -10 : 10))));
+                }
+
+                if(game.isActionTriggered("game", "move_down", true)) {
+                    if(map.Slave.move(0, 1)) team.Player.ForEach(
+                        p => p.AP = Math.Max(0, Math.Min(
+                            p.MaxAP, p.AP + (running ? -10 : 10))));
+                }
+
+                if(game.isActionTriggered("game", "move_left", true)) {
+                    if(map.Slave.move(-1, 0)) team.Player.ForEach(
+                        p => p.AP = Math.Max(0, Math.Min(
+                            p.MaxAP, p.AP + (running ? -10 : 10))));
+                }
 
                 int x = map.Slave.Facing == Facing.East ? 1 :
                     map.Slave.Facing == Facing.West ? -1 : 0;
@@ -98,19 +146,6 @@ namespace BesmashGame {
             // debug action: toggle debug pane
             if(game.isActionTriggered("debug", "action0")) {
                 debugPane.toggle();
-            }
-
-            // debug action: toggle battle overlay
-            if(game.isActionTriggered("debug", "action9")) {
-                if(battleOverlay.IsFocused) {
-                    battleOverlay.hide();
-                    GameManager.ActiveSave.ActiveMap
-                        .setRoamingState(GameManager.ActiveSave.Team);
-                } else {
-                    battleOverlay.show();
-                    GameManager.ActiveSave.ActiveMap
-                        .setFightingState(GameManager.ActiveSave.Team.Leader.Target);
-                }
             }
 
             // debug action: give exp to (and level up) team leader
@@ -147,6 +182,36 @@ namespace BesmashGame {
                 map.Entities.Where(e => e is Creature).Cast<Creature>()
                     .Where(c => c.Effects.Count > 0).ToList()
                     .ForEach(c => c.applyEffects());
+            }
+
+            // debug action: kill all enemies on map
+            if(game.isActionTriggered("debug", "action6")) {
+                map.Entities.Where(e => e is Enemy)
+                    .Cast<Enemy>().ToList()
+                    .ForEach(e => e.die());
+            }
+
+            // debug action: spawn entities
+            if(game.isActionTriggered("debug", "action7")) {
+                map.spawnEntities();
+            }
+
+            // debug action: 'kill' all enemies participating the battle
+            if(game.isActionTriggered("debug", "action8")) {
+                map.BattleMap.Participants
+                    .Where(e => e is Enemy).Cast<Enemy>()
+                    .ToList().ForEach(e => e.die());
+            }
+
+            // debug action: toggle battle overlay
+            if(game.isActionTriggered("debug", "action9")) {
+                if(map.State == TileMap.MapState.Fighting) {
+                    GameManager.ActiveSave.ActiveMap
+                        .setRoamingState();
+                } else {
+                    GameManager.ActiveSave.ActiveMap
+                        .setFightingState(GameManager.ActiveSave.Team.Leader.Target);
+                }
             }
         }
 

@@ -215,6 +215,18 @@
 /processorParam:TextureFormat=Color
 /build:images/world/entities/player/white_sheet.png
 
+#begin images/world/entities/thumbnails/anonymous_thumb.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/world/entities/thumbnails/anonymous_thumb.png
+
 #begin images/world/entities/thumbnails/grey_thumb.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -368,6 +380,21 @@
 /importer:XmlImporter
 /processor:PassThroughProcessor
 /build:lang/en.xml
+
+#begin objects/battle/abilities/attack_ability.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/abilities/attack_ability.xml
+
+#begin objects/battle/abilities/bite_ability.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/abilities/bite_ability.xml
+
+#begin objects/battle/abilities/defend_ability.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/abilities/defend_ability.xml
 
 #begin objects/battle/abilities/fireball_ability.xml
 /importer:XmlImporter

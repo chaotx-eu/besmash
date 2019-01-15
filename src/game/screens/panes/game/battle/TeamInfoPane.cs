@@ -2,6 +2,7 @@ namespace BesmashGame {
     using System.Linq;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using Microsoft.Xna.Framework.Graphics;
     using Microsoft.Xna.Framework;
     using BesmashContent;
     using GSMXtended;
@@ -13,6 +14,10 @@ namespace BesmashGame {
         private Dictionary<Player, TextItem> tiStatMap;
         private Team team;
         private VPane vpMain = new VPane();
+        private SpriteFont font;
+
+        /// The player whose turn it is
+        public Player ActivePlayer {get; set;}
 
         public Team Team {
             get {return team;}
@@ -22,14 +27,16 @@ namespace BesmashGame {
                     tiNameMap = new Dictionary<Player, TextItem>();
                     tiStatMap = new Dictionary<Player, TextItem>();
                     value.Player.ForEach(player => {
-                        TextItem tiName = new TextItem("", "fonts/game_font1");
-                        TextItem tiStat = new TextItem("", "fonts/game_font1");
+                        TextItem tiName = new TextItem("", font);
+                        TextItem tiStat = new TextItem("", font);
                         HPane hpInfo = new HPane(tiName, tiStat);
                         tiName.HAlignment = HAlignment.Left;
                         tiStat.HAlignment = HAlignment.Right;
                         tiName.DefaultScale = 0.5f;
                         tiStat.DefaultScale = 0.5f;
                         hpInfo.PercentWidth = 100;
+                        tiName.PPSFactor = 1000;
+                        tiStat.PPSFactor = 1000;
 
                         tiNameMap.Add(player, tiName);
                         tiStatMap.Add(player, tiStat);
@@ -41,14 +48,29 @@ namespace BesmashGame {
             }
         }
 
+        public TeamInfoPane() : this(null) {}
         public TeamInfoPane(Team team) {
             Team = team;
+            MPSFactor = 1.5f; // scale a bit faster
+            PPSFactor = 2;
+            vpMain.PPSFactor = 2;
             vpMain.PercentWidth = vpMain.PercentHeight = 100;
             add(vpMain);
         }
 
+        public override void load() {
+            base.load();
+            font = ParentScreen.Content.Load<SpriteFont>("fonts/game_font1");
+        }
+
         public override void show(bool giveFocus, float alpha) {
             base.show(giveFocus, alpha);
+
+            setPosition(ParentScreen.Width, ParentScreen.Height);
+            vpMain.setPosition(ParentScreen.Width, ParentScreen.Height);
+            tiNameMap.Values.ToList().ForEach(ti => ti.setPosition(ParentScreen.Width, ParentScreen.Height));
+            tiStatMap.Values.ToList().ForEach(ti => ti.setPosition(ParentScreen.Width, ParentScreen.Height));
+
             Scale = 1;
         }
 
@@ -60,11 +82,15 @@ namespace BesmashGame {
         public override void update(GameTime gameTime) {
             if(!IsFocused && IsHidden) return;
             base.update(gameTime);
+            if(Team == null) return;
+
             Team.Player.ForEach(player => {
+                if(player.HP <= 0) return;
+
                 string name;
                 string stats;
                 float percentHP = player.MaxHP > 0
-                    ? player.HP/player.MaxHP : 0;
+                    ? player.HP/(float)player.MaxHP : 0;
 
                 name = player.Name.Length > MAX_TITLE_LEN
                     ? string.Format("     {0, -15}: ", player.Name.Substring(0, MAX_TITLE_LEN-3) + "... ... ...")
@@ -75,8 +101,7 @@ namespace BesmashGame {
                     player.AP, player.MaxAP);
 
                 tiNameMap[player].Text = name;
-                tiNameMap[player].Color = player.ContainingMap.Cursor != null
-                    && player.ContainingMap.Cursor.Position.Equals(player.Position)
+                tiNameMap[player].Color = player == ActivePlayer
                     ? Color.Yellow : Color.White;
 
                 tiStatMap[player].Text = stats;

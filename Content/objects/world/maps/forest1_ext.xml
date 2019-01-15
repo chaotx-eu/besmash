@@ -8,11 +8,76 @@
 		<SpawnPoints>
 			<SpawnPoint>
 				<Position>14 32</Position>
+				<Weight>-1</Weight>
+
+				<Spawns>
+					<Spawn>
+						<NPC>objects/world/entities/npcs/hostile/big_rat</NPC>
+						<Weight>1</Weight>
+					</Spawn>
+				</Spawns>
+			</SpawnPoint>
+
+			<SpawnPoint>
+				<Position>27 31</Position>
 				<Weight>1</Weight>
 
 				<Spawns>
 					<Spawn>
 						<NPC>objects/world/entities/npcs/hostile/big_rat</NPC>
+						<Level>1 3</Level>
+						<Weight>1</Weight>
+					</Spawn>
+				</Spawns>
+			</SpawnPoint>
+
+			<SpawnPoint>
+				<Position>29 30</Position>
+				<Weight>1</Weight>
+
+				<Spawns>
+					<Spawn>
+						<NPC>objects/world/entities/npcs/hostile/big_rat</NPC>
+						<Level>1 3</Level>
+						<Weight>1</Weight>
+					</Spawn>
+				</Spawns>
+			</SpawnPoint>
+
+			<SpawnPoint>
+				<Position>18 11</Position>
+				<Weight>1</Weight>
+
+				<Spawns>
+					<Spawn>
+						<NPC>objects/world/entities/npcs/hostile/big_rat</NPC>
+						<Level>1 3</Level>
+						<Weight>1</Weight>
+					</Spawn>
+				</Spawns>
+			</SpawnPoint>
+
+			<SpawnPoint>
+				<Position>22 14</Position>
+				<Weight>1</Weight>
+
+				<Spawns>
+					<Spawn>
+						<NPC>objects/world/entities/npcs/hostile/big_rat</NPC>
+						<Level>1 3</Level>
+						<Weight>1</Weight>
+					</Spawn>
+				</Spawns>
+			</SpawnPoint>
+
+			<SpawnPoint>
+				<Position>30 14</Position>
+				<Weight>1</Weight>
+
+				<Spawns>
+					<Spawn>
+						<NPC>objects/world/entities/npcs/hostile/big_rat</NPC>
+						<Level>1 3</Level>
 						<Weight>1</Weight>
 					</Spawn>
 				</Spawns>
