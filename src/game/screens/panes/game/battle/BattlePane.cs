@@ -33,9 +33,6 @@ namespace BesmashGame {
         /// the font used within this pane
         private SpriteFont font;
 
-        private int selectedMove = -1;
-        private int thumbIndex;
-
         public BattlePane(BattleManager battleManager) {
             BattleManager = battleManager;
 
@@ -64,12 +61,6 @@ namespace BesmashGame {
             vlSkills.IsStatic = false;
             vlSkills.Color = Color.Gray;
             vlSkills.Alpha = 0.5f;
-
-            // vlSkills.HAlignment = HAlignment.Left;
-            // vlSkills.VAlignment = VAlignment.Bottom;
-            // vlSkills.PercentHeight = 20;
-            // vlSkills.Color = Color.Black;
-            // vlSkills.Alpha = 0.5f;
 
             VPane skillPane = new VPane(hpApCost, vlSkills);
             skillPane.HAlignment = HAlignment.Left;
@@ -159,7 +150,6 @@ namespace BesmashGame {
             hlThumbs.remove(hlThumbs.Children.ToArray());
             BattleManager.TurnList.ForEach(addThumb);
             hlThumbs.select(0);
-            thumbIndex = 0;
         }
 
         private void addThumb(Creature c) {
@@ -177,8 +167,7 @@ namespace BesmashGame {
             if(10 > player.AP) textItem.Color = Color.Gray; // TODO MoveCost property
 
             vlSkills.add(textItem);
-            // player.Abilities.OrderBy(a => a.APCost).ToList().ForEach(a => {                
-            player.Abilities.Sort((a1, a2) => a1.APCost.CompareTo(a2.APCost)); // order needs to sync with order in vlist
+            player.Abilities.Sort((a1, a2) => a1.APCost.CompareTo(a2.APCost)); // order needs to be sync with order in vlist
             player.Abilities.ForEach(a => {                
                 textItem = new TextItem(a.Title, font);
                 textItem.setPosition(vlSkills.X, vlSkills.Y);
@@ -212,11 +201,12 @@ namespace BesmashGame {
         }
 
         public override void show(bool giveFocus, float alpha) {
+            reset();
             initThumbs();
             objectInfo.hide();
             teamInfo.hide();
             hlThumbs.Scale = 1;
-            hlThumbs.Alpha = 1;
+            hlThumbs.Alpha = 0.5f;
             base.show(giveFocus, alpha);
         }
 
@@ -248,17 +238,20 @@ namespace BesmashGame {
                 if(next.HP <= 0) {
                     BattleManager.Participants.Remove(next);
                     BattleManager.TurnList.Remove(next);
-                    hlThumbs.select(++thumbIndex, true);
+                    hlThumbs.select();
                     next = null;
                     return;
                 }
 
-                if(next is Enemy) {
+                if(next is Enemy)
                     hideSkillList();
-                    ability = ((Enemy)next).nextAbility();
-                    if(ability == null)
-                        move = ((Enemy)next).nextMove();
-                } else player = (Player)next;
+                else player = (Player)next;
+            }
+
+            if(next is Enemy && ability == null && move == null) {
+                ability = ((Enemy)next).nextAbility();
+                if(ability == null)
+                    move = ((Enemy)next).nextMove();
             }
 
             if(!started && cursor == null
@@ -271,7 +264,8 @@ namespace BesmashGame {
 
             if(!started && (ability != null || move != null)) {
                 if(move.HasValue) {
-                    next.move(move.Value);
+                    if(next is Enemy) next.moveTo(move.Value);
+                    else next.move(move.Value);
                     next.AP -= 10; // TODO move cost
                 }
                 
@@ -284,18 +278,22 @@ namespace BesmashGame {
             if(ability != null && !ability.IsExecuting
             || move != null && !next.Moving) {
                 next.ContainingMap.hideCursor();
-                addThumb(next); // TODO test!
-                cursor = null;
-                ability = null;
-                player = null;
-                move = null;
-                next = null;
-                started = false;
-                hlThumbs.select(++thumbIndex, true);
+                addThumb(next);
+                hlThumbs.select();
+                reset();
             }
 
             if(cursor != null && !player.Moving)
                 updateFacing(player, cursor);
+        }
+
+        private void reset() {
+            cursor = null;
+            ability = null;
+            player = null;
+            move = null;
+            next = null;
+            started = false;
         }
     }
 }

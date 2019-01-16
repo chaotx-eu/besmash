@@ -45,6 +45,7 @@ namespace BesmashGame {
             Participants.ForEach(p => {
                 p.IsFighting = true;
                 p.DeathEvent += onDeath;
+                if(p is Npc) ((Npc)p).Pathfinder.Path.Clear();
             });
 
             expPool = 0;

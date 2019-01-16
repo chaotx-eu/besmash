@@ -6,7 +6,7 @@
 
         <Components>
             <Component>
-                <Animation>objects/battle/animations/sword_animation</Animation>
+                <Animation>objects/battle/animations/shield_animation</Animation>
 
                 <Effect>
                     <StatsMod>

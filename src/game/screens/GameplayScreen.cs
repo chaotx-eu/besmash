@@ -90,10 +90,14 @@ namespace BesmashGame {
                 ScreenManager.AddScreen(new GameMenuScreen(this), null);
                 
             if(map.Slave != null) {
-                if(!running && team.Leader.AP >= 50 && game.isActionTriggered("game", "cancel", true)) {
-                    running = true;
-                    team.Player.ForEach(p => p.StepTimeMultiplier = 0.7f);
-                }
+                bool inFight = map.State == TileMap.MapState.Fighting;
+
+                if(!inFight) {
+                    if(!running && team.Leader.AP >= 50 && game.isActionTriggered("game", "cancel", true)) {
+                        running = true;
+                        team.Player.ForEach(p => p.StepTimeMultiplier = 0.7f);
+                    }
+                } else running = false;
 
                 if(running && !game.isActionTriggered("game", "cancel", true) || team.Leader.AP == 0) {
                     running = false;
@@ -101,25 +105,25 @@ namespace BesmashGame {
                 }
 
                 if(game.isActionTriggered("game", "move_up", true)) {
-                    if(map.Slave.move(0, -1)) team.Player.ForEach(
+                    if(map.Slave.move(0, -1) && !inFight) team.Player.ForEach(
                         p => p.AP = Math.Max(0, Math.Min(
                             p.MaxAP, p.AP + (running ? -10 : 10))));
                 }
 
                 if(game.isActionTriggered("game", "move_right", true)) {
-                    if(map.Slave.move(1, 0)) team.Player.ForEach(
+                    if(map.Slave.move(1, 0) && !inFight) team.Player.ForEach(
                         p => p.AP = Math.Max(0, Math.Min(
                             p.MaxAP, p.AP + (running ? -10 : 10))));
                 }
 
                 if(game.isActionTriggered("game", "move_down", true)) {
-                    if(map.Slave.move(0, 1)) team.Player.ForEach(
+                    if(map.Slave.move(0, 1) && !inFight) team.Player.ForEach(
                         p => p.AP = Math.Max(0, Math.Min(
                             p.MaxAP, p.AP + (running ? -10 : 10))));
                 }
 
                 if(game.isActionTriggered("game", "move_left", true)) {
-                    if(map.Slave.move(-1, 0)) team.Player.ForEach(
+                    if(map.Slave.move(-1, 0) && !inFight) team.Player.ForEach(
                         p => p.AP = Math.Max(0, Math.Min(
                             p.MaxAP, p.AP + (running ? -10 : 10))));
                 }

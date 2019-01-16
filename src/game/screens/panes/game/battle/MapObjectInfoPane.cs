@@ -63,8 +63,8 @@ namespace BesmashGame {
 
             if(mapObject is Creature) {
                 Creature creature = (Creature)mapObject;
-                life = string.Format("Life:  {0:0000} / {1:0000}",
-                    creature.HP, creature.MaxHP);
+                life = string.Format("HP: {0:0000}/{1:0000}, AP: {2:000}/{3:000}",
+                    creature.HP, creature.MaxHP, creature.AP, creature.MaxAP);
 
                 info = "Info:  " + creature.Name
                     + ", Level: " + creature.Level;

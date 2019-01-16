@@ -6,7 +6,7 @@
 
         <Components>
             <Component>
-                <Animation>objects/battle/animations/sword_animation</Animation>
+                <Animation>objects/battle/animations/bite_animation</Animation>
                 <Position>0 -1</Position>
                 <!-- <TimeOffset>0</TimeOffset> -->
                 <!-- <FrameOffset>0</FrameOffset> -->
