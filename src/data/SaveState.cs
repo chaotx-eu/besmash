@@ -100,7 +100,7 @@ namespace BesmashGame {
                     Content.Load<Player>("objects/world/entities/player/pink_player")
                 );
 
-                Team.Formation.Add(Team.Members[0], new Point(0, -2));
+                Team.Formation.Add(Team.Members[0], new Point(-1, 1));
 
                 int i;
                 Team.Player.ForEach(pl => {
