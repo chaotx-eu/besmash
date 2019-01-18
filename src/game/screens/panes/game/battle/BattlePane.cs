@@ -207,6 +207,8 @@ namespace BesmashGame {
             teamInfo.hide();
             hlThumbs.Scale = 1;
             hlThumbs.Alpha = 0.5f;
+            BattleManager.Participants.ForEach(c =>
+                c.DamageEvent += onPlayerDamage);
             base.show(giveFocus, alpha);
         }
 
@@ -216,6 +218,8 @@ namespace BesmashGame {
             teamInfo.hide();
             hlThumbs.Scale = 0;
             hlThumbs.Alpha = 0;
+            BattleManager.Participants.ForEach(c =>
+                c.DamageEvent -= onPlayerDamage);
         }
 
         private Player player = null;
@@ -294,6 +298,19 @@ namespace BesmashGame {
             move = null;
             next = null;
             started = false;
+        }
+
+        public void onPlayerDamage(Creature sender, DamageEventArgs args) {
+            FloatingText damageText = new FloatingText(args.DamageAmount.ToString(), font);
+            damageText.Position = sender.Position;
+            damageText.ScaleMod = args.WasCritical ? 2 : 1.2f;
+            damageText.Color = args.DamageElement == Element.Earth ? Color.Green
+                : args.DamageElement == Element.Fire ? Color.Orange
+                : args.DamageElement == Element.Thunder ? Color.Yellow
+                : args.DamageElement == Element.Water ? Color.LightBlue : Color.White;
+
+            sender.ContainingMap.addEntity(damageText);
+            damageText.init();
         }
     }
 }
