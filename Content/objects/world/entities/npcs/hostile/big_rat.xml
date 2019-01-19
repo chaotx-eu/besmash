@@ -4,7 +4,7 @@
         <!-- Game Object -->
         <SpriteSheet>images/world/entities/npcs/hostile/rat_sheet</SpriteSheet>
         <SpriteRectangle>0 0 16 16</SpriteRectangle>
-        <Layer>0.5</Layer>
+        <!-- <Layer>0.5</Layer> -->
 
         <!-- Map Object -->
         <!-- <Position>10 38</Position> -->

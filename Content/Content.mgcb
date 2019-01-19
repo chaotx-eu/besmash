@@ -107,6 +107,18 @@
 /processorParam:TextureFormat=Color
 /build:images/battle/animations/sword_animation.png
 
+#begin images/battle/animations/whirl_strike_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/battle/animations/whirl_strike_sheet.png
+
 #begin images/battle/projectiles/fireball_projectile.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -420,10 +432,20 @@
 /processor:PassThroughProcessor
 /build:objects/battle/abilities/defend_ability.xml
 
+#begin objects/battle/abilities/double_strike_ability.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/abilities/double_strike_ability.xml
+
 #begin objects/battle/abilities/fireball_ability.xml
 /importer:XmlImporter
 /processor:PassThroughProcessor
 /build:objects/battle/abilities/fireball_ability.xml
+
+#begin objects/battle/abilities/whirl_strike_ability.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/abilities/whirl_strike_ability.xml
 
 #begin objects/battle/animations/bite_animation.xml
 /importer:XmlImporter
@@ -450,6 +472,16 @@
 /processor:PassThroughProcessor
 /build:objects/battle/animations/shield_animation.xml
 
+#begin objects/battle/animations/strike_corner_animation.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/animations/strike_corner_animation.xml
+
+#begin objects/battle/animations/strike_front_animation.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/animations/strike_front_animation.xml
+
 #begin objects/battle/animations/sword_animation.xml
 /importer:XmlImporter
 /processor:PassThroughProcessor
@@ -459,6 +491,11 @@
 /importer:XmlImporter
 /processor:PassThroughProcessor
 /build:objects/battle/effects/physical_damage.xml
+
+#begin objects/battle/projectiles/_dummy.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/projectiles/_dummy.xml
 
 #begin objects/battle/projectiles/fireball_projectile.xml
 /importer:XmlImporter

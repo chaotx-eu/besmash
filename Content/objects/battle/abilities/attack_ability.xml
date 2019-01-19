@@ -6,14 +6,27 @@
 
         <Components>
             <Component>
-                <Animation>objects/battle/animations/sword_animation</Animation>
+                <!-- <Animation>objects/battle/animations/sword_animation</Animation> -->
+                <AnimationAsset>
+                    <Preset>objects/battle/animations/sword_animation</Preset>
+                    <Properties>
+                        <!-- <Rotation>90</Rotation> -->
+                    </Properties>
+                </AnimationAsset>
+
+                <EffectAsset>
+                    <Properties>
+                        <BaseDamage>35</BaseDamage>
+                    </Properties>
+                </EffectAsset>
+
                 <Position>0 -1</Position>
                 <!-- <TimeOffset>0</TimeOffset> -->
                 <!-- <FrameOffset>0</FrameOffset> -->
 
-                <Effect>
+                <!-- <Effect>
                     <BaseDamage>35</BaseDamage>
-                </Effect>
+                </Effect> -->
             </Component>
         </Components>
     </Asset>

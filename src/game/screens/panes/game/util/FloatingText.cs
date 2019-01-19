@@ -18,7 +18,7 @@ namespace BesmashGame {
         public FloatingText(string text, SpriteFont font) {
             Text = text;
             Font = font;
-            Layer = 1;
+            LayerLevel = 10;
         }
 
         public void init() {

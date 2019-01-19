@@ -6,9 +6,12 @@
 
         <Components>
             <Component>
-                <Animation>objects/battle/animations/shield_animation</Animation>
+                <!-- <Animation>objects/battle/animations/shield_animation</Animation> -->
+                <AnimationAsset>
+                    <Preset>objects/battle/animations/shield_animation</Preset>
+                </AnimationAsset>
 
-                <Effect>
+                <!-- <Effect>
                     <StatsMod>
                         <VITMod>1</VITMod>
                         <ATKMod>1</ATKMod>
@@ -19,7 +22,22 @@
                     </StatsMod>
 
                     <TurnsToLast>1 1</TurnsToLast>
-                </Effect>
+                </Effect> -->
+
+                <EffectAsset>
+                    <Properties>
+                        <StatsMod>
+                            <VITMod>1</VITMod>
+                            <ATKMod>1</ATKMod>
+                            <INTMod>1</INTMod>
+                            <DEFMod>1.5</DEFMod>
+                            <WISMod>1.5</WISMod>
+                            <AGIMod>1</AGIMod>
+                        </StatsMod>
+
+                        <TurnsToLast>1 1</TurnsToLast>
+                    </Properties>
+                </EffectAsset>
             </Component>
         </Components>
     </Asset>

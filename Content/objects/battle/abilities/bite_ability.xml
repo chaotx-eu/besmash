@@ -6,14 +6,24 @@
 
         <Components>
             <Component>
-                <Animation>objects/battle/animations/bite_animation</Animation>
+                <!-- <Animation>objects/battle/animations/bite_animation</Animation> -->
+                <AnimationAsset>
+                    <Preset>objects/battle/animations/bite_animation</Preset>
+                </AnimationAsset>
+
+                <EffectAsset>
+                    <Properties>
+                        <BaseDamage>35</BaseDamage>
+                    </Properties>
+                </EffectAsset>
+                
                 <Position>0 -1</Position>
                 <!-- <TimeOffset>0</TimeOffset> -->
                 <!-- <FrameOffset>0</FrameOffset> -->
 
-                <Effect>
+                <!-- <Effect>
                     <BaseDamage>35</BaseDamage>
-                </Effect>
+                </Effect> -->
             </Component>
         </Components>
     </Asset>

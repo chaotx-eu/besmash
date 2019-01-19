@@ -5,7 +5,7 @@
         <SpriteSheet>images/world/entities/player/pink_sheet</SpriteSheet>
         <Thumbnail>images/world/entities/thumbnails/pink_thumb</Thumbnail>
         <SpriteRectangle>0 0 16 16</SpriteRectangle>
-        <Layer>0.5</Layer>
+        <!-- <Layer>0.5</Layer> -->
 
         <!-- Map Object -->
         <Position>10 36</Position>

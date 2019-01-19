@@ -6,7 +6,11 @@
 
         <Components>
             <Component>
-                <Animation>objects/battle/animations/fire_charge_animation</Animation>
+                <!-- <Animation>objects/battle/animations/fire_charge_animation</Animation> -->
+                <AnimationAsset>
+                    <Preset>objects/battle/animations/fire_charge_animation</Preset>
+                </AnimationAsset>
+
                 <!-- <Position>0 0</Position> -->
                 <!-- <TimeOffset>0</TimeOffset> -->
                 <!-- <FrameOffset>0</FrameOffset> -->
@@ -14,7 +18,11 @@
                 <Children>
                     <Component>
                         <!-- no Animation -->
-                        <Projectile>objects/battle/projectiles/fireball_projectile</Projectile>
+                        <!-- <Projectile>objects/battle/projectiles/fireball_projectile</Projectile> -->
+                        <ProjectileAsset>
+                            <Preset>objects/battle/projectiles/fireball_projectile</Preset>
+                        </ProjectileAsset>
+
                         <Position>0 0</Position>
                         <!-- <TimeOffset>500</TimeOffset> -->
                         <FrameOffset>-1</FrameOffset> <!-- -1 => after last frame of parent -->

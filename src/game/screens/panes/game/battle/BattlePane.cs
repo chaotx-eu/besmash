@@ -301,6 +301,7 @@ namespace BesmashGame {
         }
 
         public void onPlayerDamage(Creature sender, DamageEventArgs args) {
+            if(sender.ContainingMap == null) return;
             FloatingText damageText = new FloatingText(args.DamageAmount.ToString(), font);
             damageText.Position = sender.Position;
             damageText.ScaleMod = args.WasCritical ? 2 : 1.2f;

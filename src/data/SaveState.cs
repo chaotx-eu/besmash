@@ -90,21 +90,42 @@ namespace BesmashGame {
 
         /// Loads the passed mapFile and sets it as active map
         public void load(Besmash game, string mapFile) {
-            if(Content == null)
-                Content = new ContentManager(game.Services, "Content");
+            if(Content == null) Content = new ContentManager(
+                game.Content.ServiceProvider,
+                game.Content.RootDirectory);
 
-            if(Team == null) {
-                // TODO test new game
+            ContentManager mapContent = new ContentManager(
+                Content.ServiceProvider,
+                Content.RootDirectory
+            );
+
+
+            bool newGame;
+            if((newGame = Team == null)) {
                 Team = new Team(
-                    Content.Load<Player>("objects/world/entities/player/grey_player"),
-                    Content.Load<Player>("objects/world/entities/player/pink_player")
+                    mapContent.Load<Player>("objects/world/entities/player/grey_player"),
+                    mapContent.Load<Player>("objects/world/entities/player/pink_player")
                 );
 
                 Team.Formation.Add(Team.Members[0], new Point(-1, 1));
+            }
 
+            TileMap prevMap = ActiveMap;
+            ActiveMap = Content.Load<TileMap>(mapFile);
+            if(!ActiveMap.Initialized)
+                ActiveMap.init(game);
+
+            ActiveMap.onLoad(prevMap, Team);
+            // ActiveMap.load(Content); // TODO (remove line) maps have now they own content manager
+            if(prevMap != null) prevMap.unload(); // TODO test!
+            ActiveMap.load(mapContent);
+            ActiveMap.spawnEntities();
+            LastMap = mapFile;
+            Game = game;
+
+            if(newGame) {
                 int i;
                 Team.Player.ForEach(pl => {
-                    pl.load(Content); // TODO are loaded twice (other location: TileMap)
                     for(i = 0; i < 3; ++i) { // TODO start level
                         pl.Exp = pl.MaxExp;
                         pl.levelUp();
@@ -114,19 +135,6 @@ namespace BesmashGame {
                     pl.AP = pl.MaxAP;
                 });
             }
-
-            TileMap prevMap = ActiveMap;
-            ActiveMap = Content.Load<TileMap>(mapFile);
-            if(!ActiveMap.Initialized)
-                ActiveMap.init(game);
-                
-            ActiveMap.onLoad(prevMap, Team);
-            // ActiveMap.load(Content); // TODO (remove line) maps have now they own content manager
-            if(prevMap != null) prevMap.unload(); // TODO test!
-            ActiveMap.load();
-            ActiveMap.spawnEntities();
-            LastMap = mapFile;
-            Game = game;
         }
 
         /// Updates this save state and the active map

@@ -79,6 +79,20 @@ namespace BesmashGame {
             mainMenu.GameManager = Manager;
             // loadConfig(); // moved to update
             // loadSave();
+
+            /// TODO: bug report
+            /// Resources of type 'Projectile' cannot be loaded using any
+            /// content manager if a resource of type 'Ability' has been
+            /// loaded before, crashing with 'ContentLoadException:
+            /// "Incorrect type reader index found!"'.
+            ///
+            /// Loading any 'Projectile' resource in advance seems to fix this
+            /// (temporary solution!).
+            ///
+            /// Update: If an ability is loaded at this point following loadings
+            /// of abilities later in the code will fail throwing the same exception
+            // Ability a = Content.Load<Ability>("objects/battle/abilities/defend_ability");
+            Projectile p = Content.Load<Projectile>("objects/battle/projectiles/_dummy");
         }
 
         private HashSet<Keys> pressedKeys = new HashSet<Keys>();
@@ -98,8 +112,8 @@ namespace BesmashGame {
             return isActionTriggered(context, action, ongoing, 0);
         }
 
-        /// Overload for convenience. Check input with idleTime, gamePad
-        /// index will always be 0
+        /// Overload for convenience. Check input with
+        /// idleTime, gamePad index will always be 0
         public bool isActionTriggered(string context, string action, int idleTime) {
             return isActionTriggered(context, action, idleTime, 0);
         }

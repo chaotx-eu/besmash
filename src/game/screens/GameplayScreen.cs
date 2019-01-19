@@ -170,14 +170,14 @@ namespace BesmashGame {
                 if(player.Abilities.Where(a => a.Title == "Fireball").Count() == 0) {
                     player.addAbility(
                         "objects/battle/abilities/fireball_ability",
-                        GameManager.ActiveSave.Content);
+                        GameManager.ActiveSave.ActiveMap.Content);
                 }
             }
 
             // debug action: use first ability of map slave
             if(game.isActionTriggered("debug", "action4")) {
                 GameManager.ActiveSave.Team.Leader
-                    .Abilities.Where(a => a.Title == "Fireball")
+                    .Abilities.Where(a => a.Title == "Whirl Strike")
                     .ToList().ForEach(a => a.execute());
             }
 
