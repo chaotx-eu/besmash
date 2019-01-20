@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+    <Asset Type="Ability">
+        <Title>Defend</Title>
+        <APCost>-10</APCost>
+
+        <Components>
+            <Component>
+                <AnimationAsset>
+                    <Preset>objects/battle/animations/shield</Preset>
+                </AnimationAsset>
+
+                <EffectAsset>
+                    <Preset>objects/battle/effects/buffs/defend2</Preset>
+                    <Properties>
+                        <TurnsToLast>1 1</TurnsToLast>
+                    </Properties>
+                </EffectAsset>
+            </Component>
+        </Components>
+    </Asset>
+</XnaContent>

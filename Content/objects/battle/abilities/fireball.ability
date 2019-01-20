@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+    <Asset Type="Ability">
+        <Title>Fireball</Title>
+        <APCost>40</APCost>
+
+        <Components>
+            <Component>
+                <AnimationAsset>
+                    <Preset>objects/battle/animations/firecharge</Preset>
+                </AnimationAsset>
+
+                <Children>
+                    <Component>
+                        <ProjectileAsset>
+                            <Preset>objects/battle/projectiles/fireball</Preset>
+                        </ProjectileAsset>
+
+                        <FrameOffset>-1</FrameOffset>
+                    </Component>
+                </Children>
+            </Component>
+        </Components>
+    </Asset>
+</XnaContent>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+    <Asset Type="Ability">
+        <Title>Attack</Title>
+        <APCost>20</APCost>
+
+        <Components>
+            <Component>
+                <AnimationAsset>
+                    <Preset>objects/battle/animations/strike</Preset>
+                </AnimationAsset>
+
+                <EffectAsset>
+                    <Preset>objects/battle/effects/damage/damage1_phy</Preset>
+                </EffectAsset>
+
+                <Position>0 -1</Position>
+            </Component>
+        </Components>
+    </Asset>
+</XnaContent>

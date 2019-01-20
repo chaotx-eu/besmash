@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+    <Asset Type="Projectile">
+        <SpriteSheet>images/battle/projectiles/projectile_sheet</SpriteSheet>
+        <SpriteCount>11</SpriteCount>
+        <SpritesPerStep>3</SpritesPerStep>
+        <StepTime>164</StepTime>
+        <MaxDistance>42</MaxDistance>
+
+        <AbilityAsset>
+            <Preset>objects/battle/abilities/flametouch</Preset>
+            <Properties>
+                <Components><Component>
+                    <AnimationAsset>
+                       <Preset>objects/battle/animations/firesplash</Preset>
+                    </AnimationAsset>
+                </Component></Components>
+            </Properties>
+        </AbilityAsset>
+    </Asset>
+</XnaContent>

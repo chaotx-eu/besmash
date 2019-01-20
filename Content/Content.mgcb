@@ -35,7 +35,7 @@
 /processorParam:TextureFormat=Compressed
 /build:fonts/menu_font2.spritefont
 
-#begin images/battle/animations/bite_animation.png
+#begin images/battle/animations/fire_sheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -45,9 +45,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:images/battle/animations/bite_animation.png
+/build:images/battle/animations/fire_sheet.png
 
-#begin images/battle/animations/fire_animation.png
+#begin images/battle/animations/shield_sheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -57,9 +57,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:images/battle/animations/fire_animation.png
+/build:images/battle/animations/shield_sheet.png
 
-#begin images/battle/animations/fire_charge_animation.png
+#begin images/battle/animations/strike_sheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -69,9 +69,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:images/battle/animations/fire_charge_animation.png
+/build:images/battle/animations/strike_sheet.png
 
-#begin images/battle/animations/firesplash_animation.png
+#begin images/battle/animations/weaponless_sheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -81,9 +81,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:images/battle/animations/firesplash_animation.png
+/build:images/battle/animations/weaponless_sheet.png
 
-#begin images/battle/animations/shield_animation.png
+#begin images/battle/projectiles/projectile_sheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -93,55 +93,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:images/battle/animations/shield_animation.png
-
-#begin images/battle/animations/sword_animation.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:images/battle/animations/sword_animation.png
-
-#begin images/battle/animations/whirl_strike_sheet.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:images/battle/animations/whirl_strike_sheet.png
-
-#begin images/battle/projectiles/fireball_projectile.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:images/battle/projectiles/fireball_projectile.png
-
-#begin images/battle/projectiles/lightning_projectile.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:images/battle/projectiles/lightning_projectile.png
+/build:images/battle/projectiles/projectile_sheet.png
 
 #begin images/blank.png
 /importer:TextureImporter
@@ -417,123 +369,213 @@
 /processor:PassThroughProcessor
 /build:lang/en.xml
 
-#begin objects/battle/abilities/attack_ability.xml
+#begin objects/battle/abilities/bite.ability
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/abilities/attack_ability.xml
+/build:objects/battle/abilities/bite.ability
 
-#begin objects/battle/abilities/bite_ability.xml
+#begin objects/battle/abilities/defend.ability
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/abilities/bite_ability.xml
+/build:objects/battle/abilities/defend.ability
 
-#begin objects/battle/abilities/defend_ability.xml
+#begin objects/battle/abilities/doublestrike.ability
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/abilities/defend_ability.xml
+/build:objects/battle/abilities/doublestrike.ability
 
-#begin objects/battle/abilities/double_strike_ability.xml
+#begin objects/battle/abilities/fireball.ability
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/abilities/double_strike_ability.xml
+/build:objects/battle/abilities/fireball.ability
 
-#begin objects/battle/abilities/fireball_ability.xml
+#begin objects/battle/abilities/flametouch.ability
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/abilities/fireball_ability.xml
+/build:objects/battle/abilities/flametouch.ability
 
-#begin objects/battle/abilities/whirl_strike_ability.xml
+#begin objects/battle/abilities/strike.ability
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/abilities/whirl_strike_ability.xml
+/build:objects/battle/abilities/strike.ability
 
-#begin objects/battle/animations/bite_animation.xml
+#begin objects/battle/abilities/whirlstrike.ability
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/animations/bite_animation.xml
+/build:objects/battle/abilities/whirlstrike.ability
 
-#begin objects/battle/animations/fire_charge_animation.xml
+#begin objects/battle/animations/bite.animation
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/animations/fire_charge_animation.xml
+/build:objects/battle/animations/bite.animation
 
-#begin objects/battle/animations/fire1_animation.xml
+#begin objects/battle/animations/fire1.animation
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/animations/fire1_animation.xml
+/build:objects/battle/animations/fire1.animation
 
-#begin objects/battle/animations/firesplash_animation.xml
+#begin objects/battle/animations/firecharge.animation
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/animations/firesplash_animation.xml
+/build:objects/battle/animations/firecharge.animation
 
-#begin objects/battle/animations/shield_animation.xml
+#begin objects/battle/animations/firesplash.animation
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/animations/shield_animation.xml
+/build:objects/battle/animations/firesplash.animation
 
-#begin objects/battle/animations/strike_corner_animation.xml
+#begin objects/battle/animations/flametouch.animation
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/animations/strike_corner_animation.xml
+/build:objects/battle/animations/flametouch.animation
 
-#begin objects/battle/animations/strike_front_animation.xml
+#begin objects/battle/animations/shield.animation
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/animations/strike_front_animation.xml
+/build:objects/battle/animations/shield.animation
 
-#begin objects/battle/animations/sword_animation.xml
+#begin objects/battle/animations/strike.animation
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/animations/sword_animation.xml
+/build:objects/battle/animations/strike.animation
 
-#begin objects/battle/effects/physical_damage.xml
+#begin objects/battle/animations/strike_corner.animation
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/effects/physical_damage.xml
+/build:objects/battle/animations/strike_corner.animation
 
-#begin objects/battle/projectiles/_dummy.xml
+#begin objects/battle/animations/strike_front.animation
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/projectiles/_dummy.xml
+/build:objects/battle/animations/strike_front.animation
 
-#begin objects/battle/projectiles/fireball_projectile.xml
+#begin objects/battle/effects/buffs/defend1.effect
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/projectiles/fireball_projectile.xml
+/build:objects/battle/effects/buffs/defend1.effect
 
-#begin objects/battle/projectiles/lightning_projectile.xml
+#begin objects/battle/effects/buffs/defend1_mag.effect
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/battle/projectiles/lightning_projectile.xml
+/build:objects/battle/effects/buffs/defend1_mag.effect
 
-#begin objects/world/entities/npcs/hostile/big_rat.xml
+#begin objects/battle/effects/buffs/defend1_phy.effect
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/world/entities/npcs/hostile/big_rat.xml
+/build:objects/battle/effects/buffs/defend1_phy.effect
 
-#begin objects/world/entities/player/grey_player.xml
+#begin objects/battle/effects/buffs/defend2.effect
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/world/entities/player/grey_player.xml
+/build:objects/battle/effects/buffs/defend2.effect
 
-#begin objects/world/entities/player/pink_player.xml
+#begin objects/battle/effects/buffs/defend2_mag.effect
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/world/entities/player/pink_player.xml
+/build:objects/battle/effects/buffs/defend2_mag.effect
 
-#begin objects/world/maps/forest1_ext.xml
+#begin objects/battle/effects/buffs/defend2_phy.effect
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/world/maps/forest1_ext.xml
+/build:objects/battle/effects/buffs/defend2_phy.effect
 
-#begin objects/world/maps/forest1_int.xml
+#begin objects/battle/effects/buffs/defend3.effect
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/world/maps/forest1_int.xml
+/build:objects/battle/effects/buffs/defend3.effect
 
-#begin objects/world/maps/rainforest_0.xml
+#begin objects/battle/effects/buffs/defend3_mag.effect
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:objects/world/maps/rainforest_0.xml
+/build:objects/battle/effects/buffs/defend3_mag.effect
+
+#begin objects/battle/effects/buffs/defend3_phy.effect
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/effects/buffs/defend3_phy.effect
+
+#begin objects/battle/effects/damage/damage0_mag.effect
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/effects/damage/damage0_mag.effect
+
+#begin objects/battle/effects/damage/damage0_phy.effect
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/effects/damage/damage0_phy.effect
+
+#begin objects/battle/effects/damage/damage1_mag.effect
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/effects/damage/damage1_mag.effect
+
+#begin objects/battle/effects/damage/damage1_phy.effect
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/effects/damage/damage1_phy.effect
+
+#begin objects/battle/effects/damage/damage2_mag.effect
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/effects/damage/damage2_mag.effect
+
+#begin objects/battle/effects/damage/damage2_phy.effect
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/effects/damage/damage2_phy.effect
+
+#begin objects/battle/effects/damage/damage3_mag.effect
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/effects/damage/damage3_mag.effect
+
+#begin objects/battle/effects/damage/damage3_phy.effect
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/effects/damage/damage3_phy.effect
+
+#begin objects/battle/projectiles/_dummy.projectile
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/projectiles/_dummy.projectile
+
+#begin objects/battle/projectiles/fireball.projectile
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/projectiles/fireball.projectile
+
+#begin objects/battle/projectiles/lightning.projectile
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/projectiles/lightning.projectile
+
+#begin objects/world/entities/npcs/hostile/big_rat.enemy
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/world/entities/npcs/hostile/big_rat.enemy
+
+#begin objects/world/entities/player/grey.player
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/world/entities/player/grey.player
+
+#begin objects/world/entities/player/pink.player
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/world/entities/player/pink.player
+
+#begin objects/world/maps/forest1_ext.tilemap
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/world/maps/forest1_ext.tilemap
+
+#begin objects/world/maps/forest1_int.tilemap
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/world/maps/forest1_int.tilemap
+
+#begin objects/world/maps/rainforest_0.tilemap
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/world/maps/rainforest_0.tilemap
 

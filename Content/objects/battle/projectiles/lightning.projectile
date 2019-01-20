@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+    <Asset Type="Projectile">
+        <!-- GameObject -->
+        <SpriteSheet>images/battle/projectiles/projectile_sheet</SpriteSheet>
+        <SpriteRectangle>0 16 16 16</SpriteRectangle>
+
+        <!-- Movable -->
+        <SpriteCount>4</SpriteCount>
+        <SpritesPerStep>1</SpritesPerStep>
+        <StepTime>82</StepTime>
+
+        <!-- Projectile -->
+        <AbilityAsset>
+            <!-- TODO: Placeholder -->
+            <Preset>objects/battle/abilities/strike</Preset>
+        </AbilityAsset>
+    </Asset>
+</XnaContent>

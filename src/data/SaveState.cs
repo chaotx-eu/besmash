@@ -103,8 +103,8 @@ namespace BesmashGame {
             bool newGame;
             if((newGame = Team == null)) {
                 Team = new Team(
-                    mapContent.Load<Player>("objects/world/entities/player/grey_player"),
-                    mapContent.Load<Player>("objects/world/entities/player/pink_player")
+                    (mapContent.Load<Player>("objects/world/entities/player/grey").clone() as Player),
+                    (mapContent.Load<Player>("objects/world/entities/player/pink").clone() as Player)
                 );
 
                 Team.Formation.Add(Team.Members[0], new Point(-1, 1));

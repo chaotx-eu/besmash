@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+    <Asset Type="AbilityEffect">
+        <StatsMod>
+            <VITMod>1</VITMod>
+            <ATKMod>1</ATKMod>
+            <INTMod>1</INTMod>
+            <DEFMod>1</DEFMod>
+            <WISMod>1.5</WISMod>
+            <AGIMod>1</AGIMod>
+        </StatsMod>
+    </Asset>
+</XnaContent>

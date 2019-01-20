@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+	<Asset Type="SpriteAnimation">
+		<SpriteSheet>images/battle/animations/weaponless_sheet</SpriteSheet>
+		<SpriteCount>12</SpriteCount>
+		<SpriteSize>16 16</SpriteSize>
+		<SpritesPerSecond>26</SpritesPerSecond>
+	</Asset>
+</XnaContent>

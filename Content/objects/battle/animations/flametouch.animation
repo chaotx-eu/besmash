@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+    <Asset Type="SpriteAnimation">
+        <!-- TODO: placeholder -->
+        <SpriteSheet>images/battle/animations/fire_sheet</SpriteSheet>
+        <Facing>East</Facing>
+        <SpriteCount>8</SpriteCount>
+        <SpriteSize>16 16</SpriteSize>
+        <SpriteRow>2</SpriteRow>
+        <SpritesPerSecond>30</SpritesPerSecond>
+        <RotateRelative>true</RotateRelative>
+    </Asset>
+</XnaContent>

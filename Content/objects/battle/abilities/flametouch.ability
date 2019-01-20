@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+    <Asset Type="Ability">
+        <Title>Flame Touch</Title>
+        <APCost>25</APCost>
+
+        <Components>
+            <Component>
+                <AnimationAsset>
+                    <Preset>objects/battle/animations/flametouch</Preset>
+                </AnimationAsset>
+
+                <EffectAsset>
+                    <Preset>objects/battle/effects/damage/damage1_mag</Preset>
+                    <Properties>
+                        <BaseDamageElement>Fire</BaseDamageElement>
+                    </Properties>
+                </EffectAsset>
+
+                <Position>0 -1</Position>
+
+                <Children><Component>
+                    <EffectAsset>
+                        <Preset>objects/battle/effects/damage/damage0_mag</Preset>
+                        <Properties>
+                            <AnimationAsset>
+                                <Preset>objects/battle/animations/fire1</Preset>
+                            </AnimationAsset>
+                            <BaseDamageElement>Fire</BaseDamageElement>
+                            <TurnsToLast>1 3</TurnsToLast>
+                            <TurnOffset>1</TurnOffset>
+                        </Properties>
+                    </EffectAsset>
+
+                    <FrameOffset>-2</FrameOffset>
+                    <StickyPosition>false</StickyPosition>
+                    <StickyRotation>false</StickyRotation>
+                </Component></Children>
+            </Component>
+        </Components>
+    </Asset>
+</XnaContent>

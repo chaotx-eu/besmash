@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<XnaContent xmlns:ns="Microsoft.Xna.Framework">
-	<Asset Type="SpriteAnimation">
-		<SpriteSheet>images/battle/animations/sword_animation</SpriteSheet>
-		<SpriteCount>13</SpriteCount>
-		<SpriteSize>16 16</SpriteSize>
-		<SpritesPerSecond>32</SpritesPerSecond>
-	</Asset>
-</XnaContent>
