@@ -9,12 +9,12 @@ namespace BesmashGame {
         public float ScaleMod {get; set;} = 1;
 
         public int Duration {get; set;} = 1000;
-        public Vector2 Path {get; set;} = new Vector2(0, -1.5f);
+        public Vector2 Path {get; set;} = new Vector2(0, -2f);
 
         private float scale, alpha, x, y;
         private Vector2 origin, offset, path;
         private int timer;
-
+        
         public FloatingText(string text, SpriteFont font) {
             Text = text;
             Font = font;

@@ -21,7 +21,10 @@
 
         <!-- Creature -->
         <Name>Pink Thanper</Name>
-        <!-- <Class></Class> -->
+        <Class>
+            <Preset>objects/world/entities/classes/mage</Preset>
+        </Class>
+
         <!-- <Stats></Stats> -->
         <!-- <Element></Element> -->
         <!-- <Helmet></Helmet> -->
@@ -32,6 +35,7 @@
         <DefaultAbilities>
             <Path>objects/battle/abilities/strike</Path>
             <Path>objects/battle/abilities/defend</Path>
+            <Path>objects/battle/abilities/rest</Path>
             <Path>objects/battle/abilities/flametouch</Path>
             <Path>objects/battle/abilities/fireball</Path>
         </DefaultAbilities>

@@ -33,8 +33,6 @@
                     </EffectAsset>
 
                     <FrameOffset>-2</FrameOffset>
-                    <StickyPosition>false</StickyPosition>
-                    <StickyRotation>false</StickyRotation>
                 </Component></Children>
             </Component>
         </Components>

@@ -14,6 +14,9 @@ namespace BesmashGame {
     using System;
 
     public class Besmash : Game {
+        /// Font used for ingame messages
+        public static SpriteFont GameFont {get; set;}
+
         /// Manager of this game
         public GameManager Manager {get; set;}
 
@@ -77,6 +80,7 @@ namespace BesmashGame {
             Manager = GameManager.newInstance();
             BattleManager = BattleManager.newInstance();
             mainMenu.GameManager = Manager;
+            GameFont = Content.Load<SpriteFont>("fonts/game_font1");
             // loadConfig(); // moved to update
             // loadSave();
 
@@ -91,7 +95,7 @@ namespace BesmashGame {
             ///
             /// Update: If an ability is loaded at this point following loadings
             /// of abilities later in the code will fail throwing the same exception
-            // Ability a = Content.Load<Ability>("objects/battle/abilities/defend_ability");
+            // Ability a = Content.Load<Ability>("objects/battle/abilities/defend" );
             Projectile p = Content.Load<Projectile>("objects/battle/projectiles/_dummy");
         }
 

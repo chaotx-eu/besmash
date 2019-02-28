@@ -5,6 +5,18 @@
         <APCost>60</APCost>
 
         <Components>
+            <!-- TODO -->
+            <!-- <Component>
+                <UserAnimations>
+                    <UserAnimation>
+                        <Key>ANY</Key>
+                        <Value>
+                            <Preset>objects/battle/animations/generic_creature_whirl</Preset>
+                        </Value>
+                    </UserAnimation>
+                </UserAnimations>
+            </Component> -->
+
             <Component>
                 <AnimationAsset>
                     <Preset>objects/battle/animations/strike_front</Preset>

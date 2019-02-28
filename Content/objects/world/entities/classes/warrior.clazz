@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+    <Asset Type="Class">
+        <Title>Warrior</Title>
+        <BaseStatPoints>75 100</BaseStatPoints>
+
+        <VitWeight>2 6</VitWeight>
+        <AtkWeight>2 8</AtkWeight>
+        <IntWeight>1 1</IntWeight>
+        <DefWeight>2 8</DefWeight>
+        <WisWeight>1 4</WisWeight>
+        <AgiWeight>1 4</AgiWeight>
+    </Asset>
+</XnaContent>

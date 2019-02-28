@@ -16,7 +16,10 @@
 
         <!-- Creature -->
         <!-- <Name>Gray Mane</Name> -->
-        <!-- <Class></Class> -->
+        <Class>
+            <Preset>objects/world/entities/classes/critter</Preset>
+        </Class>
+
         <!-- <Stats></Stats> -->
         <!-- <Element></Element> -->
         <!-- <Helmet></Helmet> -->
@@ -24,8 +27,27 @@
         <!-- <Pants></Pants> -->
         <!-- <Weapon></Weapon> -->
         <!-- <Level></Level> -->
+
+        <DeathSound>audio/effects/entities/rat_death</DeathSound>
+        <!-- <AttackSound>audio/effects/entities/rat_attack</AttackSound> -->
+        <!-- <DamageSound>audio/effects/entitis/rat_damage</DamageSound> -->
+        <!-- <LevelUpSound>audio/effects/entities/rat_levelup</LevelUpdSound> -->
+
+        <DeathAnimationAsset>
+            <Properties>
+                <SpriteSheet>images/world/entities/npcs/hostile/rat_sheet</SpriteSheet>
+                <SpriteCount>8</SpriteCount>
+                <SpriteSize>16 16</SpriteSize>
+                <SpriteRow>5</SpriteRow>
+                <SpritesPerSecond>6</SpritesPerSecond>
+                <RowRelativeToFacing>true</RowRelativeToFacing>
+            </Properties>
+        </DeathAnimationAsset>
+
         <DefaultAbilities>
             <Path>objects/battle/abilities/bite</Path>
+            <Path>objects/battle/abilities/defend</Path>
+            <Path>objects/battle/abilities/rest</Path>
         </DefaultAbilities>
 
         <!-- Npc -->

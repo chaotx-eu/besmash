@@ -14,6 +14,30 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin audio/effects/entities/rat_death.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:audio/effects/entities/rat_death.wav
+
+#begin audio/songs/besmash_battle_theme.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:audio/songs/besmash_battle_theme.mp3
+
+#begin audio/songs/besmash_grassland_theme.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:audio/songs/besmash_grassland_theme.mp3
+
+#begin audio/songs/besmash_roaming_theme.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:audio/songs/besmash_roaming_theme.mp3
+
 #begin fonts/game_font1.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
@@ -58,6 +82,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:images/battle/animations/shield_sheet.png
+
+#begin images/battle/animations/sparkles_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/battle/animations/sparkles_sheet.png
 
 #begin images/battle/animations/strike_sheet.png
 /importer:TextureImporter
@@ -190,6 +226,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:images/world/entities/player/red_sheet.png
+
+#begin images/world/entities/player/shadou_sheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/world/entities/player/shadou_sheet.png
 
 #begin images/world/entities/player/white_sheet.png
 /importer:TextureImporter
@@ -394,6 +442,11 @@
 /processor:PassThroughProcessor
 /build:objects/battle/abilities/flametouch.ability
 
+#begin objects/battle/abilities/rest.ability
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/abilities/rest.ability
+
 #begin objects/battle/abilities/strike.ability
 /importer:XmlImporter
 /processor:PassThroughProcessor
@@ -433,6 +486,11 @@
 /importer:XmlImporter
 /processor:PassThroughProcessor
 /build:objects/battle/animations/shield.animation
+
+#begin objects/battle/animations/sparkles.animation
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/battle/animations/sparkles.animation
 
 #begin objects/battle/animations/strike.animation
 /importer:XmlImporter
@@ -549,6 +607,21 @@
 /processor:PassThroughProcessor
 /build:objects/battle/projectiles/lightning.projectile
 
+#begin objects/world/entities/classes/critter.clazz
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/world/entities/classes/critter.clazz
+
+#begin objects/world/entities/classes/mage.clazz
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/world/entities/classes/mage.clazz
+
+#begin objects/world/entities/classes/warrior.clazz
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/world/entities/classes/warrior.clazz
+
 #begin objects/world/entities/npcs/hostile/big_rat.enemy
 /importer:XmlImporter
 /processor:PassThroughProcessor
@@ -563,6 +636,11 @@
 /importer:XmlImporter
 /processor:PassThroughProcessor
 /build:objects/world/entities/player/pink.player
+
+#begin objects/world/entities/player/shadou.player
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:objects/world/entities/player/shadou.player
 
 #begin objects/world/maps/forest1_ext.tilemap
 /importer:XmlImporter

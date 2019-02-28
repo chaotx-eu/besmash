@@ -5,6 +5,7 @@ namespace BesmashGame {
     using System.Collections.Generic;
     using System.Runtime.Serialization;
     using GameStateManagement;
+    using System.Linq;
     using System;
     
     /// Holds the data of a single playthrough for
@@ -107,7 +108,7 @@ namespace BesmashGame {
                     (mapContent.Load<Player>("objects/world/entities/player/pink").clone() as Player)
                 );
 
-                Team.Formation.Add(Team.Members[0], new Point(-1, 1));
+                Team.Formation.Add(Team.Members[0], new Point(0, 1));
             }
 
             TileMap prevMap = ActiveMap;
@@ -116,17 +117,23 @@ namespace BesmashGame {
                 ActiveMap.init(game);
 
             ActiveMap.onLoad(prevMap, Team);
-            // ActiveMap.load(Content); // TODO (remove line) maps have now they own content manager
             if(prevMap != null) prevMap.unload(); // TODO test!
             ActiveMap.load(mapContent);
             ActiveMap.spawnEntities();
             LastMap = mapFile;
             Game = game;
 
+            // TODO testcode (battle start)
+            ActiveMap.Entities.Where(e => e is Creature)
+                .Cast<Creature>().ToList().ForEach(c => {
+                    if(c is Enemy) (c as Enemy)
+                        .PlayerInRangeEvent += onPlayerInEnemyRange;
+                });
+
             if(newGame) {
                 int i;
                 Team.Player.ForEach(pl => {
-                    for(i = 0; i < 3; ++i) { // TODO start level
+                    for(i = 0; i < 3; ++i) { // TODO init level
                         pl.Exp = pl.MaxExp;
                         pl.levelUp();
                     }
@@ -143,6 +150,19 @@ namespace BesmashGame {
             if(nextMap != null) load(Game, nextMap);
             ActiveMap.update(gameTime);
             Team.update(gameTime);
+        }
+
+        protected void onPlayerInEnemyRange(Creature sender, PlayerEventArgs args) {
+            if(sender.IsFighting) return;
+
+            TileMap map = sender.ContainingMap;
+            if(map.State == TileMap.MapState.Fighting)
+                Game.BattleManager.addToBattle(sender);
+            else {
+                map.setFightingState();
+                Game.BattleManager.startBattle(
+                    map, map.BattleMap.Participants);
+            }
         }
     }
 }

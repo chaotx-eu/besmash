@@ -2,9 +2,12 @@
 <XnaContent xmlns:ns='Microsoft.Xna.Framework'>
 	<Asset Type='Forest1Ext'>
 		<Title>Plains Set</Title>
+		<RoamingTheme>audio/songs/besmash_roaming_theme</RoamingTheme>
+		<BattleTheme>audio/songs/besmash_battle_theme</BattleTheme>
 		<Viewport>8 8</Viewport>
 		
 		<SpawnCount>10 20</SpawnCount>
+		<!-- <SpawnCount>1 1</SpawnCount> -->
 		<SpawnPoints>
 			<SpawnPoint>
 				<Position>14 32</Position>

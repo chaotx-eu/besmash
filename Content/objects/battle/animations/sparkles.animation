@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <XnaContent xmlns:ns="Microsoft.Xna.Framework">
 	<Asset Type="SpriteAnimation">
-		<SpriteSheet>images/battle/animations/strike_sheet</SpriteSheet>
-		<SpriteCount>13</SpriteCount>
+		<SpriteSheet>images/battle/animations/sparkles_sheet</SpriteSheet>
+		<SpriteCount>14</SpriteCount>
 		<SpriteSize>16 16</SpriteSize>
-		<SpritesPerSecond>32</SpritesPerSecond>
+		<SpritesPerSecond>15</SpritesPerSecond>
 		<RowRelativeToFacing>false</RowRelativeToFacing>
 		<RotateRelativeToFacing>false</RotateRelativeToFacing>
-		<StickyPosition>false</StickyPosition>
+		<StickyPosition>true</StickyPosition>
 	</Asset>
 </XnaContent>

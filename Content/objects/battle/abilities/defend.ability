@@ -2,7 +2,11 @@
 <XnaContent xmlns:ns="Microsoft.Xna.Framework">
     <Asset Type="Ability">
         <Title>Defend</Title>
-        <APCost>-10</APCost>
+        <Description>
+            Increases defensive stats slightly for
+            one turn and restores up to 10% of max AP.
+        </Description>
+        <APCost>0</APCost>
 
         <Components>
             <Component>
@@ -11,8 +15,10 @@
                 </AnimationAsset>
 
                 <EffectAsset>
-                    <Preset>objects/battle/effects/buffs/defend2</Preset>
+                    <Preset>objects/battle/effects/buffs/defend1</Preset>
                     <Properties>
+                        <PercentHeal>10</PercentHeal>
+                        <PercentHealTarget>MaxAp</PercentHealTarget>
                         <TurnsToLast>1 1</TurnsToLast>
                     </Properties>
                 </EffectAsset>

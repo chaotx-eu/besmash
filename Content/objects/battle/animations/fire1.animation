@@ -7,5 +7,8 @@
         <SpriteRow>3</SpriteRow>
         <SpritesPerSecond>8</SpritesPerSecond>
         <MaxIterations>2</MaxIterations>
+		<RowRelativeToFacing>false</RowRelativeToFacing>
+		<RotateRelativeToFacing>false</RotateRelativeToFacing>
+		<StickyPosition>false</StickyPosition>
     </Asset>
 </XnaContent>

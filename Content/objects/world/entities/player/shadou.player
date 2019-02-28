@@ -2,8 +2,8 @@
 <XnaContent xmlns:ns="Microsoft.Xna.Framework">
     <Asset Type="Player">
         <!-- Game Object -->
-        <SpriteSheet>images/world/entities/player/grey_sheet</SpriteSheet>
-        <Thumbnail>images/world/entities/thumbnails/grey_thumb</Thumbnail>
+        <SpriteSheet>images/world/entities/player/shadou_sheet</SpriteSheet>
+        <!-- <Thumbnail>images/world/entities/thumbnails/grey_thumb</Thumbnail> -->
         <SpriteRectangle>0 0 16 16</SpriteRectangle>
 
         <!-- Map Object -->
@@ -14,17 +14,14 @@
         <!-- <Title>Adventerer</Title> -->
 
         <!-- Movable -->
-        <SpriteCount>4</SpriteCount>
-        <SpritesPerStep>2</SpritesPerStep>
+        <SpriteCount>8</SpriteCount>
+        <SpritesPerStep>4</SpritesPerStep>
         <SpritesPerSecond>4</SpritesPerSecond>
         <StepTime>224</StepTime>
 
         <!-- Creature -->
-        <Name>Gray Mane</Name>
-        <Class>
-            <Preset>objects/world/entities/classes/warrior</Preset>
-        </Class>
-
+        <Name>Shadou</Name>
+        <!-- <Class></Class> -->
         <!-- <Stats></Stats> -->
         <!-- <Element></Element> -->
         <!-- <Helmet></Helmet> -->

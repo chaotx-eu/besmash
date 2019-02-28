@@ -2,6 +2,7 @@
 <XnaContent xmlns:ns='Microsoft.Xna.Framework'>
 	<Asset Type='Forest1Int'>
 		<Title>Plains Set</Title>
+		<RoamingTheme>audio/songs/besmash_grassland_theme</RoamingTheme>
 		<Viewport>8 8</Viewport>
 		
 		<Tiles>

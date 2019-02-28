@@ -4,6 +4,7 @@ namespace BesmashGame {
     using BesmashContent.Utility;
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
+    using System.Collections.Generic;
     using System.Linq;
     using System;
 
@@ -23,12 +24,16 @@ namespace BesmashGame {
 
         /// A list of skills of the current player
         private VList vlSkills;
+        private VPane skillPane;
 
         /// A list of player info of the current team
         private TeamInfoPane teamInfo;
 
         /// A list of object info beneath the cursor
         private MapObjectInfoPane objectInfo;
+
+        /// Shows info of the currently selected ability
+        private AbilityInfoPane abilityInfo;
 
         /// the font used within this pane
         private SpriteFont font;
@@ -62,11 +67,14 @@ namespace BesmashGame {
             vlSkills.Color = Color.Gray;
             vlSkills.Alpha = 0.5f;
 
-            VPane skillPane = new VPane(hpApCost, vlSkills);
+            skillPane = new VPane(hpApCost, vlSkills);
             skillPane.HAlignment = HAlignment.Left;
-            skillPane.VAlignment = VAlignment.Bottom;
-            skillPane.PercentWidth = 15;
-            skillPane.PercentHeight = 30;
+            // skillPane.HAlignment = HAlignment.Left;
+            // skillPane.VAlignment = VAlignment.Bottom;
+            // skillPane.PercentWidth = 15;
+            // skillPane.PercentHeight = 30;
+            skillPane.PercentWidth = 100;
+            skillPane.PercentHeight = 100;
             skillPane.Color = Color.Black;
             skillPane.Alpha = 0.5f;
 
@@ -86,30 +94,54 @@ namespace BesmashGame {
             objectInfo.Color = Color.Black;
             objectInfo.Alpha = 0.5f;
 
+            abilityInfo = new AbilityInfoPane();
+            abilityInfo.HAlignment = HAlignment.Left;
+            abilityInfo.VAlignment = VAlignment.Bottom;
+            // abilityInfo.HAlignment = HAlignment.Center;
+            // abilityInfo.VAlignment = VAlignment.Bottom;
+            abilityInfo.Color = Color.Black;
+            abilityInfo.Alpha = 0.5f;
+
+            HPane hpSkills = new HPane(skillPane, abilityInfo);
+            hpSkills.HAlignment = HAlignment.Left;
+            hpSkills.VAlignment = VAlignment.Bottom;
+            hpSkills.PercentWidth = 15;
+            hpSkills.PercentHeight = 30;
+
             vlSkills.ActionEvent += (sender, args) => {
                 int s = args.SelectedIndex;
 
                 if(player.ContainingMap.Slave is Cursor) {
-                    if(s == 0) move =
-                        MapUtils.rotatePoint(new Point(0, -1), player.Facing);
-                    else if(s > 0)
-                        ability = player.Abilities[s-1];
+                    if(s == 0) {
+                        if(moveCost > player.AP || moveCost <= 0)
+                            return;
+
+                        movePath = new Queue<Point>(pathCache);
+                        moveCost = getMoveCost(player, movePath.Count);
+                    } else if(s > 0)
+                        nextAbility = player.Abilities[s-1];
 
                     vlSkills.ControlLock = false;
                     player.ContainingMap.hideCursor();
+                    cursor.MoveStartedEvent -= onCursorMove;
                     objectInfo.hide();
+                    abilityInfo.hide();
+                    hideSkillList();
                     // teamInfo.show(); // TODO looks to busy
                 } else {
                     int cost = s == 0 ? 10 : player.Abilities[s-1].APCost; // TODO move cost
                     if(cost > player.AP) return;
 
-                    player.ContainingMap.showCursor();
+                    playerPF = new Pathfinder(player);
+                    player.ContainingMap.showCursor(player.Position);
                     cursor = player.ContainingMap.Cursor;
-                    cursor.Position = player.Position;
+                    cursor.MoveStartedEvent -= onCursorMove;
+                    cursor.MoveStartedEvent += onCursorMove;
                     objectInfo.MapCursor = cursor;
                     vlSkills.ControlLock = true;
                     objectInfo.show();
                     teamInfo.hide();
+                    abilityInfo.hide();
                 }
             };
 
@@ -117,6 +149,7 @@ namespace BesmashGame {
                 if(cursor == null) return;
                 vlSkills.ControlLock = false;
                 player.ContainingMap.hideCursor();
+                cursor.MoveStartedEvent -= onCursorMove;
                 cursor = null;
                 objectInfo.hide();
                 teamInfo.show();
@@ -124,15 +157,21 @@ namespace BesmashGame {
 
             vlSkills.SelectedEvent += (sender, args) => {
                 int sel = args.SelectedIndex;
-                int cost = sel == 0 ? 10 : player.Abilities[sel-1].APCost; // TODO move cost
-                tiApCost.Text = string.Format("AP: {0:000}/{1:000}", Math.Abs(cost), player.AP);
-                tiApCost.Color = cost < 0 ? Color.LightGreen
-                    : cost > player.AP ? Color.Red
-                    : cost == player.AP ? Color.Orange
-                    : Color.White;
+                if(sel > 0) {
+                    abilityInfo.Ability = player.Abilities[sel-1];
+                    abilityInfo.show();
+                } else abilityInfo.hide();
             };
 
-            spMain.add(hlThumbs, skillPane, objectInfo, teamInfo);
+            hlThumbs.SelectedEvent += (sender, args) => {
+                int sel = args.SelectedIndex;
+                int off = sel + hlThumbs.VisibleRange;
+                if(off < hlThumbs.Children.Count)
+                    (hlThumbs.Children[off] as MenuItem).Disabled = false;
+            };
+
+            // spMain.add(hlThumbs, skillPane, objectInfo, teamInfo, abilityInfo);
+            spMain.add(hlThumbs, objectInfo, teamInfo, hpSkills);
             add(spMain);
             hide();
         }
@@ -148,7 +187,7 @@ namespace BesmashGame {
 
         private void initThumbs() {
             hlThumbs.remove(hlThumbs.Children.ToArray());
-            BattleManager.TurnList.ForEach(addThumb);
+            BattleManager.TurnList.ToList().ForEach(addThumb);
             hlThumbs.select(0);
         }
 
@@ -157,6 +196,15 @@ namespace BesmashGame {
             thumb.PercentWidth = 80;
             thumb.PercentHeight = 80;
             hlThumbs.add(thumb);
+
+            int sel = hlThumbs.SelectedIndex;
+            int off = sel - (hlThumbs.VisibleRange+2);
+
+            if(hlThumbs.Children.Count - (sel+2) >= hlThumbs.VisibleRange)
+                thumb.Disabled = true;
+
+            if(off >= 0)
+                (hlThumbs.Children[0] as MenuItem).Disabled = true;
         }
 
         private void showSkillList(Player player) {
@@ -164,7 +212,7 @@ namespace BesmashGame {
 
             TextItem textItem = new TextItem("Move", font);
             textItem.setPosition(vlSkills.X, vlSkills.Y);
-            if(10 > player.AP) textItem.Color = Color.Gray; // TODO MoveCost property
+            if(moveCost > player.AP) textItem.Color = Color.Gray; // TODO not really needed anymore
 
             vlSkills.add(textItem);
             player.Abilities.Sort((a1, a2) => a1.APCost.CompareTo(a2.APCost)); // order needs to be sync with order in vlist
@@ -177,13 +225,33 @@ namespace BesmashGame {
 
             vlSkills.select(0);
             vlSkills.IsFocused = true;
-            vlSkills.Scale = 1;
+            skillPane.AlphaMod = 1;
+            skillPane.Scale = 1;
         }
 
         private void hideSkillList() {
             if(vlSkills.IsFocused) {
                 vlSkills.IsFocused = false;
-                vlSkills.Scale = 0;
+                skillPane.AlphaMod = 0;
+                skillPane.Scale = 0;
+            }
+        }
+
+        private void updateSkillList() {
+            if(!vlSkills.IsFocused) return;
+            int sel = vlSkills.SelectedIndex;
+            int cost = sel == 0 ? moveCost : player.Abilities[sel-1].APCost;
+            if(sel == 0 && moveCost < 0) {
+                tiApCost.Text = ("AP: ???");
+                tiApCost.Color = Color.Orange;
+            } else {
+                tiApCost.Text = string.Format(
+                    "AP: {0:000}/{1:000}",
+                    Math.Abs(cost), player.AP);
+                tiApCost.Color = cost < 0 ? Color.LightGreen
+                    : cost > player.AP ? Color.Red
+                    : cost == player.AP ? Color.Orange
+                    : Color.White;
             }
         }
 
@@ -203,31 +271,43 @@ namespace BesmashGame {
         public override void show(bool giveFocus, float alpha) {
             reset();
             initThumbs();
+            hideSkillList();
             objectInfo.hide();
             teamInfo.hide();
             hlThumbs.Scale = 1;
             hlThumbs.Alpha = 0.5f;
-            BattleManager.Participants.ForEach(c =>
-                c.DamageEvent += onPlayerDamage);
+            // BattleManager.Participants.ForEach(c =>
+            //     c.DamageEvent += onPlayerDamage);
+
             base.show(giveFocus, alpha);
         }
 
         public override void hide(bool takeFocus, float alpha) {
             base.hide(takeFocus, alpha);
+            hideSkillList();
             objectInfo.hide();
             teamInfo.hide();
+            abilityInfo.hide();
             hlThumbs.Scale = 0;
             hlThumbs.Alpha = 0;
-            BattleManager.Participants.ForEach(c =>
-                c.DamageEvent -= onPlayerDamage);
+            // BattleManager.Participants.ForEach(c =>
+            //     c.DamageEvent -= onPlayerDamage);
         }
 
         private Player player = null;
+        private Enemy enemy = null;
         private Creature next = null;
         private Cursor cursor = null;
-        private Ability ability = null;
-        private Point? move = null;
-        private bool started;
+
+        private bool moveFinished;
+        private bool abilityRunning;
+        private Point? nextMove = null;
+        private Ability nextAbility = null;
+
+        private int moveCost;
+        private Pathfinder playerPF;
+        private Queue<Point> movePath;
+        private List<Point> pathCache = new List<Point>();
 
         public override void update(GameTime time) {
             if(!IsFocused && IsHidden) return;
@@ -235,8 +315,8 @@ namespace BesmashGame {
             if(!IsFocused) return;
 
             if(next == null) {
-                next = BattleManager.TurnList[0];
-                next.AP += 10; // TODO ApPerTurn (APT) and cap add MaxAP
+                next = BattleManager.TurnList.First.Value;
+                next.AP += next.APGain;
                 next.applyEffects();
 
                 if(next.HP <= 0) {
@@ -247,71 +327,122 @@ namespace BesmashGame {
                     return;
                 }
 
-                if(next is Enemy)
-                    hideSkillList();
-                else player = (Player)next;
-            }
-
-            if(next is Enemy && ability == null && move == null) {
-                ability = ((Enemy)next).nextAbility();
-                if(ability == null)
-                    move = ((Enemy)next).nextMove();
-            }
-
-            if(!started && cursor == null
-            && player != null && !vlSkills.IsFocused) {
-                showSkillList(player);
-                teamInfo.ActivePlayer = player;
-                teamInfo.Team = Team;
-                teamInfo.show();
-            }
-
-            if(!started && (ability != null || move != null)) {
-                if(move.HasValue) {
-                    if(next is Enemy) next.moveTo(move.Value);
-                    else next.move(move.Value);
-                    next.AP -= 10; // TODO move cost
+                if(next is Enemy) {
+                    hideSkillList(); // TODO temp fix (should not be necessary)
+                    enemy = (Enemy)next;
+                    nextAbility = enemy.nextAbility();
+                    if(nextAbility == null) enemy.nextMove(true);
+                } else {
+                    player = (Player)next;
+                    showSkillList(player);
+                    teamInfo.ActivePlayer = player;
+                    teamInfo.Team = Team;
+                    teamInfo.show();
                 }
-                
-                BattleManager.NextAction = ability;
-                BattleManager.nextTurn();
-                hideSkillList();
-                started = true;
             }
 
-            if(ability != null && !ability.IsExecuting
-            || move != null && !next.Moving) {
-                next.ContainingMap.hideCursor();
+            if(enemy != null && nextAbility == null
+            && movePath == null && !enemy.Pathfinder.IsAtWork) {
+                movePath = new Queue<Point>(enemy.Pathfinder.Path
+                    .Where((p, i) => enemy.AP >= getMoveCost(enemy, i+1)));
+
+                moveCost = getMoveCost(enemy, movePath.Count);
+            }
+
+            if(movePath != null) {
+                if(movePath.Count > 0) {
+                    if(!next.Moving)
+                        next.moveTo(movePath.Dequeue());
+                } else if(!moveFinished) {
+                    next.AP -= moveCost;
+                    moveFinished = true;
+                    moveCost = 0;
+                }
+            }
+
+            if(moveFinished && !next.Moving
+            || nextAbility != null && !abilityRunning) {
+                BattleManager.NextAction = nextAbility;
+                BattleManager.nextTurn();
+                abilityRunning = true;
+            }
+
+            if(moveFinished && !next.Moving
+            || abilityRunning && !nextAbility.IsExecuting) {
+                // TODO test
+                next.ContainingMap.alignBattleMap();
                 addThumb(next);
                 hlThumbs.select();
                 reset();
             }
 
-            if(cursor != null && !player.Moving)
-                updateFacing(player, cursor);
+            if(cursor != null && movePath == null)
+                moveCost = getMoveCost(player, pathCache.Count);
+
+            updateCursor();
+            updateSkillList();
+        }
+
+        private int getMoveCost(Creature creature, int dist) {
+            return dist == 0 ? 0 : creature.MoveAP*(2*dist - 1);
+        }
+
+        private void updateCursor() {
+            if(cursor == null || player == null) return;
+            if(!player.Moving) updateFacing(player, cursor);
+            if(playerPF == null) return;
+
+            if(playerPF.IsAtWork) {
+                playerPF.update();
+                cursor.Color = Microsoft.Xna.Framework.Color.Orange;
+                moveCost = -1;
+
+                if(!playerPF.IsAtWork) {
+                    pathCache = new List<Point>(playerPF.Path);
+                } else return;
+            } else if(moveCost > player.AP || pathCache.Count == 0)
+                cursor.Color = Microsoft.Xna.Framework.Color.Red;
+            else cursor.Color = Microsoft.Xna.Framework.Color.Green;
         }
 
         private void reset() {
-            cursor = null;
-            ability = null;
+            pathCache.Clear();
+            abilityRunning = false;
+            moveFinished = false;
+            nextAbility = null;
+            nextMove = null;
+            movePath = null;
             player = null;
-            move = null;
+            enemy = null;
+            cursor = null;
             next = null;
-            started = false;
         }
 
-        public void onPlayerDamage(Creature sender, DamageEventArgs args) {
-            if(sender.ContainingMap == null) return;
-            FloatingText damageText = new FloatingText(args.DamageAmount.ToString(), font);
-            damageText.Position = sender.Position;
-            damageText.ScaleMod = args.WasCritical ? 2 : 1.2f;
-            damageText.Color = args.DamageElement == Element.Earth ? Color.Green
-                : args.DamageElement == Element.Fire ? Color.Orange
-                : args.DamageElement == Element.Thunder ? Color.Yellow
-                : args.DamageElement == Element.Water ? Color.LightBlue : Color.White;
-
-            sender.ContainingMap.addEntity(damageText);
-            damageText.init();
+        public void onCursorMove(Movable sender, MoveEventArgs args) {
+            if(sender.ContainingMap != null
+            && player != null && playerPF != null) {
+                int vw = player.ContainingMap.Viewport.X;
+                int vh = player.ContainingMap.Viewport.Y;
+                Point ct = player.ContainingMap.BattleMap.Position.ToPoint();
+                Point tl = new Point(ct.X - vw, ct.Y - vh);
+                Point br = new Point(ct.X + vw, ct.Y + vh);
+                playerPF.getShortestPath(tl, br, p => p.Equals(args.Target));
+            }
         }
+
+        // moved to BattleManager
+        // public void onPlayerDamage(Creature sender, DamageEventArgs args) {
+        //     if(sender.ContainingMap == null) return;
+        //     FloatingText damageText = new FloatingText(args.DamageAmount.ToString(), font);
+        //     damageText.Position = sender.Position;
+        //     damageText.ScaleMod = args.WasCritical ? 2 : 1.2f;
+        //     damageText.Color = args.DamageElement == Element.Earth ? Color.Green
+        //         : args.DamageElement == Element.Fire ? Color.Orange
+        //         : args.DamageElement == Element.Thunder ? Color.Yellow
+        //         : args.DamageElement == Element.Water ? Color.LightBlue : Color.White;
+
+        //     sender.ContainingMap.addEntity(damageText);
+        //     damageText.init();
+        // }
     }
 }

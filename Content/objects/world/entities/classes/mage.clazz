@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+    <Asset Type="Class">
+        <Title>Mage</Title>
+        <BaseStatPoints>75 100</BaseStatPoints>
+
+        <VitWeight>2 4</VitWeight>
+        <AtkWeight>1 1</AtkWeight>
+        <IntWeight>2 8</IntWeight>
+        <DefWeight>1 3</DefWeight>
+        <WisWeight>2 8</WisWeight>
+        <AgiWeight>1 3</AgiWeight>
+    </Asset>
+</XnaContent>

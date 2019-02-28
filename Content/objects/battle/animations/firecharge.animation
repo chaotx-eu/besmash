@@ -6,6 +6,8 @@
 		<SpriteSize>16 16</SpriteSize>
 		<SpriteRow>1</SpriteRow>
 		<SpritesPerSecond>10</SpritesPerSecond>
-		<RotateRelative>true</RotateRelative>
+		<RowRelativeToFacing>false</RowRelativeToFacing>
+		<RotateRelativeToFacing>true</RotateRelativeToFacing>
+		<StickyPosition>true</StickyPosition>
 	</Asset>
 </XnaContent>

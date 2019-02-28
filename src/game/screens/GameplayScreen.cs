@@ -11,6 +11,9 @@ namespace BesmashGame {
     using System;
     using Debug;
 
+    // for testing
+    using Microsoft.Xna.Framework.Media;
+
 
     public class GameplayScreen : BesmashScreen {
         /// Reference to the battle manager of the game
@@ -54,7 +57,7 @@ namespace BesmashGame {
 
             if(lastState != TileMap.MapState.Fighting
             && map.State == TileMap.MapState.Fighting) {
-                BattleManager.startBattle(map, map.BattleMap.Participants); // TODO
+                // BattleManager.startBattle(map, map.BattleMap.Participants); // TODO
                 BattlePane.Team = team;
                 BattlePane.show();
             } else if(lastState != TileMap.MapState.Roaming
@@ -167,9 +170,9 @@ namespace BesmashGame {
             // debug action: teach ability to map slave
             if(game.isActionTriggered("debug", "action3")) {
                 Player player = GameManager.ActiveSave.Team.Leader;
-                if(player.Abilities.Where(a => a.Title == "Fireball").Count() == 0) {
+                if(player.Abilities.Where(a => a.Title == "Double Strike").Count() == 0) {
                     player.addAbility(
-                        "objects/battle/abilities/fireball_ability",
+                        "objects/battle/abilities/double_strike",
                         GameManager.ActiveSave.ActiveMap.Content);
                 }
             }
@@ -177,7 +180,7 @@ namespace BesmashGame {
             // debug action: use first ability of map slave
             if(game.isActionTriggered("debug", "action4")) {
                 GameManager.ActiveSave.Team.Leader
-                    .Abilities.Where(a => a.Title == "Whirl Strike")
+                    .Abilities.Where(a => a.Title == "Double Strike")
                     .ToList().ForEach(a => a.execute());
             }
 
